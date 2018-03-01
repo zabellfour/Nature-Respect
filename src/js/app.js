@@ -11,6 +11,10 @@ import DE from './modules/dots';
   // When DOM is ready
   $(() => {
     DE.dotsEffect();
+
+    $('.btn-mobile, btn-close').on('click touchstart', function () {
+        $('body').toggleClass('open-menu');
+    });
   });
 
 })(jQuery);
