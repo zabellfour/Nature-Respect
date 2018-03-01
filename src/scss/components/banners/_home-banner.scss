@@ -1,0 +1,112 @@
+$green-light:#cfe849;
+.home-banner {
+	position: relative;
+	background-color: $green-light;
+	color: $dark-red;
+	max-width: 1920px;
+	margin: 0 auto;
+	.title-section {
+		font-family: $base-font-hobo;
+		position: absolute;
+    right: -349px;
+    top: 29px;
+		line-height: 1;
+		text-align: center;
+    text-transform: uppercase;
+@include media('<1700px') {
+  top:56px;
+}
+@include media('<1400px') {
+  top:120px;
+}
+@include media('<widescreen') {
+  top:150px;
+}
+		.h3 {
+      font-size: 45px;
+      margin-bottom: 17px;
+      @include media('<1400px') {
+        font-size: 35px;
+      }
+		}
+		.h2 {
+			font-size: 66px;
+			position: relative;
+			display: inline-block;
+			margin-bottom: 16px;
+      padding-bottom: 13px;
+      @include media('<1400px') {
+        font-size: 50px;
+      }
+			&:after {
+				content: '';
+				position: absolute;
+			   bottom: 0px;
+				height: 2px;
+				background:   radial-gradient( rgba($dark-red, 1),  rgba($dark-red, 0) 100%);
+
+				left:-10px;
+				right: -10px;
+				border-radius: 110%;
+			}
+		}
+		.note {
+			font-size: 16px;
+			display: block;
+		}
+	}
+	img {
+		width: 100%;
+		vertical-align: top;
+	}
+	.element-sky1{
+		position: absolute;
+		top:17%;
+		left:7%;
+		background-image: url('../images/banner-sky1.png');
+		width:271px;
+		height:100px;
+		background-size: cover;
+	}
+	.element-sky2{
+		position: absolute;
+		top: 13%;
+		left: 34%;
+		background-image: url('../images/banner-sky2.png');
+		width:126px;
+		height:64px;
+		background-size: cover;
+	}
+	.element-sky3{
+		position: absolute;
+		top:15%;
+		right:10%;
+		background-image: url('../images/banner-sky3.png');
+		width:182px;
+		height:100px;
+		background-size: cover;
+	}
+	.element-sun{
+		position: absolute;
+		top: 20%;
+		left: 22%;
+		background-image: url('../images/banner-sun.png');
+		width:123px;
+		height:100px;
+		background-size: cover;
+	}
+	.element-tree{
+		position: absolute;
+		bottom:0;
+		left:51%;
+		transform:translateX(-50%);
+		background-image: url('../images/banner-tree.png');
+		width:354px;
+		height:400px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    max-width: 18%;
+	}
+
+}
