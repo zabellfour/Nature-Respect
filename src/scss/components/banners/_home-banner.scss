@@ -9,15 +9,15 @@ $green-light:#cfe849;
 		font-family: $base-font-hobo;
 		position: absolute;
     right: -349px;
-    top: 29px;
+    top: 129px;
 		line-height: 1;
 		text-align: center;
     text-transform: uppercase;
 @include media('<1700px') {
-  top:56px;
+  top:156px;
 }
 @include media('<1400px') {
-  top:120px;
+  top:170px;
 }
 @include media('<widescreen') {
   top:150px;
@@ -102,7 +102,7 @@ $green-light:#cfe849;
 		transform:translateX(-50%);
 		background-image: url('../images/banner-tree.png');
 		width:354px;
-		height:400px;
+		height:500px;
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: 100% auto;
