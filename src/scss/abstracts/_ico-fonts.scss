@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icons/icomoon.eot?n6p0uf');
+    src:  url('../fonts/icons/icomoon.eot?n6p0uf#iefix') format('embedded-opentype'),
+      url('../fonts/icons/icomoon.ttf?n6p0uf') format('truetype'),
+      url('../fonts/icons/icomoon.woff?n6p0uf') format('woff'),
+      url('../fonts/icons/icomoon.svg?n6p0uf#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-pinterest_icon:before {
+    content: "\e902";
+  }
+  .icon-youtube_icon:before {
+    content: "\e900";
+  }
+  .icon-printing_icon:before {
+    content: "\e901";
+  }
+  .icon-facebook_icon:before {
+    content: "\e904";
+  }
+  @font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ql9hxq');
+  src:  url('fonts/icomoon.eot?ql9hxq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ql9hxq') format('truetype'),
+    url('fonts/icomoon.woff?ql9hxq') format('woff'),
+    url('fonts/icomoon.svg?ql9hxq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pinterest:before {
+    content: "\e902";
+  }
+  .icon-youtube:before {
+    content: "\e900";
+  }
+  .icon-printing:before {
+    content: "\e901";
+  }
+  .icon-facebook:before {
+    content: "\e904";
+  }
+  
