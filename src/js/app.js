@@ -3,18 +3,16 @@
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
 
-import DE from './modules/dots';
+import headerNav from './modules/mobileNav.js';
+import sliderTab from './modules/sliderTab.js';
 
 ( ($) => {
   'use strict';
 
   // When DOM is ready
   $(() => {
-    DE.dotsEffect();
-
-    $('.btn-mobile, btn-close').on('click touchstart', function () {
-        $('body').toggleClass('open-menu');
-    });
+    headerNav.init();
+    sliderTab.init();
   });
 
 })(jQuery);

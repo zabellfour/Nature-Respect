@@ -1,0 +1,58 @@
+/* product style */
+
+.product-wrap {
+	background: url(../images/decor03.png) 50% 0/cover no-repeat;
+	padding: 120px 0 90px;
+	position: relative;
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+	.logo {
+		position: absolute;
+		top: -200px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 400px;
+		.box-text {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font: 18px/20px $base-font-hobo;
+			position: absolute;
+			right: -200px;
+			top: 0;
+			text-transform: uppercase;
+			color: #fff;
+			width: 190px;
+			height: 190px;
+			background: url(../images/decor05.png) 50% 50%/cover no-repeat;
+		}
+		span {
+			display: block;
+			text-align: center;
+			padding: 20px;
+			transform: rotate(15deg);
+		}
+	}
+	.decor {
+		position: absolute;
+		bottom: 0;
+		left: -109px;
+		z-index: -1;
+	}
+	.box {
+		width: 48%;
+		overflow: hidden;
+	}
+	.text-holder {
+		font-size: 21px;
+		line-height: 22px;
+		width: 80%;
+		float: right;
+		color: #fff;
+	}
+	p {
+		margin: 0 0 30px;
+	}
+}

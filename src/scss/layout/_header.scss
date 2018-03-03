@@ -1,12 +1,19 @@
 /* header style */
 
 #header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
 	padding: 22px 0 0;
 	margin: 0 0 22px;
 	background: #fff;
-	position: relative;
 	@include media('<desktop') {
+		position: relative;
 		background: none;
+		padding: 0;
+		margin: 0;
 	}
 	&:before {
 		content: '';
@@ -22,23 +29,41 @@
 		}
 	}
 	.container {
-		max-width: 1175px;
+		@include animate(transform);
+		max-width: 1215px;
 		padding: 0 25px;
 		margin: 0 auto;
 		position: relative;
+		z-index: 100;
 		@include media('<desktop') {
-			@include animate(transform);
-			width: 250px;
-			max-width: 250px;
-			transform: translateX(-250px);
+			height: 100vh;
+			overflow: auto;
+			padding: 20px 33px;
+			width: 238px;
+			max-width: 238px;
+			transform: translateX(-238px);
 			position: absolute;
 			top: 0;
 			left: 0;
-			background: green;
+			background: #c7d126;
 		}
-		.open-menu & {
+		.open-nav & {
 			transform: translateX(0);
 		}
+		.resize-active & {
+			transition: none
+		}
+	}
+}
+
+.logo-holder {
+	@include media('<desktop') {
+		margin: 34px 0 0;
+		position: absolute;
+		z-index: 20;
+		top: 0;
+		left: 0;
+		right: 0;
 	}
 }
 
@@ -47,25 +72,68 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	font: 17px/19px $base-font-decoratin-solid;
+	@include media('<widescreen') {
+		font-size: 14px;
+		line-height: 16px;
+	}
 	@include media('<desktop') {
+		font: 18px/20px $base-font-hobo;
+		padding: 38px 0 13px;
 		display: block;
 	}
 	li {
 		position: relative;
-		padding: 0 30px;
+		padding: 0 4px 0 32px;
+		@include media('<desktop') {
+			margin: 0 0 17px;
+			padding: 0 4px 0 40px;
+		}
 	}
 	img {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		left: 0;
+		width: 26px;
 	}
 	a {
 		text-decoration: none;
 		color: #632200;
+		@include media('<desktop') {
+			color: #fff;
+		}
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+	.is-active {
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+.logo-header-mob {
+	display: none;
+	@include media('<desktop') {
+		display: block;
+		width: 120px;
+		height: 120px;
+		margin: 0 auto;
+		position: relative;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -14px;
+		left: -13px;
+		width: 157px;
+		height: 1px;
+		background: #6b2e03;
+	}
+	img {
+		width: 100%;
 	}
 }
 
@@ -75,10 +143,14 @@
 	position: absolute;
 	bottom: -115px;
 	left: 50%;
+	display: block;
 	@include media('<desktop') {
+		width: 67px;
+		height: 67px;
 		position: relative;
 		bottom: 0;
-		left: 0;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 	img {
 		width: 100%;
@@ -89,7 +161,7 @@
 	@extend %listreset;
 	display: flex;
 	position: absolute;
-	right: 55px;
+	right: 35px;
 	bottom: -31px;
 	@include media('<desktop') {
 		display: none;
@@ -117,32 +189,74 @@
 	@extend %listreset;
 	display: none;
 	@include media('<desktop') {
-		display: block;
+		display: flex;
+		padding: 0 0 0 10px;
+	}
+	li {
+		font-size: 40px;
+		color: #612400;
+		margin: 0 13px 0 0;
 	}
 }
 
 .btn-mobile {
 	display: none;
 	@include media('<desktop') {
-		width: 50px;
-		height: 50px;
+		width: 37px;
+		height: 37px;
 		position: absolute;
-		top: 20px;
-		left: 20px;
+		top: 7px;
+		left: 11px;
 		display: block;
-		background: green;
+		background: url(../images/decor02.png) 0 0/100% 100% no-repeat;
+	}
+	&__decor,
+	&:after,
+	&:before {
+		content: "";
+		position: absolute;
+		top: 16px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 17px;
+		height: 3px;
+		transition: all .2s linear;
+		border-radius: 4px;
+		background: #fff;
+	}
+	&:before {
+		top: 10px;
+	}
+	&:after {
+		top: 22px;
 	}
 }
 
 .btn-close {
 	display: none;
 	@include media('<desktop') {
-		width: 50px;
-		height: 50px;
+		width: 17px;
+		height: 17px;
 		position: absolute;
-		top: 20px;
-		right: 20px;
+		top: 5px;
+		right: 5px;
 		display: block;
-		background: red;
+		color: #fff;
+	}
+	span {
+		height: 22px;
+		width: 3px;
+		border-radius: 2px;
+		background: #fff;
+		position: absolute;
+		top: 0;
+	}
+	.decor1 {
+		left: 0;
+		transform: rotate(45deg);
+	}
+	.decor2 {
+		right: 14px;
+		transform: rotate(-45deg);
 	}
 }
