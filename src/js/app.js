@@ -4,7 +4,8 @@
 // Feel free with using ES6 here.
 
 import headerNav from './modules/mobileNav.js';
-import sliderTab from './modules/sliderTab.js';
+import tabs from './modules/tab.js';
+import  productSlider from './modules/slick.js';
 
 ( ($) => {
   'use strict';
@@ -12,7 +13,8 @@ import sliderTab from './modules/sliderTab.js';
   // When DOM is ready
   $(() => {
     headerNav.init();
-    sliderTab.init();
+    tabs.init();
+    productSlider.init();
   });
 
 })(jQuery);

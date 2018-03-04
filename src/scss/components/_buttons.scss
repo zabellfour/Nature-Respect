@@ -14,3 +14,16 @@
     opacity: .8;
   }
 }
+
+.product-list
+
+.js-tab-hidden {
+  display: block !important;
+  left: -9999px !important;
+  position: absolute !important;
+  top: -9999px !important;
+}
+
+.tab-content > .active {
+  display: block;
+}

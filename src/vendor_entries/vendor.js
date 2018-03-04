@@ -4,5 +4,6 @@
 
 module.exports = [
   './node_modules/jquery/dist/jquery.js',
-  './src/js/plugin/sliderTab.js'
+  './plugins/tabs/tab.js',
+  './plugins/slick/slick.js'
 ];

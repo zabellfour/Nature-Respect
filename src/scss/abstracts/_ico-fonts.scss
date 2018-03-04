@@ -23,6 +23,13 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+.icon-arrow-right:before {
+	content: "\e905";
+}
+.icon-arrow-left:before {
+	content: "\e906";
+}
 .icon-cross:before {
 	content: "\e900";
 }
