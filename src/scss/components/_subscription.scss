@@ -1,0 +1,152 @@
+/* subscription form style */
+
+.subscription-wrap {
+	padding: 40px 0 95px;
+	background: #cbd537;
+	position: relative;
+	@include media('<tablet') {
+		padding: 40px 0 30px;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: -45px;
+		left: 0;
+		right: 0;
+		height: 45px;
+		background: url(../images/decor07.png) 0 0/cover no-repeat;
+		@include media('<tablet') {
+			display: none;
+		}
+	}
+	.container {
+		position: relative;
+		margin: -70px auto 0;
+		max-width: 1195px;
+		padding: 0 50px;
+		@include media('<desktop') {
+			padding: 0 35px;
+			margin: -55px auto 0;
+		}
+		@include media('<tablet') {
+			padding: 0 20px;
+		}
+	}
+	.holder {
+		padding: 36px 15px 40px;
+		background: #fff;
+		outline: 20px solid rgba(255, 255, 255, .5);
+		max-width: 1145px;
+		@include media('<tablet') {
+			outline: 12px solid rgba(255, 255, 255, .5);
+			padding: 14px 7px 18px;
+		}
+	}
+	.heading {
+		font-size: 21px;
+		line-height: 22px;
+		text-align: center;
+		color: #c2cd23;
+		margin: 0 0 39px;
+		@include media('<tablet') {
+			font-size: 13px;
+			line-height: 17px;
+			margin: 0;
+		}
+		p {
+			@include media('<tablet') {
+				margin: 0 0 5px;
+			}
+		}
+	}
+	.h3 {
+		font: 30px/32px $base-font-hobo;
+		margin: 0 0 15px;
+		@include media('<tablet') {
+			font-size: 15px;
+			line-height: 17px;
+			margin: 0 0 9px;
+		}
+	}
+}
+
+.subscription-form {
+	max-width: 840px;
+	margin: 0 auto;
+	@include media('<tablet') {
+		padding: 0 23px;
+	}
+	.input-col {
+		position: relative;
+		width: 100%;
+		margin: 0 20px 0 0;
+		@include media('<tablet') {
+			margin: 0;
+		}
+	}
+	.alert-success {
+		font: 31px/33px $base-font-hobo;
+		color: #6b2a00;
+		display: none;
+		text-align: center;
+	}
+	.error {
+		.field {
+			border-color: #ff0000;
+		}
+		.error-msg {
+			display: block;
+		}
+	}
+	label.error {
+		font-size: 21px;
+		line-height: 23px;
+		color: #ff0000;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		@include media('<desktop') {
+			font-size: 18px;
+		}
+		@include media('<tablet') {
+			display: none;
+		}
+	}
+	.field {
+		width: 100%;
+		font-size: 25px;
+		line-height: 41px;
+		height: 41px;
+		padding: 0 15px;
+		@include media('<tablet') {
+			height: 21px;
+			font-size: 13px;
+			line-height: 21px;
+			padding: 0 5px;
+		}
+	}
+	.btn-submit {
+		&:focus {
+			outline: none;
+		}
+		@include media('<desktop') {
+			font-size: 19px;
+			line-height: 21px;
+		}
+		@include media('<tablet') {
+			font-size: 13px;
+			line-height: 21px;
+			margin: 17px 0 0;
+			padding: 0 10px;
+		}
+	}
+	form {
+		display: flex;
+		justify-content: space-between;
+		@include media('<tablet') {
+			display: block;
+			text-align: center;
+		}
+	}
+}

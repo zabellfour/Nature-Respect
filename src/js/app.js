@@ -5,7 +5,9 @@
 
 import headerNav from './modules/mobileNav.js';
 import tabs from './modules/tab.js';
-import  productSlider from './modules/slick.js';
+import productSlider from './modules/slick.js';
+import openClose from './modules/openClose.js';
+import validationForm from './modules/validation.js';
 
 ( ($) => {
   'use strict';
@@ -15,6 +17,8 @@ import  productSlider from './modules/slick.js';
     headerNav.init();
     tabs.init();
     productSlider.init();
+    openClose.init();
+    validationForm.init();
   });
 
 })(jQuery);

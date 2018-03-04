@@ -1,9 +1,12 @@
 var tabs = (function($) {
     'use strict';
+    var tabHolder = $('ul.product-list');
+
+    if (!tabHolder.length) return;
 
     // content tabs init
     function initTabs() {
-        jQuery('ul.product-list').tabset({
+        tabHolder.tabset({
             tabLinks: 'a',
             defaultTab: false
         });
