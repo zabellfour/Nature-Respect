@@ -3,7 +3,8 @@
 .product-wrap {
 	background: url(../images/decor03.png) 50% 0/cover no-repeat;
 	padding: 110px 0 35px;
-	position: relative;
+  position: relative;
+  z-index: 102;
 	@include media('<tablet') {
 		padding: 103px 0 42px;
 	}
