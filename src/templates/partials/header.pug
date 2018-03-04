@@ -2,32 +2,34 @@
 #header
 	.container
 		span.btn-close
-		a(href="#").logo-header
-			img(src="assets/images/logo.png", alt="#" )
+			span.decor1
+			span.decor2
+		a(href="#").logo-header-mob
+			img(src="assets/images/logo-mob.png", alt="#" )
 		ul.nav-header
-			li.item
-				img(src="assets/images/icon01.png", alt="#")
+			li.item.is-active
+				img(src="assets/images/home.svg", alt="#")
 				a(href="#") Home
 			li.item
-				img(src="assets/images/icon02.png", alt="#")
+				img(src="assets/images/concept.svg", alt="#")
 				a(href="#") Concept
 			li.item
-				img(src="assets/images/icon03.png", alt="#")
+				img(src="assets/images/products.svg", alt="#")
 				a(href="#") Products
 			li.item
-				img(src="assets/images/icon04.png", alt="#")
+				img(src="assets/images/recipes.svg", alt="#")
 				a(href="#") Recipes
 			li.item
-				img(src="assets/images/icon05.png", alt="#")
+				img(src="assets/images/about.svg", alt="#")
 				a(href="#") All about poultry
 			li.item
-				img(src="assets/images/icon06.png", alt="#")
+				img(src="assets/images/contact.svg", alt="#")
 				a(href="#") Contact
 			li.item
-				img(src="assets/images/icon07.png", alt="#")
+				img(src="assets/images/news.svg", alt="#")
 				a(href="#") News
 			li.item
-				img(src="assets/images/icon08.png", alt="#")
+				img(src="assets/images/coupons.svg", alt="#")
 				a(href="#") Gewinne/Coupons
 		ul.lang-list
 			li
@@ -41,9 +43,13 @@
 					img(src="assets/images/lang03.png", alt="#")
 		ul.social-list
 			li
-				i.icon
+				i.icon.icon-facebook_icon
 			li
-				i.icon
+				i.icon.icon-pinterest_icon
 			li
-				i.icon
-	span.btn-mobile
+				i.icon.icon-youtube_icon
+	.logo-holder
+		a(href="#").logo-header
+			img(src="assets/images/logo.png", alt="#" )
+		span.btn-mobile
+			span.btn-mobile__decor

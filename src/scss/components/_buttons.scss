@@ -1,4 +1,6 @@
 .bnt-raggy {
+  @include animate(opacity);
+  text-align: center;
   background-size: 100% 100%;
   background-image: url('../images/btn-raggy-bg.svg');
   padding: 9px 29px 13px;
@@ -8,7 +10,6 @@
   color: $white;
   min-width: 190px;
   opacity: 1;
-  @include animate(opacity);
   &:hover{
     opacity: .8;
   }

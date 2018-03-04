@@ -1,21 +1,55 @@
 $green-light:#cfe849;
 .home-banner {
     position: relative;
-    background-color: $green-light;
     color: $dark-red;
     max-width: 1920px;
     margin: 0 auto;
-    &:after{
+    z-index: 2;
+    .chicken-image-holder {
       position: absolute;
-      bottom:0;
-      left:0;
-      right:0;
-      height: 110px;
-      content:'';
-      background-image: url('../images/home-banner-decoration.png');
-      background-size: 100% auto;
-      background-position: 50% 100%;
-      background-repeat: no-repeat;
+      left: 351px;
+      bottom: 0px;
+      width: 357px;
+      overflow: hidden;
+      height: 212px;
+      vertical-align: bottom;
+      display: flex;
+      align-items: flex-end;
+      @include media('<1600px') {
+
+        left:318px;
+        width:241px;
+      }
+      @include media('<widescreen') {
+          left:226px;
+          width:200px;
+      }
+      @include media('<desktop') {
+        width:194px;
+        left:9px;
+        transform:rotate(1deg) translate(0) !important ;
+
+      }
+      @include media('<tablet') {
+        transform:rotate(-3deg) translate(0) !important ;
+        bottom:2px;
+      }
+      @include media('<tablet') {
+        left:4px;
+        width:115px;
+      }
+        img {
+            width: 100%;
+            vertical-align: bottom;
+            height: auto;
+        }
+    }
+    .chicken-photo-holder {
+        position: absolute;
+        left: 15px;
+        bottom: -260px;
+        width: 730px;
+        z-index: -1;
     }
     .img-holder {
         overflow: hidden;
@@ -100,14 +134,12 @@ $green-light:#cfe849;
         width: 100%;
         vertical-align: top;
         @include media('<desktop') {
-          max-width: none;
-          width: 115%;
-          float: right;
+            max-width: none;
+            width: 115%;
+            float: right;
         }
         @include media('<tablet') {
-           
-            width: 139%;
-
+            width: 146%;
         }
     }
     .element-sky1 {
@@ -122,6 +154,14 @@ $green-light:#cfe849;
         @include media('<widescreen') {
             width: 170px;
         }
+        @include media('<tablet') {
+          width:150px;
+          top:5%;
+        }
+        @include media('<phone') {
+          width:100px;
+          right:-50px;
+        }
     }
     .element-sky2 {
         position: absolute;
@@ -135,6 +175,15 @@ $green-light:#cfe849;
         @include media('<widescreen') {
             width: 70px;
         }
+        @include media('<tablet') {
+          width:100px;
+          top:1%;
+        }
+        @include media('<phone') {
+          width:30px;
+          top:20px;
+          left: 5%;
+        }
     }
     .element-sky3 {
         position: absolute;
@@ -147,6 +196,15 @@ $green-light:#cfe849;
         background-repeat: no-repeat;
         @include media('<widescreen') {
             width: 120px;
+        }
+        @include media('<tablet') {
+          width:120px;
+          top:8%;
+        }
+        @include media('<phone') {
+          width:40px;
+          right:0;
+          top: 2%;
         }
     }
     .element-sun {
@@ -162,6 +220,19 @@ $green-light:#cfe849;
         @include media('<widescreen') {
             width: 80px;
             top: 10%;
+        }
+        @include media('<tablet') {
+          width: 80px;
+          top: -22px;
+          right: 0;
+          left: auto;
+          width:60px;
+        }
+        @include media('<phone') {
+          top: -46px;
+          right: 13px;
+          left: auto;
+          width: 29px;
         }
     }
     .element-tree {
@@ -184,12 +255,19 @@ $green-light:#cfe849;
             width: 170px;
         }
         @include media('<tablet') {
-          right: 34px;
-          bottom: -29px;
+            right: 34px;
+            bottom: 0px;
+            max-width: 38%;
+            left: auto;
+            width: 203px;
+            transform: translateX(0);
+        }
+        @include media('<phone') {
+          right: 24px;
+          bottom: 17px;
           max-width: 38%;
           left: auto;
-          width: 159px;
-            transform:translateX(0);
+          width: 100px;
         }
     }
 }

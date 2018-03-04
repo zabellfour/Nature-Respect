@@ -1,0 +1,108 @@
+.present-section {
+    position: relative;
+    padding-top: 0px;
+    .row {
+        overflow: hidden;
+        .single-text-box {
+            text-align: center;
+            width: 400px;
+            margin-right: 10%;
+            float: right;
+            margin-bottom: 50px;
+            .h3 {
+                font-family: $base-font-hobo;
+                text-transform: uppercase;
+                font-size: 31px;
+                p {
+                    margin-bottom: 25px;
+                }
+                .small {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+    &:before {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        height: 110px;
+        content: '';
+        // background-image: url('../images/home-banner-decoration.png');
+        background-size: 100% auto;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+    .chicken-photo-holder {
+        position: absolute;
+        left: 29px;
+        top: -234px;
+        width: 730px;
+        z-index: 1;
+        @include media('<1600px') {
+            width: 500px;
+            top: -180px;
+            left: 94px;
+        }
+        @include media('<widescreen') {
+            width: 440px;
+            top: -180px;
+            left: 17px;
+        }
+        @include media('<desktop') {
+            left: -200px;
+            transform: translate(0) !important;
+        }
+        @include media('<tablet') {
+            left: -106px;
+            width: 248px;
+            top: -89px;
+        }
+    }
+}
+
+.accelerators-holder {
+    text-align: center;
+    .owl-item img,
+    img {
+        width: 200px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .accelerator-element {
+        position: relative;
+        .collapse-text-box{
+     display: none;
+         overflow: hidden;
+        }
+        .circle-text {
+            margin-bottom: 0;
+            font-size: 21px;
+            font-weight: 400;
+            font-family: $base-font-hobo;
+            margin-bottom: -10px;
+        }
+        .image-box {
+            position: absolute;
+            top: 17px;
+            left: 63px;
+            width: 50px;
+            height: auto;
+            transform: rotate(-9deg);
+        }
+        .image-animal+.image-box {
+            position: absolute;
+            top: 3px;
+            left: 80px;
+            width: 38px;
+        }
+        .image-nature+.image-box {
+            position: absolute;
+            top: 9px;
+            left: 84px;
+            width: 33px;
+        }
+    }
+}
