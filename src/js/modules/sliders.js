@@ -3,19 +3,20 @@ var sliders = {
         $('.accelerators-holder').owlCarousel({
           items:4,
           mouseDrag: false,
+          dots:false,
+          nav:true,
            responsive:{
         0:{
             items:1,
             nav:true
         },
-      768:{
+       768:{
             items:2,
-            nav:false
+      
         },
        1024:{
             items:4,
-            nav:true,
-            loop:false
+          
         }
     }
         });

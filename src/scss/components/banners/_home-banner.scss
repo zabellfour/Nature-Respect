@@ -6,38 +6,36 @@ $green-light:#cfe849;
     margin: 0 auto;
     z-index: 2;
     .chicken-image-holder {
-      position: absolute;
-      left: 351px;
-      bottom: 0px;
-      width: 357px;
-      overflow: hidden;
-      height: 212px;
-      vertical-align: bottom;
-      display: flex;
-      align-items: flex-end;
-      @include media('<1600px') {
-
-        left:318px;
-        width:241px;
-      }
-      @include media('<widescreen') {
-          left:226px;
-          width:200px;
-      }
-      @include media('<desktop') {
-        width:194px;
-        left:9px;
-        transform:rotate(1deg) translate(0) !important ;
-
-      }
-      @include media('<tablet') {
-        transform:rotate(-3deg) translate(0) !important ;
-        bottom:2px;
-      }
-      @include media('<tablet') {
-        left:4px;
-        width:115px;
-      }
+        position: absolute;
+        left: 351px;
+        bottom: 0px;
+        width: 357px;
+        overflow: hidden;
+        height: 212px;
+        vertical-align: bottom;
+        display: flex;
+        align-items: flex-end;
+        @include media('<1600px') {
+            left: 318px;
+            width: 241px;
+        }
+        @include media('<widescreen') {
+            left: 226px;
+            width: 200px;
+        }
+        @include media('<desktop') {
+            width: 194px;
+            left: 9px;
+            transform: rotate(1deg) translate(0) !important;
+        }
+        @include media('<tablet') {
+            transform: rotate(-3deg) translate(0) !important;
+            bottom: 2px;
+        }
+        @include media('<tablet') {
+            left: 4px;
+            width: 115px;
+        }
         img {
             width: 100%;
             vertical-align: bottom;
@@ -70,10 +68,17 @@ $green-light:#cfe849;
             right: 8%;
             top: 80px;
         }
+        @include media('<desktop') {
+            top: 40px;
+        }
         @include media('<tablet') {
             top: 100%;
             margin-top: 15px;
-            right: 40px;
+            right: 30%;
+        }
+        @include media('<phone') {
+            right: 8%;
+            top: 97%;
         }
         .h3 {
             font-size: 45px;
@@ -107,6 +112,7 @@ $green-light:#cfe849;
             }
             @include media('<desktop') {
                 font-size: 40px;
+                padding-bottom: 9px;
             }
             @include media('<tablet') {
                 font-size: 30px;
@@ -127,6 +133,9 @@ $green-light:#cfe849;
             display: block;
             @include media('<1400px') {
                 font-size: 15px;
+            }
+            @include media('<tablet') {
+              font-size: 8px;  
             }
         }
     }
@@ -155,12 +164,12 @@ $green-light:#cfe849;
             width: 170px;
         }
         @include media('<tablet') {
-          width:150px;
-          top:5%;
+            width: 150px;
+            top: 5%;
         }
         @include media('<phone') {
-          width:100px;
-          right:-50px;
+            width: 100px;
+            right: -50px;
         }
     }
     .element-sky2 {
@@ -176,13 +185,13 @@ $green-light:#cfe849;
             width: 70px;
         }
         @include media('<tablet') {
-          width:100px;
-          top:1%;
+            width: 100px;
+            top: 1%;
         }
         @include media('<phone') {
-          width:30px;
-          top:20px;
-          left: 5%;
+            width: 30px;
+            top: 20px;
+            left: 5%;
         }
     }
     .element-sky3 {
@@ -198,13 +207,13 @@ $green-light:#cfe849;
             width: 120px;
         }
         @include media('<tablet') {
-          width:120px;
-          top:8%;
+            width: 120px;
+            top: 8%;
         }
         @include media('<phone') {
-          width:40px;
-          right:0;
-          top: 2%;
+            width: 40px;
+            right: 0;
+            top: 2%;
         }
     }
     .element-sun {
@@ -222,17 +231,17 @@ $green-light:#cfe849;
             top: 10%;
         }
         @include media('<tablet') {
-          width: 80px;
-          top: -22px;
-          right: 0;
-          left: auto;
-          width:60px;
+            width: 80px;
+            top: -22px;
+            right: 0;
+            left: auto;
+            width: 60px;
         }
         @include media('<phone') {
-          top: -46px;
-          right: 13px;
-          left: auto;
-          width: 29px;
+            top: -46px;
+            right: 13px;
+            left: auto;
+            width: 29px;
         }
     }
     .element-tree {
@@ -263,11 +272,11 @@ $green-light:#cfe849;
             transform: translateX(0);
         }
         @include media('<phone') {
-          right: 24px;
-          bottom: 17px;
-          max-width: 38%;
-          left: auto;
-          width: 100px;
+            right: 24px;
+            bottom: 17px;
+            max-width: 38%;
+            left: auto;
+            width: 100px;
         }
     }
 }

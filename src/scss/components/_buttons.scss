@@ -11,6 +11,11 @@
   min-width: 190px;
   opacity: 1;
   font-family: $base-font-hobo;
+  @include media('<tablet') {
+    font-size: 12px;
+    min-width: 120px;
+  }
+
   &:hover{
     opacity: .8;
   }

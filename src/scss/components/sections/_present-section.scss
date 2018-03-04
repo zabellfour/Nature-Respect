@@ -1,6 +1,9 @@
 .present-section {
     position: relative;
     padding-top: 0px;
+    @include media('<tablet') {
+        padding-top: 118px;
+    }
     .container {
         position: relative;
     }
@@ -20,7 +23,7 @@
             top: -22px
         }
         @include media('<widescreen') {
-          display: none;
+            display: none;
         }
     }
     &:after {
@@ -35,9 +38,18 @@
         background-position: 50% calc(100% + 60px);
         background-repeat: no-repeat;
         z-index: -1;
+        @include media('<1500px') {
+            bottom: -66px;
+        }
         @include media('<widescreen') {
             margin-bottom: 0px;
             bottom: -50px;
+        }
+        @include media('<desktop') {
+            margin-bottom: 17px;
+        }
+        @include media('<tablet') {
+            display: none;
         }
     }
     .row {
@@ -51,6 +63,18 @@
             @include media('<widescreen') {
                 margin-bottom: 15px;
             }
+            @include media('<tablet') {
+                margin: 0 0 15px;
+                padding: 0 15px;
+                
+                width: 100%;
+                font-size: 18px;
+            }
+            @include media('<phone') {
+              font-size: 13px;
+              padding-left: 0;
+              padding-right: 0;
+            }
             .capitalize {
                 font-weight: 400;
                 text-transform: capitalize;
@@ -58,45 +82,74 @@
             .bnt-raggy {
                 font-size: 25px;
                 padding: 12px 29px 17px;
+                @include media('<tablet') {
+                    font-size: 12px;
+                    padding: 8px 9px;
+                }
             }
             .h3 {
                 font-family: $base-font-hobo;
                 text-transform: uppercase;
                 font-size: 31px;
                 margin-bottom: 12px;
+                @include media('<tablet') {
+                  text-transform: none;
+                  margin-bottom: 15px;
+                }
+                br{
+                  @include media('<phone') {
+                    display: none;
+                  }
+                }
+                @include media('<desktop') {
+                font-weight: 400;
+                }
+                @include media('<tablet') {
+                    font-size: 22px;
+                }
+                @include media('<phone') {
+                  font-size: 17px;
+                }
                 p {
                     margin-bottom: 25px;
+                    @include media('<tablet') {
+                      margin-bottom: 9px;
+                    }
                 }
                 .small {
                     font-size: 21px;
+                    @include media('<tablet') {
+                      font-size: inherit;
+                    }
                 }
             }
         }
     }
     &:before {
-      @include media('<widescreen') {
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-        right: 0;
-        height: 110px;
-        content: '';
-        background-image: url('../images/home-banner-decoration.png');
-        background-size: 100% auto;
-        background-position: 50% 100%;
-        background-repeat: no-repeat;
-        z-index:101;
-        @include media('<desktop') {width: 115%;
-          background-position: 100% 100%;
-          right: 0;
-          left: auto;
+        @include media('<widescreen') {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            height: 110px;
+            content: '';
+            background-image: url('../images/home-banner-decoration.png');
+            background-size: 100% auto;
+            background-position: 50% 100%;
+            background-repeat: no-repeat;
+            z-index: 101;
+            @include media('<desktop') {
+                width: 115%;
+                background-position: 100% 100%;
+                right: 0;
+                left: auto;
+            }
+            @include media('<tablet') {
+                width: 146%;
+                margin-left: 50%;
+                background-image: url('../images/home-banner-decoration-resp.png');
+            }
         }
-        @include media('<tablet') {
-          width: 146%;
-          margin-left: 50%;
-          background-image: url('../images/home-banner-decoration-resp.png');
-        }
-      }
     }
     .chicken-photo-holder {
         position: absolute;
@@ -133,9 +186,50 @@
     min-height: 698px;
     position: relative;
     z-index: 100;
+    overflow: hidden;
     @include media('<widescreen') {
         padding: 0;
-        min-height:540px;
+        min-height: 540px;
+    }
+    @include media('<tablet') {
+      min-height: 0;
+      padding-bottom: 79px;
+    }
+    .owl-nav {
+        position: static;
+        .owl-prev {
+            transform: rotate(180deg);
+        }
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 138px;
+            left: -5px;
+            width: 34px;
+            height: 34px;
+            background: #e3e892;
+            border-radius: 50%;
+            margin-top: -17px;
+            color: transparent;
+            text-indent: -9999px;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 45%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                width: 15px;
+                height: 15px;
+                border: 3px solid #c7d126;
+                border-left: none;
+                border-bottom: none;
+            }
+        }
+        .owl-next {
+            right: -5px;
+            left: auto;
+            color: transparent;
+        }
     }
     .owl-item img,
     img {
@@ -147,6 +241,12 @@
             width: 70%;
             margin: 0 auto;
         }
+        @include media('<desktop') {
+            width: 50%;
+        }
+        @include media('<tablet') {
+            width: 208px;
+        }
     }
     .accelerator-element {
         position: relative;
@@ -154,45 +254,51 @@
         @include media('<widescreen') {
             padding-top: 20px;
         }
+        @include media('<tablet') {
+            max-width: 300px;
+            margin: 0 auto;
+        }
         @include animate(padding-top .6s);
         &.active {
-            padding-top: 0;
-            .owl-item img,
-            img {
-                width: 301px;
-                @include media('<widescreen') {
-                    width: 80%;
+            @include media('>desktop') {
+                padding-top: 0;
+                .owl-item img,
+                img {
+                    width: 301px;
+                    @include media('<widescreen') {
+                        width: 80%;
+                    }
                 }
-            }
-            .circle-text {
-                font-size: 31px;
-                @include media('<widescreen') {
-                    font-size: 22px;
+                .circle-text {
+                    font-size: 31px;
+                    @include media('<widescreen') {
+                        font-size: 22px;
+                    }
                 }
-            }
-            .image-farmer+.image-box {
-                @include media('>=widescreen') {
-                    top: 48px !important;
-                    left: 7px
+                .image-farmer+.image-box {
+                    @include media('>=widescreen') {
+                        top: 48px !important;
+                        left: 7px
+                    }
                 }
-            }
-            .image-animal+.image-box {
-                @include media('>=widescreen') {
-                    top: 30px;
-                    left: 15px;
+                .image-animal+.image-box {
+                    @include media('>=widescreen') {
+                        top: 30px;
+                        left: 15px;
+                    }
                 }
-            }
-            .image-nature+.image-box {
-                @include media('>=widescreen') {
-                    top: 26px;
-                    left: 36px;
+                .image-nature+.image-box {
+                    @include media('>=widescreen') {
+                        top: 26px;
+                        left: 36px;
+                    }
                 }
-            }
-            .image-customer+.image-box {
-                @include media('>=widescreen') {
-                    top: 42px;
-                    left: -6px;
-                    transform: rotate(-12deg);
+                .image-customer+.image-box {
+                    @include media('>=widescreen') {
+                        top: 42px;
+                        left: -6px;
+                        transform: rotate(-12deg);
+                    }
                 }
             }
         }
@@ -204,11 +310,33 @@
                 font-size: 18px;
                 padding: 10px;
             }
+            @include media('<desktop') {
+                display: block !important;
+                height: auto !important;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            @include media('<tablet') {
+              font-size: 17px;
+            }
+            @include media('<phone') {
+              font-size: 13px;
+              padding-left:0;
+              padding-right: 0;
+              padding-top: 9px;
+              line-height: 1.1;
+            }
             p {
                 margin-bottom: 15px;
                 &:first-letter {
                     font-size: 31px;
                     line-height: 1;
+                    @include media('<tablet') {
+                      font-size: 19px;
+                    }
+                }
+                @include media('<tablet') {
+                  margin-bottom: 18px;
                 }
             }
         }
@@ -245,6 +373,14 @@
                 top: 30px;
                 left: 20px;
             }
+            @include media('<desktop') {
+                top: 14%;
+                left: 22%;
+            }
+            @include media('<tablet') {
+                top: 16%;
+                left: 9%;
+            }
         }
         .image-animal+.image-box {
             position: absolute;
@@ -255,6 +391,14 @@
                 top: 17px;
                 left: 34px;
             }
+            @include media('<desktop') {
+                top: 8%;
+                left: 26%;
+            }
+            @include media('<tablet') {
+                top: 9%;
+                left: 10%;
+            }
         }
         .image-nature+.image-box {
             position: absolute;
@@ -262,8 +406,16 @@
             left: 61px;
             width: 33px;
             @include media('<widescreen') {
-              top: 12px;
-              left: 43px;
+                top: 12px;
+                left: 43px;
+            }
+            @include media('<desktop') {
+                top: 5%;
+                left: 29%;
+            }
+            @include media('<tablet') {
+                top: 6%;
+                left: 18%;
             }
         }
         .image-customer+.image-box {
@@ -273,8 +425,16 @@
             height: auto;
             transform: rotate(-16deg);
             @include media('<widescreen') {
-              top: 26px;
-              left: 14px;
+                top: 26px;
+                left: 14px;
+            }
+            @include media('<desktop') {
+                top: 12%;
+                left: 22%;
+            }
+            @include media('<tablet') {
+                top: 12%;
+                left: 7%;
             }
         }
         .headind-img-holder {
