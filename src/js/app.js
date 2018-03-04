@@ -4,10 +4,12 @@
 // Feel free with using ES6 here.
 
 import headerNav from './modules/mobileNav.js';
-import sliderTab from './modules/sliderTab.js';
+
 import diffSpeed from './modules/paralaxEl.js';
 import common from './modules/commonModule.js';
 import sliders from './modules/sliders.js';
+import tabs from './modules/tab.js';
+import  productSlider from './modules/slick.js';
 
 ( ($) => {
   'use strict';
@@ -15,12 +17,17 @@ import sliders from './modules/sliders.js';
   // When DOM is ready
   $(() => {
     headerNav.init();
-    sliderTab.init();
+
+
 
     //module for paralax elements
     diffSpeed.init();
     common.circleText();
     sliders.accSlider();
+
+
+    tabs.init();
+    productSlider.init();
 
   });
 

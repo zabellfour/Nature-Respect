@@ -2,6 +2,8 @@
 //
 // Note: You can import SCSS and CSS files as well.
 
-@import './src/plugins/normalize/normalize',
-        './src/plugins/owlCarousel/owl.carousel.min',
-        './src/plugins/owlCarousel/owl.theme.default.min';
+@import '../..//plugins/normalize/normalize',
+        '../..//plugins/owlCarousel/owl.carousel.min',
+        '../..//plugins/owlCarousel/owl.theme.default.min',
+        '../../node_modules/normalize.css/normalize',
+        '../../plugins/slick/slick.css';
