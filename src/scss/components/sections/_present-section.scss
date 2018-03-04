@@ -74,6 +74,7 @@
         }
     }
     &:before {
+      @include media('<widescreen') {
         position: absolute;
         bottom: 100%;
         left: 0;
@@ -84,7 +85,18 @@
         background-size: 100% auto;
         background-position: 50% 100%;
         background-repeat: no-repeat;
-        z-index: 0;
+        z-index:101;
+        @include media('<desktop') {width: 115%;
+          background-position: 100% 100%;
+          right: 0;
+          left: auto;
+        }
+        @include media('<tablet') {
+          width: 146%;
+          margin-left: 50%;
+          background-image: url('../images/home-banner-decoration-resp.png');
+        }
+      }
     }
     .chicken-photo-holder {
         position: absolute;
