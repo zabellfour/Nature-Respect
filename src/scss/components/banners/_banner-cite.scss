@@ -1,0 +1,45 @@
+/* banner cite style */
+
+.banner-cite {
+	.heading {
+		max-width: 1040px;
+		padding: 0 10px;
+		margin: 185px auto 0;
+		text-align: center;
+		position: relative;
+		@include media('<desktop') {
+			margin: 45px auto 0;
+			max-width: 700px;
+		}
+	}
+	.h3 {
+		font: 41px/55px $base-font-hobo;
+		@include media('<desktop') {
+			font-size: 25px;
+			line-height: 30px;
+		}
+		@include media('<tablet') {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+	.desktop-img {
+		@include media('<tablet') {
+			display: none;
+		}
+	}
+	.mobile-img {
+		display: none;
+		@include media('<tablet') {
+			display: block;
+		}
+	}
+	img {
+		width: 100%;
+		margin: -105px 0 0;
+		display: block;
+		@include media('<tablet') {
+			margin: -20px 0 0;
+		}
+	}
+}
