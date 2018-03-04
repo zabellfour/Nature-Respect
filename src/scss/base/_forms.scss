@@ -18,11 +18,12 @@ textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   box-sizing: border-box;
+  font-family: $base-font-sans-serif;
   border: 1px solid $form-element-border-color;
   padding: $form-element-padding;
 
   &:focus {
-    border-color: $form-element-focus-border-color;
+    outline: none;
   }
 
   @include placeholder {
@@ -47,4 +48,16 @@ input[type='submit'] {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   cursor: pointer;
+}
+
+input[type='submit'] {
+  @include animate(opacity);
+  font: 25px/27px $base-font-hobo;
+  background: #cbd537;
+  color: #fff;
+  border: none;
+  padding: 5px 20px;
+  &:hover {
+    opacity: .8;
+  }
 }

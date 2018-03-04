@@ -3,6 +3,9 @@ var productSlider = (function ($) {
 
     var slider = $('.product-slider');
 
+    if (!slider.length) return;
+
+    // init slider
     function initSlider() {
         slider.slick({
             nextArrow: '<span class="next"><i class="icon icon-arrow-right"></i></span>',

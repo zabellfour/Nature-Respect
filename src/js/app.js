@@ -9,26 +9,32 @@ import diffSpeed from './modules/paralaxEl.js';
 import common from './modules/commonModule.js';
 import sliders from './modules/sliders.js';
 import tabs from './modules/tab.js';
-import  productSlider from './modules/slick.js';
+import productSlider from './modules/slick.js';
+import openClose from './modules/openClose.js';
+import validationForm from './modules/validation.js';
 
 ( ($) => {
   'use strict';
 
   // When DOM is ready
   $(() => {
+    //init mobile navigation
     headerNav.init();
-
-
 
     //module for paralax elements
     diffSpeed.init();
     common.circleText();
     sliders.accSlider();
 
-
+    //init sliderTab
     tabs.init();
     productSlider.init();
 
+    //init openClose for footer mobile
+    openClose.init();
+
+    //init validation for subscription form
+    validationForm.init();
   });
 
 })(jQuery);
