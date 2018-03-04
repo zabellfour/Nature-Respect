@@ -246,6 +246,13 @@
           </div>
         </div>
       </section>
+      <section style="width:100%; height:800px; background:blue;"></section>
+      <div class="map-holder">
+        <div class="container">
+          <h4 class="title">Where to find us</h4>
+        </div>
+        <div id="map"></div>
+      </div>
       <!-- subscription form of the site-->
       <div class="subscription-wrap">
         <div class="container">
@@ -321,6 +328,55 @@
       </div>
       <script src="assets/js/vendor.min.js" defer=""></script>
       <script src="assets/js/app.js" defer=""></script>
+      <!--provide this script in footer bofore call google map with necessary data-->
+      <!--data can be providen from WP admin to lacation array-->
+      <script>
+        function initMap() {
+          //samples of data
+              var locations = [
+            ['<div class="tooltip-map"><h3>Name of Market</h3><p>Address 1</p><p>Address 2</p><p>Link to GoogleMapsRoute</p><a href="@">http://www.address.de</a> ', 50.307872, 10.822161],
+            ['<div class="tooltip-map"><h3>Name of Market2</h3><p>Address 1</p><p>Address 2</p><p>Link to GoogleMapsRoute</p><a href="@">http://www.address.de</a> ',50.450261, 10.718627],
+            ['<div class="tooltip-map"><h3>Name of Market3</h3><p>Address 1</p><p>Address 2</p><p>Link to GoogleMapsRoute</p><a href="@">http://www.address.de</a> ',40.550261, 10.618627],
+            ['<div class="tooltip-map"><h3>Name of Market4</h3><p>Address 1</p><p>Address 2</p><p>Link to GoogleMapsRoute</p><a href="@">http://www.address.de</a> ',50.250261, 10.928627],
+            ['<div class="tooltip-map"><h3>Name of Market5</h3><p>Address 1</p><p>Address 2</p><p>Link to GoogleMapsRoute</p><a href="@">http://www.address.de</a> ',50.150261, 10.678627],
+            ['<div class="tooltip-map"><h3>Name of Market6</h3><p>Address 1</p><p>Address 2</p><p>Link to GoogleMapsRoute</p><a href="@">http://www.address.de</a> ',50.055261, 10.178627],
+          ];
+        
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 9,
+            //set center coordinates
+            center: new google.maps.LatLng( 50.307872, 10.822161),  
+          });
+        
+          var infowindow = new google.maps.InfoWindow(
+         
+          );
+        
+          var marker, i;
+        
+          var icon = {
+            url: "assets/images/marker.svg",
+        
+            scaledSize: new google.maps.Size(44, 34),
+          };  
+        
+          for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+              position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+              map: map,
+              icon: icon
+            });
+        
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function() {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+              }
+            })(marker, i));
+          }
+        }
+      </script>
+      <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjFiOeRB49qv_F9Ek8_M47BLBAUI4ZUP0&amp;callback=initMap"></script>
     </div>
   </body>
 </html>

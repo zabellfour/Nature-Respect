@@ -3,10 +3,13 @@ html(lang='en')
   include ../partials/head
   body
     #wrapper
+      - var has_map = true
       include ../partials/header
       include ../partials/banners/home-banner
       include ../partials/sections/present-section
       include ../partials/product
+      section(style="width:100%; height:800px; background:blue")
+      include ../partials/sections/map
       include ../partials/subscription
       include ../partials/foot
 
