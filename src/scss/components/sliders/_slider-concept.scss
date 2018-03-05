@@ -1,0 +1,56 @@
+/* slider-concept style */
+
+.slider-concept {
+	.tab-nav {
+		@extend %listreset;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		li {
+			margin: 0 20px;
+		}
+	}
+	.tab-content {
+		.js-tab-hidden {
+			height: 0;
+			overflow: hidden;
+		}
+		>.active {
+			height: auto;
+		}
+	}
+	.slick-slide {
+		padding: 0 15px;
+	}
+	.img-box {
+		border: 22px solid #d1bdb3;
+		position: relative;
+		&:before {
+			@include animate(opacity);
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			background: rgba(209, 189, 179, .65);
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.text-box {
+		@include animate(opacity);
+		text-align: center;
+		padding: 15px;
+		opacity: 0;
+	}
+	.slick-center {
+		.text-box {
+			opacity: 1;
+		}
+		.img-box:before {
+			opacity: 0;
+		}
+	}
+}

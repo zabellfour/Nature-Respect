@@ -2,8 +2,6 @@ var validationForm = (function($) {
     'use strict';
     var form = $('#subscript-form');
 
-    if (!form.length) return;
-
     // validation init
     function init() {
 

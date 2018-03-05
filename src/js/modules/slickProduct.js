@@ -3,8 +3,6 @@ var productSlider = (function ($) {
 
     var slider = $('.product-slider');
 
-    if (!slider.length) return;
-
     // init slider
     function initSlider() {
         slider.slick({
