@@ -1,5 +1,5 @@
 .map-holder {
-    clip-path: ellipse(99% 105% at 30.5% 107%);
+   // clip-path: ellipse(99% 105% at 30.5% 107%);
     background: #cbd537;
     padding-top: 35px;
     margin-top: -450px;
@@ -16,9 +16,9 @@
 
 #map {
     height: 730px;
-    clip-path: ellipse(100% 97% at 33% 98%);
+   clip-path: polygon(0 0, 8.6% 1.4%, 22% 0, 49% 2.9%, 74% 14%, 90% 29%, 100% 42.5%, 100% 100%, 0 100%);
     overflow: hidden;
-    box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+   // box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .gm-style-iw {
