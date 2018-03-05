@@ -12,6 +12,8 @@ import tabs from './modules/tab.js';
 import productSlider from './modules/slick.js';
 import openClose from './modules/openClose.js';
 import validationForm from './modules/validation.js';
+import menuSlider from './modules/sliderMenu.js';
+
 
 ( ($) => {
   'use strict';
@@ -35,6 +37,9 @@ import validationForm from './modules/validation.js';
 
     //init validation for subscription form
     validationForm.init();
+
+    //init menuSlider
+    menuSlider.init();
   });
 
 })(jQuery);

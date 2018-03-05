@@ -1,24 +1,43 @@
+.map-shadow-holder{
+ padding-top: 25px; 
+ margin-top: -410px;
+ background-color:rgba(255,255,255,.7);;
+ position: relative;
+ mask-image: url('../images/map-mask3.png');
+ mask-mode: alpha;
+
+ mask-mode: alpha;
+ mask-repeat: no-repeat;
+ mask-size: 100% 100%;
+}
 .map-holder {
-   // clip-path: ellipse(99% 105% at 30.5% 107%);
+    mask-image: url('../images/map-mask2.png');
     background: #cbd537;
-    padding-top: 35px;
-    margin-top: -450px;
+    padding-top: 24px;
+
     position: relative;
-   
+    mask-mode: alpha;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+
     .title {
-        font-size: 30px;
+
+        font-size: 41px;
         font-family: $base-font-hobo;
         color: $white;
         font-weight: 400;
-        margin-bottom: 5px;
+        margin-bottom: 22px;
     }
 }
 
 #map {
-    height: 730px;
-   clip-path: polygon(0 0, 8.6% 1.4%, 22% 0, 49% 2.9%, 74% 14%, 90% 29%, 100% 42.5%, 100% 100%, 0 100%);
-    overflow: hidden;
-   // box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    height: 675px;
+    mask-image: url('../images/map-mask.png');
+    mask-mode: alpha;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+  
+    // box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .gm-style-iw {
