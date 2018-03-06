@@ -1,18 +1,16 @@
-var sliderTabs = (function ($) {
+var sliderVideo = (function ($) {
     'use strict';
 
-    var slider = $('.slider-tab');
+    var slider = $('.slider-video');
 
     // init slider
     function init() {
         slider.slick({
-            nextArrow: '<span class="next"><img src="assets/images/right02.png" alt="#"></span>',
-            prevArrow: '<span class="prev"><img src="assets/images/left02.png" alt="#"></span>',
+            nextArrow: '<span class="next"><img src="assets/images/right.png" alt="#"></span>',
+            prevArrow: '<span class="prev"><img src="assets/images/left.png" alt="#"></span>',
             infinite: true,
             slidesToScroll: 1,
-            centerMode: true,
-            centerPadding: ' 30%',
-            slidesToShow: 1,
+            slidesToShow: 2,
             responsive: [
                 {
                     breakpoint: 768,
@@ -31,4 +29,4 @@ var sliderTabs = (function ($) {
 
 }(jQuery));
 
-export default sliderTabs;
+export default sliderVideo;

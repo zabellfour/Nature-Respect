@@ -15,6 +15,8 @@ module.exports = [
     //added openclose plugin for footer mobile
     './plugins/openClose/openClose.js',
     //added validation subscription form
-    './plugins/validation/jquery.validate.js'
+    './plugins/validation/jquery.validate.js',
+    //added fancybox
+    './plugins/fancybox/jquery.fancybox.js'
 ]
 ;

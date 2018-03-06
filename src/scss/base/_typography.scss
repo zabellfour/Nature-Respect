@@ -13,6 +13,17 @@ h6, .h6,
   font-weight: bold;
   margin: 0 0 10px;
   color: $headings-color;
+  position: relative;
+  &.decor-title:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../images/decor-title.png) 0 0/cover no-repeat;
+    width: 260px;
+    height: 3px;
+  }
 }
 
 h1, .h1 {

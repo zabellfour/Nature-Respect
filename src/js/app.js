@@ -13,12 +13,15 @@ import openClose from './modules/openClose.js';
 import validationForm from './modules/validation.js';
 import menuSlider from './modules/sliderMenu.js';
 import sliderTabs from './modules/sliderTab.js';
+import sliderVideo from './modules/sliderVideo.js';
+import fancyBox from './modules/fancybox.js';
 
 ( ($) => {
   'use strict';
 
   // When DOM is ready
   $(() => {
+      fancyBox.init();
     //init mobile navigation
     headerNav.init();
 
@@ -42,6 +45,9 @@ import sliderTabs from './modules/sliderTab.js';
 
     //init menuSlider
     menuSlider.init();
+
+   //init videoSlider
+    sliderVideo.init();
   });
 
 })(jQuery);

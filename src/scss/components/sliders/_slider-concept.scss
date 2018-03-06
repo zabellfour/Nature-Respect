@@ -1,13 +1,40 @@
 /* slider-concept style */
 
 .slider-concept {
+	background: url(../images/decor15.png) 0 0/cover no-repeat;
+	padding: 83px 0 0;
+	margin: -87px 0 0;
+	position: relative;
 	.tab-nav {
 		@extend %listreset;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		font-size: 36px;
+		line-height: 38px;
+		padding: 24px 0 ;
 		li {
-			margin: 0 20px;
+			margin: 0 47px;
+			&:last-child img {
+				top: 65%;
+			}
+		}
+		a {
+			@include animate(opacity);
+			opacity: .5;
+			position: relative;
+			color: #fff;
+			text-decoration: none;
+			padding: 0 0 0 57px;
+		}
+		a.active {
+			opacity: 1;
+		}
+		img {
+			position: absolute;
+			left: -11px;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 	.tab-content {
@@ -18,9 +45,6 @@
 		>.active {
 			height: auto;
 		}
-	}
-	.slick-slide {
-		padding: 0 15px;
 	}
 	.img-box {
 		border: 22px solid #d1bdb3;
@@ -42,15 +66,42 @@
 	.text-box {
 		@include animate(opacity);
 		text-align: center;
-		padding: 15px;
+		padding: 28px 15px 10px;
 		opacity: 0;
+	}
+}
+
+.slider-tab {
+	.slick-slide {
+		padding: 0 15px;
+		&:focus {
+			outline: none;
+		}
 	}
 	.slick-center {
 		.text-box {
+			color: #fff;
 			opacity: 1;
 		}
 		.img-box:before {
 			opacity: 0;
 		}
+	}
+	.next,
+	.prev {
+		@include animate(opacity);
+		position: absolute;
+		left: 18.5%;
+		width: 50px;
+		height: 30px;
+		bottom: 52px;
+		z-index: 10;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+	.next {
+		left: auto;
+		right: 18.5%;
 	}
 }

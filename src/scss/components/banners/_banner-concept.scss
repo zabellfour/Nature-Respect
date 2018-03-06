@@ -57,6 +57,8 @@
 	}
 	.box-img {
 		width: 38%;
+		position: relative;
+		z-index: 5;
 		img {
 			display: block;
 			width: 100%;
