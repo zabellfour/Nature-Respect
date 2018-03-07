@@ -228,6 +228,28 @@
 		padding: 0;
 		margin: 0 0 18px;
 	}
+	.tab-content {
+		@include media('<tablet') {
+			max-width: 400px;
+			padding: 0 50px;
+			margin: 0 auto;
+		}
+		@include media('<phone') {
+			padding: 0 34px;
+			max-width: 100%;
+		}
+		.js-tab-hidden {
+			@include media('>=tablet') {
+				display: block !important;
+				left: -9999px !important;
+				position: absolute !important;
+				top: -9999px !important;
+			}
+		}
+		>.active {
+			display: block;
+		}
+	}
 	.title {
 		font-size: 31px;
 		line-height: 33px;
@@ -441,6 +463,6 @@
 		}
 	}
 	>.active {
-		display: block;
+		display: block; 
 	}
 }

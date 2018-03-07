@@ -1,0 +1,105 @@
+/* banner-concept style */
+
+.banner-concept {
+	position: relative;
+	.container {
+		position: relative;
+		height: 100%;
+	}
+	.banner-top {
+		background: url(../images/banner3.png) 34% 0/cover no-repeat;
+		height: 595px;
+	}
+	.banner-heading {
+		font-family: $base-font-hobo;
+		text-transform: uppercase;
+		position: absolute;
+		top: 45%;
+		transform: translateY(-50%);
+		right: 279px;
+		text-align: center;
+		span {
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
+	.banner-bottom {
+		margin: -45px 0 0;
+		.container {
+			display: flex;
+			justify-content: center;
+			max-width: 1500px;
+		}
+		.block {
+			margin: 0 0 111px;
+			padding:0 72px 0 10px;
+		}
+		.block.small {
+			padding: 0 95px 0 95px;
+		}
+	}
+	.img-holder {
+		margin: 166px -37px 0px 46px;
+	}
+	.box-text {
+		font-size: 21px;
+		line-height: 25px;
+		width: 46%;
+		text-align: center;
+		color: #642200;
+		p {
+			margin: 0 0 30px;
+			&:first-letter {
+				font-weight: bold;
+				font-size: 30px;
+			}
+		}
+	}
+	.box-img {
+		width: 38%;
+		position: relative;
+		z-index: 5;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	.h2 {
+		font-size: 38px;
+		line-height: 40px;
+	}
+	.h3 {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			height: 2px;
+			background: radial-gradient(#642200, rgba(100, 34, 0, 0) 100%);
+			left: -10px;
+			right: -10px;
+			border-radius: 110%;
+		}
+	}
+	.h4 {
+		font:31px/34px $base-font-hobo;
+	}
+	.title {
+		font:31px/32px $base-font-hobo;
+		color: #c2cd23;
+		display: block;
+		margin: 0 0 35px;
+	}
+	.h5 {
+		font:31px/32px $base-font-hobo;
+		margin: 0 0 31px;
+		span {
+			color: #c2cd23;
+		}
+	}
+	.decor-banner {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+}

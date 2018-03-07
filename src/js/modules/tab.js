@@ -1,8 +1,6 @@
 var tabs = (function($) {
     'use strict';
-    var tabHolder = $('ul.product-list');
-
-    if (!tabHolder.length) return;
+    var tabHolder = $('ul.product-list, ul.tab-nav');
 
     // content tabs init
     function initTabs() {

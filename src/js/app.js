@@ -4,22 +4,24 @@
 // Feel free with using ES6 here.
 
 import headerNav from './modules/mobileNav.js';
-
 import diffSpeed from './modules/paralaxEl.js';
 import common from './modules/commonModule.js';
 import sliders from './modules/sliders.js';
 import tabs from './modules/tab.js';
-import productSlider from './modules/slick.js';
+import productSlider from './modules/slickProduct.js';
 import openClose from './modules/openClose.js';
 import validationForm from './modules/validation.js';
 import menuSlider from './modules/sliderMenu.js';
-
+import sliderTabs from './modules/sliderTab.js';
+import sliderVideo from './modules/sliderVideo.js';
+import fancyBox from './modules/fancybox.js';
 
 ( ($) => {
   'use strict';
 
   // When DOM is ready
   $(() => {
+      fancyBox.init();
     //init mobile navigation
     headerNav.init();
 
@@ -34,9 +36,14 @@ import menuSlider from './modules/sliderMenu.js';
 
     sliders.accSlider();
 
-    //init sliderTab
+
+    //init tabs
     tabs.init();
+
+    //init sliders
+    sliders.accSlider();
     productSlider.init();
+    sliderTabs.init();
 
     //init openClose for footer mobile
     openClose.init();
@@ -46,6 +53,9 @@ import menuSlider from './modules/sliderMenu.js';
 
     //init menuSlider
     menuSlider.init();
+
+   //init videoSlider
+    sliderVideo.init();
   });
 
 })(jQuery);

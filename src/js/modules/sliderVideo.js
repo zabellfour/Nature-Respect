@@ -1,17 +1,16 @@
-var menuSlider = (function ($) {
+var sliderVideo = (function ($) {
     'use strict';
 
-    var slider = $('.slider-menu');
+    var slider = $('.slider-video');
 
     // init slider
-    function initSlider() {
+    function init() {
         slider.slick({
-            nextArrow: '<span class="next"><i class="icon icon-arrow-right"></i></span>',
-            prevArrow: '<span class="prev"><i class="icon icon-arrow-left"></i></span>',
+            nextArrow: '<span class="next"><img src="assets/images/right.png" alt="#"></span>',
+            prevArrow: '<span class="prev"><img src="assets/images/left.png" alt="#"></span>',
             infinite: true,
-            slidesToShow: 3,
             slidesToScroll: 1,
-            dots: true,
+            slidesToShow: 2,
             responsive: [
                 {
                     breakpoint: 768,
@@ -25,9 +24,9 @@ var menuSlider = (function ($) {
     }
 
     return {
-        init: initSlider
+        init: init
     };
 
 }(jQuery));
 
-export default menuSlider;
+export default sliderVideo;

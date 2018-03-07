@@ -1,17 +1,18 @@
-var menuSlider = (function ($) {
+var sliderTabs = (function ($) {
     'use strict';
 
-    var slider = $('.slider-menu');
+    var slider = $('.slider-tab');
 
     // init slider
-    function initSlider() {
+    function init() {
         slider.slick({
-            nextArrow: '<span class="next"><i class="icon icon-arrow-right"></i></span>',
-            prevArrow: '<span class="prev"><i class="icon icon-arrow-left"></i></span>',
+            nextArrow: '<span class="next"><img src="assets/images/right02.png" alt="#"></span>',
+            prevArrow: '<span class="prev"><img src="assets/images/left02.png" alt="#"></span>',
             infinite: true,
-            slidesToShow: 3,
             slidesToScroll: 1,
-            dots: true,
+            centerMode: true,
+            centerPadding: ' 30%',
+            slidesToShow: 1,
             responsive: [
                 {
                     breakpoint: 768,
@@ -25,9 +26,9 @@ var menuSlider = (function ($) {
     }
 
     return {
-        init: initSlider
+        init: init
     };
 
 }(jQuery));
 
-export default menuSlider;
+export default sliderTabs;

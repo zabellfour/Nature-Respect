@@ -3,8 +3,6 @@ var openClose = (function ($) {
 
     var elem = $('.open-close');
 
-    if (!elem.length) return;
-
     function init() {
         elem.openClose({
             activeClass: 'active',

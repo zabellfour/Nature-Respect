@@ -21,15 +21,23 @@
   }
 }
 
-.product-list
-
-.js-tab-hidden {
-  display: block !important;
-  left: -9999px !important;
-  position: absolute !important;
-  top: -9999px !important;
-}
-
-.tab-content > .active {
+.play-btn {
   display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 9px solid #fff;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15.5px 0 15.5px 21px;
+    border-color: transparent transparent transparent #ffffff;
+  }
 }
