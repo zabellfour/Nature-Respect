@@ -88,7 +88,8 @@
 		font: 31px/33px $base-font-hobo;
 		color: #6b2a00;
 		display: none;
-		text-align: center;
+    text-align: center;
+
 	}
 	.error {
 		.field {
@@ -110,7 +111,8 @@
 			font-size: 18px;
 		}
 		@include media('<tablet') {
-			display: none;
+      display: none;
+      font-size: 12px;
 		}
 	}
 	.field {

@@ -15,7 +15,7 @@ module.exports = function(options) {
         entries: `./${options.src}/js/${options.mainJs}`,
         // Remove sourcemap for production
         debug: !options.isProduction
-      }) 
+      })
       .transform('babelify', {
         presets: ['es2015']
       })

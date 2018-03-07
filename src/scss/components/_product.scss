@@ -46,8 +46,9 @@
 			margin: 0;
 			padding: 0 5px;
 			float: none;
-			max-width: 400px;
-			margin: 0 auto;
+			max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
 		}
 	}
 	.bnt-raggy {
@@ -274,7 +275,12 @@
 		margin: 0 0 27px;
 		@include media('<widescreen') {
 			padding: 0 3px 0 0;
-		}
+    }
+    @include media('<tablet') {
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 		li {
 			position: relative;
 			margin: 0 0 10px;
@@ -327,7 +333,10 @@
 			font-size: 14px;
 			line-height: 16px;
 			display: flex;
-			justify-content: space-between;
+      justify-content: space-between;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
 		}
 		span {
 			display: block;
@@ -415,7 +424,7 @@
 
 .tab-content {
 	@include media('<tablet') {
-		max-width: 400px;
+		max-width: 98%;
 		padding: 0 50px;
 		margin: 0 auto;
 	}

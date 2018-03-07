@@ -14,9 +14,13 @@
         right: 0px;
         bottom: -25px;
         z-index: 99;
-        background-size: 100% auto;
-        background-image: url('../images/root.svg');
-        background-repeat: no-repeat;
+        svg{
+          position: absolute;
+          top:0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
         @include media('<1500px') {
             left: 35px;
             right: 70px;

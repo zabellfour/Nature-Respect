@@ -25,7 +25,13 @@ import menuSlider from './modules/sliderMenu.js';
 
     //module for paralax elements
     diffSpeed.init();
-    common.circleText();
+
+    //init js for Slide in dowm boxes on click
+    common.slideBox();
+
+    //draw root on scroll (homepage)
+    common.rootDraw();
+
     sliders.accSlider();
 
     //init sliderTab

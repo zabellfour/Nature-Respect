@@ -5,8 +5,23 @@
 <style type="text/css">
 	.st0{fill:#CAD434;}
 </style>
+ <linearGradient id="linear" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#fff"></stop>
+                             <stop offset="17%" stop-color="#fff"></stop>
+                             <stop offset="17%" stop-color="rgba(255,255,255,0)"></stop>
+                             <stop offset="27%" stop-color="rgba(255,255,255,0)"></stop>
+                             <stop offset="27%" stop-color="#fff"></stop>
+                             <stop offset="40%" stop-color="#fff"></stop>
+                             <stop offset="40%" stop-color="rgba(255,255,255,0)"></stop>
+                             <stop offset="50%" stop-color="rgba(255,255,255,0)"></stop>
+                             <stop offset="50%" stop-color="#fff"></stop>
+                             <stop offset="87%" stop-color="#fff"></stop>
+                             <stop offset="87%" stop-color="rgba(255,255,255,0)"></stop>
+                             <stop offset="95%" stop-color="rgba(255,255,255,0)"></stop>
+                             <stop offset="95%" stop-color="#fff"></stop>
+                        </linearGradient>
 <g transform="translate(0.000000,323.000000) scale(0.050000,-0.050000)">
-	<path class="st0" d="M3103.2,6445.7c0-97.5,6.8-191.5,6.8-192.2c0,0-0.5-4.7-2.1-13.9c-26.5-152.8-37.1-187.7-121.2-355
+	<path fill="url(#linear)" class="st0" d="M3103.2,6445.7c0-97.5,6.8-191.5,6.8-192.2c0,0-0.5-4.7-2.1-13.9c-26.5-152.8-37.1-187.7-121.2-355
 		c-133-268-155-395-123-699c12-123,23-314,23-424c0-113,12-240,28-292c26-89,25-98-27-208c-151-319-326-369-792-226
 		c-286,88-332,78-554-132c-283-267-310-269-632-51c-555,375-1102-336-844-1097c72-210,168-345,477-667c435-453,567-647,664-973
 		c56-189,132-339,291-580c175-264,281-380,129-140c-184,289-311,550-370,760c-99,353-243,568-666,996c-401,406-490,564-525,934
@@ -17,3 +32,5 @@
 		c-8,160-21,394-29,522c-19,314,3,395,170,637l118,175.9c9.1,13.5,26,280.1,25.8,296.3l-6.9,73.1L3103.2,6445.7z"/>
 </g>
 </svg>
+
+

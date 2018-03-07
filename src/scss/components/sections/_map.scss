@@ -1,32 +1,65 @@
-.map-shadow-holder{
- padding-top: 25px; 
- margin-top: -410px;
- background-color:rgba(255,255,255,.7);;
- position: relative;
- mask-image: url('../images/map-mask3.png');
- mask-mode: alpha;
-
- mask-mode: alpha;
- mask-repeat: no-repeat;
- mask-size: 100% 100%;
+.map-shadow-holder {
+    padding-top: 25px;
+    margin-top: -410px;
+    background-color: rgba(255, 255, 255, .7);
+    position: relative;
+    mask-image: url('../images/map-mask3.png');
+    mask-mode: alpha;
+    mask-repeat: no-repeat;
+    mask-size: 100% auto;
+    @include media('<widescreen') {
+        margin-top: -350px;
+    }
+    @include media('<desktop') {
+        margin-top: -300px;
+    }
+    @include media('<tablet') {
+        mask-size: 200% auto;
+        margin-top: -200px;
+        padding-top: 15px;
+    }
+    @include media('<phone') {
+        margin-top: -80px;
+    }
 }
+
 .map-holder {
     mask-image: url('../images/map-mask2.png');
     background: #cbd537;
     padding-top: 24px;
-
     position: relative;
     mask-mode: alpha;
     mask-repeat: no-repeat;
-    mask-size: 100% 100%;
-
+    mask-size: 100% auto;
+    @include media('<tablet') {
+        mask-size: 200% auto;
+    }
     .title {
-
+        padding-left: 53px;
         font-size: 41px;
         font-family: $base-font-hobo;
         color: $white;
         font-weight: 400;
         margin-bottom: 22px;
+        @include media('<widescreen') {
+            padding-top: 10px;
+            padding-left: 76px;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+        @include media('<desktop') {
+            padding-top: 18px;
+            padding-top: 2px;
+            font-size: 24px;
+        }
+        @include media('<tablet') {
+            font-size: 18px;
+        }
+        @include media('<phone') {
+            margin: 0 auto 15px;
+            text-align: center;
+            padding: 0;
+        }
     }
 }
 
@@ -35,8 +68,20 @@
     mask-image: url('../images/map-mask.png');
     mask-mode: alpha;
     mask-repeat: no-repeat;
-    mask-size: 100% 100%;
-  
+    mask-size: 100% auto;
+    @include media('<widescreen') {
+        height: 600px;
+    }
+    @include media('<desktop') {
+        height: 500px;
+    }
+    @include media('<tablet') {
+        height: 400px;
+        mask-size: 200% auto;
+    }
+    @include media('<phone') {
+        height: 350px;
+    }
     // box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
