@@ -10,17 +10,23 @@ var sliderTabs = (function ($) {
             prevArrow: '<span class="prev"><img src="assets/images/left02.png" alt="#"></span>',
             infinite: true,
             slidesToScroll: 1,
+            slidesToShow: 1,
             centerMode: true,
             centerPadding: ' 30%',
-            slidesToShow: 1,
             responsive: [
                 {
                     breakpoint: 768,
                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
+                        centerMode: false,
                     }
                 },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: ' 10%',
+                    }
+                }
             ]
         });
     }

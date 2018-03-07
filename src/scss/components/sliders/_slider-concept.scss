@@ -5,6 +5,14 @@
 	padding: 83px 0 0;
 	margin: -87px 0 0;
 	position: relative;
+	@include media('<desktop') {
+		margin: 0;
+	}
+	.tab-content {
+		@include media('<tablet') {
+			padding: 0 70px;
+		}
+	}
 	.tab-nav {
 		@extend %listreset;
 		display: flex;
@@ -13,8 +21,18 @@
 		font-size: 36px;
 		line-height: 38px;
 		padding: 24px 0 ;
+		@include media('<desktop') {
+			font-size: 28px;
+			line-height: 30px;
+		}
+		@include media('<tablet') {
+			justify-content: space-between;
+		}
 		li {
 			margin: 0 47px;
+			@include media('<desktop') {
+				margin: 0 20px;
+			}
 			&:last-child img {
 				top: 65%;
 			}
@@ -68,12 +86,19 @@
 		text-align: center;
 		padding: 28px 15px 10px;
 		opacity: 0;
+		color: #fff;
+		@include media('<tablet') {
+			opacity: 1;
+		}
 	}
 }
 
 .slider-tab {
 	.slick-slide {
 		padding: 0 15px;
+		@include media('<tablet') {
+			padding: 0;
+		}
 		&:focus {
 			outline: none;
 		}
@@ -96,12 +121,52 @@
 		height: 30px;
 		bottom: 52px;
 		z-index: 10;
+		cursor: pointer;
+		@include media('<desktop') {
+			left: 8%;
+		}
+		@include media('<tablet') {
+			font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			width: 50px;
+			height: 50px;
+			border-radius: 100px;
+			background: #b09080;
+			left: -60px;
+			top: 50%;
+			transform: translateY(-50%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:before {
+				content: '\e906';
+			}
+		}
 		&:hover {
 			opacity: 0.8;
+		}
+		img {
+			@include media('<tablet') {
+				display: none;
+			}
 		}
 	}
 	.next {
 		left: auto;
 		right: 18.5%;
+		@include media('<desktop') {
+			right: 8%;
+		}
+		@include media('<tablet') {
+			right: -60px;
+			&:before {
+				content: '\e905';
+			}
+		}
 	}
 }

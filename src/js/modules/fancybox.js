@@ -12,11 +12,15 @@ var fancyBox = (function($) {
                     position: 'top'
                 }
             },
+            mobile : {
+                idleTime : false,
+                margin   : 0,
+            },
             beforeLoad: function() {
                 var caption = this.opts.$orig.attr('data-title');
                 $(".fancybox-slide").html('<span class="title-video">' + caption + '</span>');
                 $('.fancybox-slide').append( $('.fancybox-caption') );
-            }
+            },
         });
 
     }

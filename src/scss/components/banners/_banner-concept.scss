@@ -18,6 +18,9 @@
 		transform: translateY(-50%);
 		right: 279px;
 		text-align: center;
+		@include media('<desktop') {
+			right: 15%;
+		}
 		span {
 			font-size: 14px;
 			line-height: 16px;
@@ -27,19 +30,38 @@
 		margin: -45px 0 0;
 		.container {
 			display: flex;
-			justify-content: center;
+			justify-content: flex-end;
 			max-width: 1500px;
 		}
 		.block {
 			margin: 0 0 111px;
 			padding:0 72px 0 10px;
+			@include media('<desktop') {
+				margin: 0 0 30px;
+			}
 		}
 		.block.small {
 			padding: 0 95px 0 95px;
+			@include media('<widescreen') {
+				padding: 0 20px;
+			}
 		}
 	}
 	.img-holder {
-		margin: 166px -37px 0px 46px;
+		bottom: 0;
+		position: absolute;
+		left: -76%;
+		z-index: 1;
+		@include media('<1350px') {
+			left: 0;
+			transform: translateX(-100%);
+		}
+		@include media('<desktop') {
+			position: relative;
+			transform: translateX(0);
+			margin: 0 0 30px;
+
+		}
 	}
 	.box-text {
 		font-size: 21px;
@@ -47,6 +69,10 @@
 		width: 46%;
 		text-align: center;
 		color: #642200;
+		position: relative;
+		@include media('<desktop') {
+			width: 100%;
+		}
 		p {
 			margin: 0 0 30px;
 			&:first-letter {
@@ -98,8 +124,10 @@
 		}
 	}
 	.decor-banner {
+		display: none;
 		position: absolute;
-		left: 0;
-		bottom: 0;
+		left: -133px;
+		bottom: -465px;
+		max-width: 1150px;
 	}
 }
