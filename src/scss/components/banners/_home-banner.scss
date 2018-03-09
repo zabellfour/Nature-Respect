@@ -5,13 +5,18 @@ $green-light:#cfe849;
     max-width: 1920px;
     margin: 0 auto;
     z-index: 2;
+    mask-image: url('../images/home-banner-decoration.png');
+    mask-size: 100% auto;
+    mask-mode: alpha;
+    mask-repeat: no-repeat;
+    mask-position: 50% 100%;
     .chicken-image-holder {
         position: absolute;
-        left: 351px;
-        bottom: 0px;
-        width: 357px;
+        left: 371px;
+        bottom:-178px;
+        width: 382px;
         overflow: hidden;
-        height: 212px;
+
         vertical-align: bottom;
         display: flex;
         align-items: flex-end;
@@ -49,8 +54,9 @@ $green-light:#cfe849;
         width: 730px;
         z-index: -1;
     }
-    .img-holder {
+    .banner-img-holder {
         overflow: hidden;
+
     }
     .title-section {
         font-family: $base-font-hobo;

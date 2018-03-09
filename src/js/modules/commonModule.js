@@ -18,9 +18,9 @@ var common = {
           $doc = $(document);
       $doc.on('scroll', function(){
         console.log($doc.scrollTop());
-        var scrPos = $doc.scrollTop()/15;
+        var scrPos = $doc.scrollTop()/13;
         $point1.attr('offset', scrPos-1 + '%');
-        $point2.attr('offset', scrPos + '%');
+        $point2.attr('offset', scrPos+5 + '%');
  
       });
 
