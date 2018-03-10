@@ -16,46 +16,46 @@ import sliderTabs from './modules/sliderTab.js';
 import sliderVideo from './modules/sliderVideo.js';
 import fancyBox from './modules/fancybox.js';
 
-( ($) => {
-  'use strict';
+(($) => {
+    'use strict';
 
-  // When DOM is ready
-  $(() => {
-      fancyBox.init();
-    //init mobile navigation
-    headerNav.init();
+    // When DOM is ready
+    $(() => {
+        fancyBox.init();
+        //init mobile navigation
+        headerNav.init();
 
-    //module for paralax elements
-    diffSpeed.init();
+        //module for paralax elements
+        diffSpeed.init();
 
-    //init js for Slide in dowm boxes on click
-    common.slideBox();
+        //init js for Slide in dowm boxes on click
+        common.slideBox();
 
-    //draw root on scroll (homepage)
-    common.rootDraw();
+        //draw root on scroll (homepage)
+        common.rootDraw();
 
-    sliders.accSlider();
+        sliders.accSlider();
 
 
-    //init tabs
-    tabs.init();
+        //init tabs
+        tabs.init();
 
-    //init sliders
-    sliders.accSlider();
-    productSlider.init();
-    sliderTabs.init();
+        //init sliders
+        sliders.accSlider();
+        productSlider.init();
+        sliderTabs.init();
 
-    //init openClose for footer mobile
-    openClose.init();
+        //init openClose for footer mobile
+        openClose.init();
 
-    //init validation for subscription form
-    validationForm.init();
+        //init validation for subscription form
+        validationForm.init();
 
-    //init menuSlider
-    menuSlider.init();
+        //init menuSlider
+        menuSlider.init();
 
-   //init videoSlider
-    sliderVideo.init();
-  });
+        //init videoSlider
+        sliderVideo.init();
+    });
 
 })(jQuery);

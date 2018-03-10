@@ -4,6 +4,95 @@
     @include media('<tablet') {
         padding-top: 118px;
     }
+    .title-section {
+        font-family: $base-font-hobo;
+        position: absolute;
+        right: 21.5%;
+        top: 141px;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        display: none;
+        @include media('<1600px') {
+            right: 15%;
+            top: 100px;
+        }
+        @include media('<widescreen') {
+            right: 8%;
+            top: 80px;
+        }
+        @include media('<desktop') {
+            top: 40px;
+        }
+        @include media('<tablet') {
+            top: -110px;
+            margin-top: 15px;
+            right: 30%;
+            display: block;
+        }
+        @include media('<phone') {
+            right: 8%;
+            top: -129px;
+        }
+        .h3 {
+            font-size: 45px;
+            margin-bottom: 17px;
+            @include media('<1400px') {
+                font-size: 45px;
+                margin-bottom: 5px;
+            }
+            @include media('<widescreen') {
+                font-size: 40px;
+            }
+            @include media('<desktop') {
+                font-size: 35px;
+            }
+            @include media('<tablet') {
+                font-size: 20px;
+            }
+        }
+        .h2 {
+            font-size: 66px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 16px;
+            padding-bottom: 13px;
+            @include media('<1400px') {
+                font-size: 55px;
+                margin-bottom: 5px;
+            }
+            @include media('<widescreen') {
+                font-size: 50px;
+            }
+            @include media('<desktop') {
+                font-size: 40px;
+                padding-bottom: 9px;
+            }
+            @include media('<tablet') {
+                font-size: 30px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                height: 2px;
+                background: radial-gradient( rgba($dark-red, 1), rgba($dark-red, 0) 100%);
+                left: -10px;
+                right: -10px;
+                border-radius: 110%;
+            }
+        }
+        .note {
+            font-size: 16px;
+            display: block;
+            @include media('<1400px') {
+                font-size: 15px;
+            }
+            @include media('<tablet') {
+                font-size: 8px;
+            }
+        }
+    }
     .container {
         position: relative;
     }
@@ -13,13 +102,13 @@
         left: -29px;
         right: 0px;
         bottom: -25px;
-        z-index: 99;
-        svg{
-          position: absolute;
-          top:0;
-          left: 0;
-          right: 0;
-          bottom: 0;
+        z-index: -1;
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
         @include media('<1500px') {
             left: 35px;
@@ -70,14 +159,13 @@
             @include media('<tablet') {
                 margin: 0 0 15px;
                 padding: 0 15px;
-                
                 width: 100%;
                 font-size: 18px;
             }
             @include media('<phone') {
-              font-size: 13px;
-              padding-left: 0;
-              padding-right: 0;
+                font-size: 13px;
+                padding-left: 0;
+                padding-right: 0;
             }
             .capitalize {
                 font-weight: 400;
@@ -97,61 +185,35 @@
                 font-size: 31px;
                 margin-bottom: 12px;
                 @include media('<tablet') {
-                  text-transform: none;
-                  margin-bottom: 15px;
+                    text-transform: none;
+                    margin-bottom: 15px;
                 }
-                br{
-                  @include media('<phone') {
-                    display: none;
-                  }
+                br {
+                    @include media('<phone') {
+                        display: none;
+                    }
                 }
                 @include media('<desktop') {
-                font-weight: 400;
+                    font-weight: 400;
                 }
                 @include media('<tablet') {
                     font-size: 22px;
                 }
                 @include media('<phone') {
-                  font-size: 17px;
+                    font-size: 17px;
                 }
                 p {
                     margin-bottom: 25px;
                     @include media('<tablet') {
-                      margin-bottom: 9px;
+                        margin-bottom: 9px;
                     }
                 }
                 .small {
                     font-size: 21px;
                     @include media('<tablet') {
-                      font-size: inherit;
+                        font-size: inherit;
                     }
                 }
-            }
-        }
-    }
-    &:before {
-        @include media('<widescreen') {
-            position: absolute;
-            bottom: 100%;
-            left: 0;
-            right: 0;
-            height: 110px;
-            content: '';
-            background-image: url('../images/home-banner-decoration.png');
-            background-size: 100% auto;
-            background-position: 50% 100%;
-            background-repeat: no-repeat;
-            z-index: 101;
-            @include media('<desktop') {
-                width: 115%;
-                background-position: 100% 100%;
-                right: 0;
-                left: auto;
-            }
-            @include media('<tablet') {
-                width: 146%;
-                margin-left: 50%;
-                background-image: url('../images/home-banner-decoration-resp.png');
             }
         }
     }
@@ -161,10 +223,10 @@
         top: -290px;
         width: 735px;
         z-index: 1;
-        @include media('<1600px') {
+        @include media('<1700px') {
             width: 500px;
             top: -180px;
-            left: 94px;
+            left: 74px;
         }
         @include media('<widescreen') {
             width: 440px;
@@ -196,8 +258,94 @@
         min-height: 540px;
     }
     @include media('<tablet') {
-      min-height: 0;
-      padding-bottom: 79px;
+        min-height: 0;
+        padding-bottom: 79px;
+    }
+    .heading-img-holder {
+        display: block;
+    }
+    .btn-raggy {
+        @include media('>=widescreen') {
+            font-size: 23px;
+        }
+    }
+    .image-holder {
+        position: relative;
+        &:after {
+            position: absolute;
+            width: 26px;
+            height: 33px;
+            content: '';
+            display: inline-block;
+            background-image: url('../images/leaf-green.png');
+            background-size: 100% auto;
+            position: absolute;
+            bottom: -5px;
+            left: 22%;
+            z-index: -1;
+            background-repeat: no-repeat;
+            @include media('<desktop') {
+                display: none !important;
+            }
+        }
+        &:before {
+            @include media('<desktop') {
+                display: none !important;
+            }
+        }
+        &.farmer-circle:before {
+            position: absolute;
+            width: 26px;
+            height: 33px;
+            content: '';
+            display: inline-block;
+            background-image: url('../images/leaf-green.png');
+            background-size: 100% auto;
+            position: absolute;
+            bottom: 80%;
+            right: 20%;
+            z-index: -1;
+            transform: rotate(160deg);
+        }
+        &.animal-circle:after {
+            position: absolute;
+            width: 26px;
+            height: 33px;
+            content: '';
+            display: inline-block;
+            background-image: url('../images/leaf-green.png');
+            position: absolute;
+            bottom: 20%;
+            left: auto;
+            right: 10%;
+            z-index: -1;
+            transform: rotate(290deg);
+            background-size: 70% auto;
+            background-repeat: no-repeat;
+        }
+        &.nature-circle:after {
+            transform: rotate(40deg);
+            top: 55%;
+            left: 10%;
+            background-size: 70% auto;
+            background-repeat: no-repeat;
+        }
+        &.customer-circle:after {
+            position: absolute;
+            width: 26px;
+            height: 33px;
+            content: '';
+            display: inline-block;
+            background-image: url('../images/leaf-green.png');
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 5%;
+            right: 20%;
+            z-index: -1;
+            transform: rotate(-180deg);
+            background-size: 70% auto;
+            left: auto;
+        }
     }
     .owl-nav {
         position: static;
@@ -240,7 +388,7 @@
         width: 200px;
         display: inline-block;
         vertical-align: top;
-        @include animate(width 0.6s);
+        @include animate(width 0.3s);
         @include media('<widescreen') {
             width: 70%;
             margin: 0 auto;
@@ -262,7 +410,7 @@
             max-width: 300px;
             margin: 0 auto;
         }
-        @include animate(padding-top .6s);
+        @include animate(padding-top .3s);
         &.active {
             @include media('>desktop') {
                 padding-top: 0;
@@ -321,14 +469,14 @@
                 padding-right: 30px;
             }
             @include media('<tablet') {
-              font-size: 17px;
+                font-size: 17px;
             }
             @include media('<phone') {
-              font-size: 13px;
-              padding-left:0;
-              padding-right: 0;
-              padding-top: 9px;
-              line-height: 1.1;
+                font-size: 13px;
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 9px;
+                line-height: 1.1;
             }
             p {
                 margin-bottom: 15px;
@@ -336,11 +484,11 @@
                     font-size: 31px;
                     line-height: 1;
                     @include media('<tablet') {
-                      font-size: 19px;
+                        font-size: 19px;
                     }
                 }
                 @include media('<tablet') {
-                  margin-bottom: 18px;
+                    margin-bottom: 18px;
                 }
             }
         }
@@ -353,7 +501,7 @@
             font-weight: 400;
             font-family: $base-font-hobo;
             margin-bottom: -10px;
-            @include animate(font-size .6s);
+            @include animate(font-size .3s);
         }
         .image-box {
             position: absolute;
@@ -441,9 +589,10 @@
                 left: 7%;
             }
         }
-        .headind-img-holder {
+        .heading-img-holder {
             transform: rotate(10deg);
             transform-origin: 50% 50%;
+            color: inherit;
         }
     }
 }

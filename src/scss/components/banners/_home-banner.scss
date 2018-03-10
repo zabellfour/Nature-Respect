@@ -10,6 +10,7 @@ $green-light:#cfe849;
     mask-mode: alpha;
     mask-repeat: no-repeat;
     mask-position: 50% 100%;
+    overflow: hidden;
     .chicken-image-holder {
         position: absolute;
         left: 371px;
@@ -20,27 +21,28 @@ $green-light:#cfe849;
         vertical-align: bottom;
         display: flex;
         align-items: flex-end;
-        @include media('<1600px') {
-            left: 318px;
-            width: 241px;
+        @include media('<1700px') {
+            left: 303px;
+            width: 261px;
+            bottom:-143px;
         }
         @include media('<widescreen') {
-            left: 226px;
-            width: 200px;
+ 
+            left: 221px;
+            width: 227px;
+            bottom:-99px;
         }
         @include media('<desktop') {
-            width: 194px;
+            width: 224px;
+            left: 6px;
+
+        }
+        @include media('<tablet') {
             left: 9px;
-            transform: rotate(1deg) translate(0) !important;
+            width: 125px;
+            bottom:-68px;
         }
-        @include media('<tablet') {
-            transform: rotate(-3deg) translate(0) !important;
-            bottom: 2px;
-        }
-        @include media('<tablet') {
-            left: 4px;
-            width: 115px;
-        }
+  
         img {
             width: 100%;
             vertical-align: bottom;
@@ -166,6 +168,7 @@ $green-light:#cfe849;
         height: 100px;
         background-size: 100% auto;
         background-repeat: no-repeat;
+        animation: move1 32s infinite linear;
         @include media('<widescreen') {
             width: 170px;
         }
@@ -187,6 +190,7 @@ $green-light:#cfe849;
         height: 64px;
         background-size: 100% auto;
         background-repeat: no-repeat;
+        animation: move4 52s infinite linear;
         @include media('<widescreen') {
             width: 70px;
         }
@@ -209,6 +213,7 @@ $green-light:#cfe849;
         height: 100px;
         background-size: 100% auto;
         background-repeat: no-repeat;
+        animation: move2 102s infinite linear;
         @include media('<widescreen') {
             width: 120px;
         }
@@ -232,6 +237,8 @@ $green-light:#cfe849;
         background-position: 50% 50%;
         background-size: 100% auto;
         background-repeat: no-repeat;
+        animation: move3 170s infinite linear;
+        animation-direction:reverse;
         @include media('<widescreen') {
             width: 80px;
             top: 10%;
@@ -279,10 +286,51 @@ $green-light:#cfe849;
         }
         @include media('<phone') {
             right: 24px;
-            bottom: 17px;
+            bottom:7px;
             max-width: 38%;
             left: auto;
             width: 100px;
         }
     }
 }
+
+@keyframes move1 {
+    0% {
+     left:-100px;
+    }
+
+    100% {
+      left:calc(100%) ;
+    }
+  }
+  
+  @keyframes move2 {
+    0% {
+     left:-150px;
+    }
+
+    100% {
+      left:calc(100%) ;
+    }
+  }
+  @keyframes move3 {
+    0% {
+     left:-50px;
+
+    }
+ 
+
+    100% {
+      left:calc(100%) ;
+    }
+  }
+  @keyframes move4 {
+    0% {
+     left:-200px;
+    }
+
+    100% {
+      left:calc(100%) ;
+    }
+  }
+  
