@@ -24,6 +24,22 @@ var common = {
             $point2.attr('offset', scrPos + 5 + '%');
 
         });
+    },
+    //function for collapsing filterMenu 
+    filterMenu: function() {
+        var $filterMenu = $('.recept-menu');
+        if (!$filterMenu.length) return;
+        var openBtn = $filterMenu.siblings('.filter-open-btn'),
+            closeBtn = $filterMenu.find('.close');
+        console.log(openBtn);
+        var $body = $('body');
+        openBtn.on('click', function() {
+            $body.addClass('filter-opened');
+        });
+        closeBtn.on('click', function() {
+            $body.removeClass('filter-opened');
+        });
+
     }
 
 

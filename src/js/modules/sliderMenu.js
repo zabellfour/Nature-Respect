@@ -1,4 +1,4 @@
-var menuSlider = (function ($) {
+var menuSlider = (function($) {
     'use strict';
 
     var slider = $('.slider-menu');
@@ -12,9 +12,15 @@ var menuSlider = (function ($) {
             slidesToShow: 3,
             slidesToScroll: 1,
             dots: true,
-            responsive: [
-                {
+            responsive: [{
                     breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 495,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1

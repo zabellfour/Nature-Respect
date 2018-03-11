@@ -117,8 +117,8 @@
     .item {
         border: 16px solid #f2f8d2;
         position: relative;
-        @include media('<desktop') {
-            border-width: 10px;
+        @include media('<tablet') {
+            border-width: 6px;
         }
     }
     .slick-slide {
@@ -128,7 +128,7 @@
         }
     }
     .title {
-        background: url(../images/decor10.png) 0 0/100% 100% no-repeat;
+        background-image: url(../images/decor10.png);
         position: absolute;
         left: 0;
         right: 0;
@@ -138,6 +138,8 @@
         height: 67px;
         font: 18px/20px $base-font-hobo;
         padding: 10px 63px;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
         @include media('<widescreen') {
             display: flex;
             align-items: center;
@@ -153,14 +155,20 @@
             font-size: 9px;
             line-height: 11px;
             height: 34px;
-            padding: 4px 32px 0 32px;
+            padding: 4px 5px 0 5px;
             display: block;
         }
         &.green {
             background: url(../images/decor12.png) 0 0/cover no-repeat;
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+            background-size: cover;
         }
         &.yellow {
             background: url(../images/decor11.png) 0 0/cover no-repeat;
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+            background-size: cover;
         }
     }
     .bnt-raggy {

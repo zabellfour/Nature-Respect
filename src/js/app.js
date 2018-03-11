@@ -34,8 +34,8 @@ import fancyBox from './modules/fancybox.js';
         //draw root on scroll (homepage)
         common.rootDraw();
 
-        sliders.accSlider();
-
+        //filter menu mobile
+        common.filterMenu();
 
         //init tabs
         tabs.init();
