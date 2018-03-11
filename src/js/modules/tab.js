@@ -8,6 +8,14 @@ var tabs = (function($) {
             tabLinks: 'a',
             defaultTab: false
         });
+        //swiching paralax photo in other section
+        var $tabSelector = $('.product-list a');
+        $tabSelector.on('click', function() {
+            var dataLook = $(this).attr('href').replace('#', '');
+            $('.image-holder').removeClass('active');
+            $('[data-' + dataLook + ']').addClass('active');
+            console.log(dataLook);
+        });
     }
 
     return {

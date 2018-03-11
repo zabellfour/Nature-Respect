@@ -43,30 +43,32 @@
           <div class="element-sky3"></div>
           <div class="element-sun"></div>
           <div class="element-tree"></div>
-          <div class="chicken-image-holder parallax-section"><img src="assets/images/chicken-paralax-image.png" alt="image of chicken" data-scroll-speed="-3"></div>
+          <div class="chicken-image-holder parallax-section"><img src="assets/images/chicken-paralax-image.png" alt="image of chicken" data-0="transform: translate3d(0px, 0px, 0px);" data-500="transform: translate3d(0px, 180px, 0px)"></div>
           <div class="title-section">
             <h3 class="h3">FREE RANGE</h3>
             <h2 class="h2">POULTRY</h2><span class="note">by Nature & RESPECT</span>
           </div>
         </div>
       </div>
-      <section class="present-section">
+      <section class="present-section" id="product">
         <div class="container">
           <div class="title-section">
             <h3 class="h3">FREE RANGE</h3>
             <h2 class="h2">POULTRY</h2><span class="note">by Nature & RESPECT</span>
           </div>
         </div>
-        <div class="chicken-photo-holder parallax-section"><img src="assets/images/chicken-paralax.png" alt="image of chicken" data-scroll-speed="-3"></div>
+        <div class="chicken-photo-holder parallax-section"><img src="assets/images/chicken-paralax.png" alt="image of chicken" data-0="transform: translate3d(0px, 0px, 0px);" data-500="transform: translate3d(0px, 180px, 0px)"></div>
         <div class="container">
           <div class="root-holder">
             <svg id="svgroot" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 300.2 309.8" style="enable-background:new 0 0 300.2 309.8;" xml:space="preserve">
               <style type="text/css">.st0{fill:#CAD434;}</style>
-              <radialGradient id="linear" x1="50%" y1="0%" cy="100%" x2="50%" y2="100%" r="100%">
-                <stop offset="0%" stop-color="#CAD434">    </stop>
-                <stop id="point1" offset="0%" stop-color="#CAD434"> </stop>
-                <stop id="point2" offset="5%" stop-color="rgba(202,212,52,0)">            </stop>
-              </radialGradient>
+              <defs>
+                <radialGradient id="linear" cy="100%" r="100%">
+                  <stop offset="0%" stop-color="#CAD434">    </stop>
+                  <stop id="point1" offset="0%" stop-color="#CAD434"> </stop>
+                  <stop id="point2" offset="5%" stop-color="rgba(202,212,52,0)">            </stop>
+                </radialGradient>
+              </defs>
               <g transform="translate(0.000000,323.000000) scale(0.050000,-0.050000)">
                 <path fill="url(#linear)" d="M3103.2,6445.7c0-97.5,6.8-191.5,6.8-192.2c0,0-0.5-4.7-2.1-13.9c-26.5-152.8-37.1-187.7-121.2-355    c-133-268-155-395-123-699c12-123,23-314,23-424c0-113,12-240,28-292c26-89,25-98-27-208c-151-319-326-369-792-226    c-286,88-332,78-554-132c-283-267-310-269-632-51c-555,375-1102-336-844-1097c72-210,168-345,477-667c435-453,567-647,664-973    c56-189,132-339,291-580c175-264,281-380,129-140c-184,289-311,550-370,760c-99,353-243,568-666,996c-401,406-490,564-525,934    c-38,403,77,656,364,802c197,99,297,75,563-135c199-157,323-141,554,74c220,205,268,217,550,139c456-127,635-76,781,219l74,148    l82-123c188-279,349-315,692-155c300,139,380,147,511,54c477-340,483-341,789-109c411,311,806,94,906-500c57-339-35-516-603-1157    c-274-310-443-535-557-742c-87-159-254-562-239-577c4-5,24,34,44,87c140,377,380,729,820,1206c526,570,631,764,603,1110    c-55,672-556,998-974,635c-282-244-347-243-697,12c-212,154-265,158-542,39c-418-179-570-137-751,208c-75,142-77,150-92,435    c-8,160-21,394-29,522c-19,314,3,395,170,637l118,175.9c9.1,13.5,26,280.1,25.8,296.3l-6.9,73.1L3103.2,6445.7z"></path>
               </g>
@@ -80,35 +82,29 @@
           </div>
           <div class="accelerators-holder owl-carousel owl-theme">
             <div class="accelerator-element"><a class="heading-img-holder" href="#">
-                <h5 class="h5 image-farmer"> 
-                  <div class="circle-text">Faramer</div>
-                </h5><img class="image-box" src="assets/images/farmer-icon.png">
-                <div class="image-holder farmer-circle"><img src="assets/images/farmer-circle.png"></div></a>
+                <h5 class="h5 image-farmer"> <span class="circle-text">Faramer</span></h5><img class="image-box" src="assets/images/farmer-icon.png" alt="image">
+                <div class="image-holder farmer-circle"><img src="assets/images/farmer-circle.png" alt="image"></div></a>
               <div class="collapse-text-box">
                 <p>A combination of passion and tradition for livestock farming: our farmers are well-trained and commited to producing high-quality birds! </p><a class="bnt-raggy" href="#">learn more »</a>
               </div>
             </div>
             <div class="accelerator-element"><a class="heading-img-holder" href="#">
-                <h5 class="h5 image-animal">
-                  <div class="circle-text">Animals</div>
-                </h5><img class="image-box" src="assets/images/animal-icon.png">
-                <div class="image-holder animal-circle"><img src="assets/images/animal-circle.png"></div></a>
+                <h5 class="h5 image-animal"><span class="circle-text">Animals</span></h5><img class="image-box" src="assets/images/animal-icon.png" alt="image">
+                <div class="image-holder animal-circle"><img src="assets/images/animal-circle.png" alt="image"></div></a>
               <div class="collapse-text-box">
                 <p>LoremLorem sunt incididunt quis nisi deserunt ut anim eu reprehenderit est tempor.</p><a class="bnt-raggy" href="#">learn more »</a>
               </div>
             </div>
             <div class="accelerator-element"><a class="heading-img-holder" href="#">
-                <h5 class="h5 image-nature">
-                  <div class="circle-text">Nature</div>
-                </h5><img class="image-box" src="assets/images/nature-icon.png">
-                <div class="image-holder nature-circle"><img src="assets/images/nature-circle.png"></div></a>
+                <h5 class="h5 image-nature"><span class="circle-text">Nature</span></h5><img class="image-box" src="assets/images/nature-icon.png" alt="image">
+                <div class="image-holder nature-circle"><img src="assets/images/nature-circle.png" alt="image"></div></a>
               <div class="collapse-text-box">
                 <p>LoremLorem sunt incididunt quis nisi deserunt ut anim eu reprehenderit est tempor.</p><a class="bnt-raggy" href="#">learn more »</a>
               </div>
             </div>
             <div class="accelerator-element"><a class="heading-img-holder" href="#">
-                <h5 class="h5 circle-text demo1 image-customer">Customer</h5><img class="image-box" src="assets/images/customer-icon.png">
-                <div class="image-holder customer-circle"><img src="assets/images/customer-circle.png"></div></a>
+                <h5 class="h5 image-customer"><span class="circle-text">Customer</span></h5><img class="image-box" src="assets/images/customer-icon.png" alt="image">
+                <div class="image-holder customer-circle"><img src="assets/images/customer-circle.png" alt="image"></div></a>
               <div class="collapse-text-box">
                 <p>LoremLorem sunt incididunt quis nisi deserunt ut anim eu reprehenderit est tempor.</p><a class="bnt-raggy" href="#">learn more »</a>
               </div>
@@ -117,7 +113,7 @@
         </div>
       </section>
       <!--product section of the site-->
-      <div class="product-section-wrap">
+      <div class="product-section-wrap" id="anchor">
         <section class="product-wrap">
           <div class="product-logo"><img src="assets/images/logo-big.png" alt="#">
             <div class="box-text"><img class="decor" src="assets/images/decor06.png" alt="#"><span>EU-<br>CERTIFIED FREE RANGE<br>poultry</span></div>
@@ -126,21 +122,36 @@
             <div class="box">
               <div class="product-holder">
                 <ul class="product-list">
-                  <li><a class="active" href="#product1">Chiken</a></li>
-                  <li><a href="#product2">Duck</a></li>
-                  <li><a href="#product3">Guinea fowl</a></li>
-                  <li><a href="#product4">Hen</a></li>
-                  <li><a href="#product5">Goose</a></li>
-                  <li><a href="#product6">Eggs</a></li>
-                  <li><a href="#product7">Goos</a></li>
-                  <li><a href="#product8">Delicatessen</a></li>
+                  <li><a class="active" href="#chiken">Chiken</a></li>
+                  <li><a href="#duck">Duck</a></li>
+                  <li><a href="#turkey">Turkey</a></li>
+                  <li><a href="#guinea">Guinea fowl</a></li>
+                  <li><a href="#hen">Hen</a></li>
+                  <li><a href="#goose">Goose</a></li>
+                  <li><a href="#eggs">Eggs</a></li>
+                  <li><a href="#delicatessen">Delicatessen</a></li>
                 </ul>
                 <div class="product-info"><span class="title">Free Range</span>
                   <div class="tab-content product-slider">
-                    <div id="product1">
-                      <div class="paralax-image-holder"><img src="assets/images/duck-parallax-image.png" alt="Duck image"></div>
+                    <div id="chiken">
+                      <div class="paralax-image-holder"><img src="assets/images/chicken2-parallax-image.png" alt="chiken image" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
                       <div class="logo-product"><img src="assets/images/logo-product.png" alt="#"></div>
-                      <div class="title-holder"><span class="header-title">duck</span></div>
+                      <div class="title-holder"><span class="header-title">Chiken</span></div>
+                      <ul class="list-info">
+                        <li>Chiken</li>
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem ipsum dm ipsum dm ipsum dolor sit amet consectetur adipisicing elit. Minima, id?</li>
+                      </ul>
+                      <ul class="list">
+                        <li><a href="#"><img src="assets/images/icon-leg.png" alt="#"><span>Leg</span></a></li>
+                        <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Breast</span></a></li>
+                        <li><a href="#"><img src="assets/images/icon-leg.png" alt="#"><span>Leg</span></a></li>
+                      </ul>
+                    </div>
+                    <div id="duck">
+                      <div class="paralax-image-holder"><img src="assets/images/duck-parallax-image.png" alt="Duck image" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
+                      <div class="logo-product"><img src="assets/images/logo-product.png" alt="#"></div>
+                      <div class="title-holder"><span class="header-title">Duck</span></div>
                       <ul class="list-info">
                         <li>Pekin Duck breed.</li>
                         <li>Bred in open air for minimum half of their life.</li>
@@ -152,13 +163,14 @@
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
                       </ul>
                     </div>
-                    <div id="product2">
+                    <div id="turkey">
+                      <div class="paralax-image-holder"><img src="assets/images/turkey-parallax-image.png" alt="Duck image" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
                       <div class="logo-product"><img src="assets/images/logo-product.png" alt="#"></div>
-                      <div class="title-holder"><span class="header-title">duck2</span></div>
+                      <div class="title-holder"><span class="header-title">Turkey</span></div>
                       <ul class="list-info">
-                        <li>Pekin Duck breed.</li>
-                        <li>Bred in open air for minimum half of their life.</li>
-                        <li>Fed on a 100% vegetarian, mineral and vitamins diet with a minimum of 70% cereals.</li>
+                        <li>Turkey</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem Lorem ipsum dolor sit. ipsum dolor sit.	</li>
                       </ul>
                       <ul class="list">
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
@@ -166,13 +178,14 @@
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
                       </ul>
                     </div>
-                    <div id="product3">
+                    <div id="guinea">
+                      <div class="paralax-image-holder"><img src="assets/images/guinea-parallax-image.png" alt="guinea image" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
                       <div class="logo-product"><img src="assets/images/logo-product.png" alt="#"></div>
-                      <div class="title-holder"><span class="header-title">duck3</span></div>
+                      <div class="title-holder"><span class="header-title">Guinea</span></div>
                       <ul class="list-info">
-                        <li>Pekin Duck breed.</li>
-                        <li>Bred in open air for minimum half of their life.</li>
-                        <li>Fed on a 100% vegetarian, mineral and vitamins diet with a minimum of 70% cereals.</li>
+                        <li>Ginea</li>
+                        <li>Loremr sit.</li>
+                        <li>Lorem sit. ipsum dolor sit.	</li>
                       </ul>
                       <ul class="list">
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
@@ -180,13 +193,14 @@
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
                       </ul>
                     </div>
-                    <div id="product4">
+                    <div id="hen">
+                      <div class="paralax-image-holder"><img src="assets/images/chicken2-parallax-image.png" alt="chiken image" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
                       <div class="logo-product"><img src="assets/images/logo-product.png" alt="#"></div>
-                      <div class="title-holder"><span class="header-title">duck4</span></div>
+                      <div class="title-holder"><span class="header-title">Hen</span></div>
                       <ul class="list-info">
-                        <li>Pekin Duck breed.</li>
-                        <li>Bred in open air for minimum half of their life.</li>
-                        <li>Fed on a 100% vegetarian, mineral and vitamins diet with a minimum of 70% cereals.</li>
+                        <li>Hen</li>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
                       </ul>
                       <ul class="list">
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
@@ -194,13 +208,14 @@
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
                       </ul>
                     </div>
-                    <div id="product5">
+                    <div id="goose">
+                      <div class="paralax-image-holder"><img src="assets/images/goose-parallax-image.png" alt="goose image" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
                       <div class="logo-product"><img src="assets/images/logo-product.png" alt="#"></div>
-                      <div class="title-holder"><span class="header-title">duck5</span></div>
+                      <div class="title-holder"><span class="header-title">Goose</span></div>
                       <ul class="list-info">
-                        <li>Pekin Duck breed.</li>
-                        <li>Bred in open air for minimum half of their life.</li>
-                        <li>Fed on a 100% vegetarian, mineral and vitamins diet with a minimum of 70% cereals.</li>
+                        <li>oose</li>
+                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi facilis, in asperiores sunt commodi nam!</li>
                       </ul>
                       <ul class="list">
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
@@ -208,13 +223,14 @@
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
                       </ul>
                     </div>
-                    <div id="product6">
+                    <div id="eggs">
+                      <div class="paralax-image-holder"><img src="assets/images/eggs-parallax-image.png" alt="goose image" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
                       <div class="logo-product"><img src="assets/images/logo-product.png" alt="#"></div>
-                      <div class="title-holder"><span class="header-title">duck6</span></div>
+                      <div class="title-holder"><span class="header-title">Eggs</span></div>
                       <ul class="list-info">
-                        <li>Pekin Duck breed.</li>
-                        <li>Bred in open air for minimum half of their life.</li>
-                        <li>Fed on a 100% vegetarian, mineral and vitamins diet with a minimum of 70% cereals.</li>
+                        <li>Eggs</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
                       </ul>
                       <ul class="list">
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
@@ -222,27 +238,14 @@
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
                       </ul>
                     </div>
-                    <div id="product7">
+                    <div id="delicatessen">
+                      <div class="paralax-image-holder"><img src="assets/images/chicken2-parallax-image.png" alt="chiken image" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
                       <div class="logo-product"><img src="assets/images/logo-product.png" alt="#"></div>
-                      <div class="title-holder"><span class="header-title">duck7</span></div>
+                      <div class="title-holder"><span class="header-title">Delicatessen</span></div>
                       <ul class="list-info">
-                        <li>Pekin Duck breed.</li>
-                        <li>Bred in open air for minimum half of their life.</li>
-                        <li>Fed on a 100% vegetarian, mineral and vitamins diet with a minimum of 70% cereals.</li>
-                      </ul>
-                      <ul class="list">
-                        <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
-                        <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Breast</span></a></li>
-                        <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
-                      </ul>
-                    </div>
-                    <div id="product8">
-                      <div class="logo-product"><img src="assets/images/logo-product.png" alt="#"></div>
-                      <div class="title-holder"><span class="header-title">duck8</span></div>
-                      <ul class="list-info">
-                        <li>Pekin Duck breed.</li>
-                        <li>Bred in open air for minimum half of their life.</li>
-                        <li>Fed on a 100% vegetarian, mineral and vitamins diet with a minimum of 70% cereals.</li>
+                        <li>Delicatessen</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatem fugiat voluptate consequatur!</li>
                       </ul>
                       <ul class="list">
                         <li><a href="#"><img src="assets/images/image01.png" alt="#"><span>Leg</span></a></li>
@@ -266,7 +269,14 @@
       <!-- slider menu of the page-->
       <section class="slider-menu-wrap">
         <div class="paralax-photo-holder">
-          <div class="image-holder"><img src="assets/images/duck-parallax-photo.png" alt="Duck photo" data-scroll-speed="-3"></div>
+          <div class="image-holder active" data-chiken><img src="assets/images/chicken2-parallax-photo.png" alt="chiken photo" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
+          <div class="image-holder" data-duck><img src="assets/images/duck-parallax-photo.png" alt="Duck photo" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
+          <div class="image-holder" data-turkey><img src="assets/images/turkey-parallax-photo.png" alt="Duck photo" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
+          <div class="image-holder" data-guinea><img src="assets/images/guinea-parallax-photo.png" alt="Guinea photo" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
+          <div class="image-holder" data-hen><img src="assets/images/chicken2-parallax-photo.png" alt="chiken photo" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
+          <div class="image-holder" data-goose><img src="assets/images/goose-parallax-photo.png" alt="chiken photo" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
+          <div class="image-holder" data-eggs><img src="assets/images/eggs-parallax-photo.png" alt="chiken photo" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
+          <div class="image-holder" data-delicatessen><img src="assets/images/chicken2-parallax-photo.png" alt="chiken photo" data-anchor-target="#anchor" data-100-center="transform: translate3d(0px, 0px, 0px);" data-700-center="transform: translate3d(0px, 100px, 0px)"></div>
         </div>
         <div class="container">
           <div class="heading">
@@ -308,7 +318,7 @@
               <p>Join our list and we will let you know, when we‘re available in a city near you.</p>
             </div>
             <div class="subscription-form"><span class="alert-success">Thank you for your message. We will stay in touch.</span>
-              <form action="" id="subscript-form">
+              <form action="#" id="subscript-form">
                 <div class="input-col">
                   <input class="field" type="email" placeholder="E-Mail Address" name="email">
                 </div>
@@ -374,8 +384,6 @@
       </div>
       <script src="assets/js/vendor.min.js" defer=""></script>
       <script src="assets/js/app.js" defer=""></script>
-      <!--provide this script in footer bofore call google map with necessary data-->
-      <!--data can be providen from WP admin to lacation array-->
       <script>
         function initMap() {
           //samples of data

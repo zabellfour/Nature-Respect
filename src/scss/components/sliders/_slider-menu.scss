@@ -1,5 +1,23 @@
 /* slider menu style */
 
+.paralax-photo-holder {
+    .image-holder {
+        opacity: 0;
+        visibility: hidden;
+        @include media('<widescreen') {
+            transform: scale(0.7);
+            right: 201px !important;
+        }
+        @include media('<desktop') {
+            display: none;
+        }
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
 .slider-menu-wrap {
     background: url(../images/decor13.png) 0 85% no-repeat;
     padding: 246px 0 1px;

@@ -24,6 +24,9 @@
         right: 0;
         position: absolute;
         background: url(../images/decor01.png) 50% 0/cover no-repeat;
+        @include media('<widescreen') {
+            height: 19px;
+        }
         @include media('<desktop') {
             display: none;
         }
@@ -148,9 +151,12 @@
     left: 50%;
     transform: translateX(-50%);
     display: block;
-    @include media('<desktop') {
+    @include media('<widescreen') {
         width: 67px;
         height: 67px;
+        bottom: -67px;
+    }
+    @include media('<desktop') {
         position: relative;
         bottom: 0;
         left: 50%;

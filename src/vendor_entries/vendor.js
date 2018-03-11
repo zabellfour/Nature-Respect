@@ -17,6 +17,7 @@ module.exports = [
     //added validation subscription form
     './plugins/validation/jquery.validate.js',
     //added fancybox
-    './plugins/fancybox/jquery.fancybox.js'
-]
-;
+    './plugins/fancybox/jquery.fancybox.js',
+    //added scrollr plugin for parallax
+    './plugins/scrollr/scrollr.js'
+];

@@ -4,7 +4,6 @@ var common = {
         if (!$box) return;
         $box.find('.collapse-text-box').slideUp(0);
         $box.on('mouseenter click', function() {
-            console.log('xiy');
             $box.not(this).find('.collapse-text-box').fadeOut(400);
             $box.removeClass('active');
             $(this).find('.collapse-text-box').fadeIn(400);
