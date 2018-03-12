@@ -1,43 +1,42 @@
 .bnt-raggy {
-  @include animate(opacity);
-  text-align: center;
-  background-size: 100% 100%;
-  background-image: url('../images/btn-raggy-bg.svg');
-  padding: 9px 29px 13px;
-  font-size: 25px;
-  display: inline-block;
-  text-decoration: none;
-  color: $white;
-  min-width: 190px;
-  opacity: 1;
-  font-family: $base-font-hobo;
-  @include media('<tablet') {
-    font-size: 12px;
-    min-width: 120px;
-  }
-
-  &:hover{
-    opacity: .8;
-  }
+    @include animate(opacity);
+    text-align: center;
+    background-size: 100% 100%;
+    background-image: url('../images/btn-raggy-bg.svg');
+    padding: 9px 29px 13px;
+    font-size: 25px;
+    display: inline-block;
+    text-decoration: none;
+    color: $white;
+    min-width: 190px;
+    opacity: 1;
+    font-family: $base-font-hobo;
+    @include media('<tablet') {
+        font-size: 12px;
+        min-width: 120px;
+    }
+    &:hover {
+        opacity: .8;
+    }
 }
 
 .play-btn {
-  display: block;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  border: 9px solid #fff;
-  position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 15.5px 0 15.5px 21px;
-    border-color: transparent transparent transparent #ffffff;
-  }
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 9px solid #fff;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15.5px 0 15.5px 21px;
+        border-color: transparent transparent transparent #ffffff;
+    }
 }

@@ -1,8 +1,84 @@
 .recept-banner {
     text-align: center;
     position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .title-holder {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: $white;
+        @include media('<tablet') {
+            top: calc(100% + 20px);
+            transform: translate(-50%, 0%);
+            color: $dark-red;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            @include media('<desktop') {
+                width: 150%;
+                height: 150%;
+                background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+            }
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+        .h1 {
+            font-size: 50px;
+            font-family: $base-font-hobo;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+            @include media('<desktop') {
+                font-size: 30px;
+            }
+            @include media('<tablet') {
+                font-size: 18px;
+            }
+        }
+        .subtitle {
+            font-size: 19px;
+            display: inline-block;
+            position: relative;
+            padding-top: 4px;
+            @include media('<desktop') {
+                font-size: 14px;
+            }
+            @include media('<tablet') {
+                font-size: 14px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: -4px;
+                height: 3px;
+                background: linear-gradient(to right, rgba(203, 212, 40, .4) 0%, rgba(203, 212, 40, 0) 10%, rgba(203, 212, 40, 1) 20%, rgba(203, 212, 40, 1) 80%, rgba(203, 212, 40, 0) 90%, rgba(203, 212, 40, .4) 100%);
+                /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                left: -60px;
+                right: -60px;
+                border-radius: 110%;
+            }
+        }
+    }
     &>img {
         width: 100%;
+        @include media('<tablet') {
+            width: 130%;
+            max-width: 130%;
+        }
     }
     .filter-open-btn {
         display: none;
@@ -37,6 +113,7 @@
     .recept-menu {
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 10px;
         @extend %listreset;
         position: absolute;
         bottom: 0;
@@ -52,12 +129,14 @@
             left: 0;
             right: 0px;
             height: 100vh;
+            padding-bottom: 40px;
             background: $white;
             padding: 10px;
             flex-direction: column;
             z-index: 999;
             justify-content: flex-start;
-            transform: translateY(-100%);
+            transform: translateY(-200%);
+            overflow: auto;
         }
         li {
             position: relative;
@@ -67,6 +146,8 @@
             color: $white;
             font-size: 16px;
             margin: 0;
+            font-family: $base-font-hobo;
+            font-weight: 400;
             @include animate (margin);
             @include media('<tablet') {
                 bottom: 0 !important;
@@ -86,7 +167,7 @@
                 @include media('<tablet') {
                     display: block;
                     position: absolute;
-                    right: calc(100% + 5px);
+                    right: calc(100% - 5px);
                     top: 50%;
                     text-align: right;
                     transform: translateY(-50%);
@@ -196,8 +277,14 @@
                     align-items: center;
                 }
                 .text {
-                    font-size: 16px;
+                    font-size: 15px;
                     @include animate(font-size);
+                    @include media('<widescreen') {
+                        font-size: 14px;
+                    }
+                    @include media('<desktop') {
+                        font-size: 12px;
+                    }
                     @include media('<tablet') {
                         position: absolute;
                         right: calc(100% + 10px);
@@ -206,7 +293,8 @@
                 }
                 img {
                     width: 50%;
-                    margin: 0 auto 10px;
+                    display: inline;
+                    margin: 0 auto 3px;
                     @include media('<desktop') {
                         margin-bottom: 5px;
                     }
@@ -221,6 +309,19 @@
                 color: inherit;
                 display: block;
                 border-radius: 50%;
+                @include media('<tablet') {
+                    position: relative;
+                }
+                &:before {
+                    @include media('<tablet') {
+                        position: absolute;
+                        left: -999px;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        content: '';
+                    }
+                }
             }
             &.close {
                 display: none;
@@ -236,14 +337,17 @@
             &.eggs {
                 a {
                     background-color: #d89005;
+                    img {
+                        width: 35%;
+                    }
                 }
-                bottom: -10px;
+                bottom: 0px;
             }
             &.turkey {
                 a {
                     background-color: #e6b02a;
                 }
-                bottom: -26px;
+                bottom: -14px;
             }
             &.hen {
                 a {
@@ -261,30 +365,36 @@
                 a {
                     background-color: #1a664a;
                 }
-                bottom: -37px;
+                bottom: -52px;
             }
             &.guinea {
                 a {
                     background-color: #910836;
                 }
-                bottom: -39px;
+                bottom: -58px;
             }
             &.goose {
                 a {
                     background-color: #9e361b;
                 }
-                bottom: -38px;
+                bottom: -56px;
             }
             &.delicatessen {
                 a {
                     background-color: #646dc3;
                 }
-                bottom: -30px;
+                img {
+                    width: 95%;
+                }
+                bottom: -44px;
             }
         }
     }
 }
 
-.filter-opened .recept-menu {
-    transform: translateY(0);
+.filter-opened {
+    position: fixed;
+    .recept-menu {
+        transform: translateY(0);
+    }
 }
