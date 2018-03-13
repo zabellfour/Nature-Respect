@@ -4,7 +4,7 @@
 	padding: 73px 0;
 	overflow: hidden;
 	@include media('<tablet') {
-		padding: 25px 0;
+		padding: 47px 0 0;
 	}
 	&.img-left {
 		.container {
@@ -16,7 +16,7 @@
 		.img-box {
 			padding: 0;
 			@include media('<tablet') {
-				padding: 0 50px 25px;
+				padding: 0 50px 18px;
 			}
 		}
 	}
@@ -32,6 +32,7 @@
 		max-width: 1230px;
 		@include media('<tablet') {
 			flex-direction: column-reverse;
+			padding: 0 9px;
 		}
 	}
 	.text-box {
@@ -46,6 +47,8 @@
 			padding: 0;
 		}
 		@include media('<tablet') {
+			font-size: 14px;
+			line-height: 16px;
 			width: 100%;
 		}
 	}
@@ -54,7 +57,7 @@
 		padding: 105px 0 0;
 		@include media('<tablet') {
 			width: 100%;
-			padding: 0 50px 25px;
+			padding: 0 50px 18px;
 		}
 		img {
 			width: 100%;
@@ -71,6 +74,9 @@
 			line-height: 30px;
 		}
 		@include media('<tablet') {
+			font-size: 16px;
+			line-height: 18px;
+			margin: 0 0 12px;
 			width: 100%;
 			text-align: center;
 		}
@@ -84,6 +90,9 @@
 		color: #fff;
 		margin: 0 0 18px;
 		position: relative;
+		@include media('<tablet') {
+			padding: 6px 5px 8px 11px;
+		}
 		&:before {
 			content: '';
 			position: absolute;
@@ -101,6 +110,9 @@
 			&:first-letter {
 				font-weight: bold;
 				font-size: 28px;
+				@include media('<tablet') {
+					font-size: 16px;
+				}
 			}
 		}
 	}
@@ -110,6 +122,10 @@
 		font-weight: bold;
 		display: block;
 		margin: 0 0 20px;
+		@include media('<tablet') {
+			font-size: 16px;
+			line-height: 18px;
+		}
 		+ .respect-list {
 			margin: 0;
 		}
@@ -121,6 +137,10 @@
 			padding: 0 0 0 30px;
 			margin: 0 0 35px;
 			position: relative;
+			@include media('<tablet') {
+				padding: 0 0 0 20px;
+				margin: 0 0 20px;
+			}
 			&:before {
 				content: '';
 				position: absolute;
@@ -129,16 +149,28 @@
 				background: url(../images/decor17.png) 0 0 no-repeat;
 				width: 21px;
 				height: 32px;
+				@include media('<tablet') {
+					top: -7px;
+					width: 13px;
+					height: 25px;
+					background-size: contain;
+				}
 			}
 			&:first-letter {
 				font-weight: bold;
 				font-size: 28px;
+				@include media('<tablet') {
+					font-size: 16px;
+				}
 			}
 			p {
 				margin: 0 0 36px;
 				&:first-letter {
 					font-weight: bold;
 					font-size: 28px;
+					@include media('<tablet') {
+						font-size: 16px;
+					}
 				}
 			}
 		}
@@ -146,6 +178,9 @@
 			font-family: $base-font-hobo;
 			display: block;
 			margin: 0 0 26px;
+			@include media('<tablet') {
+				margin: 0 0 16px;
+			}
 		}
 	}
 	span.img-holder {
@@ -153,6 +188,14 @@
 		text-align: center;
 		padding: 16px 0 6px;
 		margin: 0;
+		@include media('<tablet') {
+			padding: 16px 98px 6px;
+		}
+		img {
+			@include media('<tablet') {
+				width: 100%;
+			}
+		}
 	}
 }
 
@@ -167,8 +210,34 @@
 		font-size: 28px;
 		line-height: 32px;
 	}
+	@include media('<tablet') {
+		font-size: 16px;
+		line-height: 18px;
+		padding: 13px 0 19px;
+	}
 	.container {
 		max-width: 1065px;
+	}
+	blockquote {
+		@include media('<tablet') {
+			margin: 0;
+		}
+	}
+	p {
+		margin: 0 0 22px;
+	}
+	cite {
+		font-size: 35px;
+		line-height: 37px;
+		font-style: normal;
+		@include media('<desktop') {
+			font-size: 21px;
+			line-height: 23px;
+		}
+		@include media('<tablet') {
+			font-size: 16px;
+			line-height: 18px;
+		}
 	}
 }
 
@@ -184,6 +253,10 @@
 .decor-line {
 	background: url(../images/decor-line.png) 50% 0 no-repeat;
 	height: 70px;
+	@include media('<desktop') {
+		height: 35px;
+		background-size: contain;
+	}
 	@include media('<tablet') {
 		display: none;
 	}

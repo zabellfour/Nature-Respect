@@ -25,6 +25,20 @@
     z-index: 2;
     .home &{
         padding: 246px 0 1px;
+        @include media('<desktop') {
+            padding: 100px 0;
+        }
+        @include media('<tablet') {
+            padding: 45px 0;
+        }
+    }
+    @include media('<desktop') {
+        padding: 100px 0;
+    }
+    @include media('<tablet') {
+        padding: 8px 0 45px;
+        background-size: cover;
+        background-position: 50% 0;
     }
     .paralax-photo-holder {
         position: absolute;
@@ -38,14 +52,6 @@
             top: -238px;
             right: 15%;
         }
-    }
-    @include media('<desktop') {
-        padding: 100px 0;
-    }
-    @include media('<tablet') {
-        padding: 45px 0;
-        background-size: cover;
-        background-position: 50% 0;
     }
     .container {
         max-width: 1165px;

@@ -28,6 +28,11 @@
   border-radius: 100%;
   border: 9px solid #fff;
   position: relative;
+  @include media('<tablet') {
+    width: 34px;
+    height: 34px;
+    border-width: 3px;
+  }
   &:before {
     content: '';
     position: absolute;
@@ -38,6 +43,9 @@
     height: 0;
     border-style: solid;
     border-width: 13.5px 0 13.5px 19px;
-    border-color: transparent transparent transparent #ffffff;
+    border-color: transparent transparent transparent #fff;
+    @include media('<tablet') {
+      border-width: 7px 0 7px 13px;
+    }
   }
 }

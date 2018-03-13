@@ -6,20 +6,24 @@
 	background-size: auto 622px;
 	overflow: hidden;
 	@include media('<tablet') {
-		background-size: auto 310px;
+		background-position: 45% -40px;
+		background-size: auto 244px;
 	}
 	.container {
 		position: relative;
 		max-width: 1125px;
 		display: flex;
 		justify-content: flex-end;
+		@include media('<tablet') {
+			padding: 0 5px;
+		}
 	}
 	.banner-heading {
 		font-family: $base-font-hobo;
 		text-transform: uppercase;
 		padding: 186px 0 211px;
 		@include media('<tablet') {
-			padding: 258px 0 32px;
+			padding: 159px 0 29px;
 			overflow: hidden;
 		}
 		.holder {
@@ -36,6 +40,11 @@
 			line-height: 40px;
 			margin: 0 0 12px;
 			display: inline-block;
+			@include media('<tablet') {
+				font-size: 20px;
+				line-height: 22px;
+				margin: 0;
+			}
 		}
 		.h3 {
 			font-size: 58px;
@@ -43,6 +52,11 @@
 			position: relative;
 			display: inline-block;
 			margin: 0 0 22px;
+			@include media('<tablet') {
+				font-size: 21px;
+				line-height: 23px;
+				margin: 0 0 15px;
+			}
 			&:after {
 				content: '';
 				position: absolute;
@@ -57,18 +71,26 @@
 		span {
 			font-size: 14px;
 			line-height: 16px;
+			@include media('<tablet') {
+				font-size: 8px;
+				line-height: 10px;
+			}
 		}
 	}
 	.block {
 		margin: 0 0 111px;
 		@include media('<desktop') {
-			margin: 0 0 30px;
+			margin: 0 0 34px;
 		}
 	}
 	.block.small {
 		padding: 0 0 0 75px;
 		@include media('<widescreen') {
 			padding: 0 20px;
+		}
+		@include media('<tablet') {
+			padding: 0 9px;
+			margin: 0 0 18px;
 		}
 	}
 	.img-holder {
@@ -84,7 +106,10 @@
 			position: relative;
 			transform: translateX(0);
 			margin: 0 0 30px;
-
+		}
+		@include media('<tablet') {
+			padding: 0 54px;
+			margin: 0 0 22px;
 		}
 	}
 	.box-text {
@@ -97,11 +122,21 @@
 		@include media('<desktop') {
 			width: 100%;
 		}
+		@include media('<tablet') {
+			font-size: 14px;
+			line-height: 16px;
+		}
 		p {
 			margin: 0 0 30px;
+			@include media('<tablet') {
+				margin: 0 0 16px;
+			}
 			&:first-letter {
 				font-weight: bold;
 				font-size: 30px;
+				@include media('<tablet') {
+					font-size: 16px;
+				}
 			}
 		}
 	}
@@ -116,16 +151,36 @@
 	}
 	.h4 {
 		font:31px/34px $base-font-hobo;
+		@include media('<tablet') {
+			font-size: 16px;
+			line-height: 18px;
+			margin: 0;
+		}
 	}
 	.title {
 		font:31px/32px $base-font-hobo;
 		color: #c2cd23;
 		display: block;
 		margin: 0 0 35px;
+		@include media('<tablet') {
+			font-size: 16px;
+			line-height: 18px;
+			margin: 0 0 10px;
+		}
 	}
 	.h5 {
 		font:31px/32px $base-font-hobo;
 		margin: 0 0 31px;
+		@include media('<tablet') {
+			font-size: 16px;
+			line-height: 18px;
+			margin: 0 0 9px;
+		}
+		&:before {
+			@include media('<tablet') {
+				display: none;
+			}
+		}
 		span {
 			color: #c2cd23;
 		}
@@ -136,10 +191,10 @@
 		top: -136px;
 		max-width: 1150px;
 		@include media('<desktop') {
-			max-width: 450px;
+			max-width: 340px;
 			right: auto;
-			left: -256px;
-			top: 0;
+			left: -194px;
+			top: -42px;
 		}
 	}
 }
