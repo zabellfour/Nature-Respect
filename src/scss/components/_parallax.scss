@@ -1,0 +1,19 @@
+/* parallax style */
+
+.paralax-photo-holder {
+	.image-holder {
+		opacity: 0;
+		visibility: hidden;
+		@include media('<widescreen') {
+			transform: scale(0.7);
+			right: 201px !important;
+		}
+		@include media('<desktop') {
+			display: none;
+		}
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

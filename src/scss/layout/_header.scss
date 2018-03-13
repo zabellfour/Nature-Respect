@@ -269,3 +269,11 @@
         transform: rotate(-45deg);
     }
 }
+
+.recipie-page #header {
+    .logo-header {
+        @include media('<phone') {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,191 @@
+.recepties-grid {
+    background-image: url('../images/recepties1-bg.jpg');
+    background-size: 100% auto;
+    background-position: 0 0;
+    background-repeat: repeat-y;
+    padding: 140px 0 100px;
+    .recepties-grid-list {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        color: $white;
+        padding: 0 5.5%;
+        &:after {
+            content: '';
+            width: 31%;
+            flex-shrink: 1;
+        }
+        .recept-box {
+            height: 553px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 31%;
+            background-size: cover;
+            overflow: hidden;
+            box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.65);
+            margin-bottom: 36px;
+            &.eggs-recept {
+                .box-heading:before {
+                    background-color: #d89005;
+                }
+            }
+            &.turkey-recept {
+                .box-heading:before {
+                    background-color: #e6b02a;
+                }
+            }
+            &.hen-recept {
+                .box-heading:before {
+                    background-color: #aa0033;
+                }
+            }
+            &.chikcen-recept {
+                .box-heading:before {
+                    background-color: #5b9ac7;
+                }
+            }
+            &.duck-recept {
+                .box-heading:before {
+                    background-color: #1a664a;
+                }
+            }
+            &.guinea-recept {
+                .box-heading:before {
+                    background-color: #910836;
+                }
+            }
+            &.goose-recept {
+                .box-heading:before {
+                    background-color: #9e361b;
+                }
+            }
+            &.delicatessen-recept {
+                .box-heading:before {
+                    background-color: #646dc3;
+                }
+            }
+        }
+        .box-heading {
+            position: relative;
+            min-width: 80px;
+            &:before,
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: -200px;
+                right: -200px;
+                height: 521px;
+                background: #910836;
+                content: '';
+                border-radius: 50%;
+                z-index: 5;
+            }
+            &:after {
+                z-index: 4;
+                left: -220px;
+                right: -220px;
+                height: 521px;
+                bottom: -20px;
+                background-size: 100% 100%;
+                background: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 70%);
+            }
+        }
+        .box-footer {
+            min-height: 160px;
+            position: relative;
+            padding: 4px 25px 9px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            &:before,
+            &:after {
+                position: absolute;
+                top: 0;
+                left: -250px;
+                right: -150px;
+                height: 500px;
+                background: #682806;
+                content: '';
+                border-radius: 50%;
+                z-index: 5;
+            }
+            &:after {
+                z-index: 4;
+                left: -250px;
+                right: -150px;
+                height: 500px;
+                top: -20px;
+                background-size: 100% 100%;
+                background: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 70%);
+            }
+        }
+        .h2 {
+            padding: 12px 12px 16px;
+            font-family: $base-font-hobo;
+            font-size: 21px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            max-width: 240px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+        dl {
+            position: relative;
+            z-index: 10;
+            font-size: 19px;
+            margin-bottom: 10px;
+            padding-left: 15px;
+            dt {
+                display: inline-block;
+                width: 49%;
+                padding-right: 10px;
+                text-align-last: left;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            dd {
+                text-align: left;
+                display: inline-block;
+                padding-left: 15px;
+                width: 40%;
+                margin: 0;
+                border-left: 2px solid $white;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        a {
+            position: relative;
+            z-index: 10;
+            font-size: 17px;
+            padding: 15px 17px 20px;
+            &:hover {
+                background-image: url("../images/btn-raggy-bg-white-green.svg");
+                color: $dark-red;
+                opacity: 1;
+            }
+        }
+        .bottom-decoration {
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            right: -22px;
+            bottom: -74px;
+            background-color: #c7d126;
+            z-index: 10;
+            transform: rotate(66deg);
+        }
+        .product-image {
+            position: absolute;
+            z-index: 10;
+            right: 13px;
+            bottom: 6px;
+            width: 35px;
+        }
+    }
+}
