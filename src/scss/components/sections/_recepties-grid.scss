@@ -4,6 +4,20 @@
     background-position: 0 0;
     background-repeat: repeat-y;
     padding: 140px 0 100px;
+    @include media('<desktop') {
+        padding-top: 100px;
+    }
+    @include media('<tablet') {
+        padding-top: 90px;
+    }
+    @include media('<phone') {
+        padding-top: 87px;
+    }
+    .bnt-raggy {
+        @include media('<widescreen') {
+            font-size: 16px;
+        }
+    }
     .recepties-grid-list {
         display: flex;
         align-items: flex-start;
@@ -11,6 +25,12 @@
         flex-wrap: wrap;
         color: $white;
         padding: 0 5.5%;
+        @include media('<desktop') {
+            padding: 0;
+        }
+        @include media('<phone') {
+            padding: 0 18%;
+        }
         &:after {
             content: '';
             width: 31%;
@@ -26,6 +46,17 @@
             overflow: hidden;
             box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.65);
             margin-bottom: 36px;
+            @include media('<widescreen') {
+                height: 400px;
+            }
+            @include media('<tablet') {
+                width: 49%;
+                height: 350px;
+            }
+            @include media('<phone') {
+                width: 100%;
+                height: 293px;
+            }
             &.eggs-recept {
                 .box-heading:before {
                     background-color: #d89005;
@@ -99,6 +130,15 @@
             display: flex;
             flex-wrap: wrap;
             align-items: flex-end;
+            @include media('<desktop') {
+                padding: 5px 5px 5px;
+            }
+            @include media('<tablet') {
+                min-height: 109px;
+            }
+            @include media('<phone') {
+                min-height: 86px;
+            }
             &:before,
             &:after {
                 position: absolute;
@@ -131,6 +171,13 @@
             max-width: 240px;
             margin: 0 auto;
             font-weight: 400;
+            @include media('<desktop') {
+                font-size: 18px;
+            }
+            @include media('<tablet') {
+                font-size: 13px;
+                padding: 8px 5 10px
+            }
         }
         dl {
             position: relative;
@@ -138,6 +185,21 @@
             font-size: 19px;
             margin-bottom: 10px;
             padding-left: 15px;
+            @include media('<widescreen') {
+                font-size: 17px;
+            }
+            @include media('<desktop') {
+                font-size: 14px;
+            }
+            @include media('<tablet') {
+                font-size: 10px;
+                line-height: 1;
+            }
+            @include media('<phone') {
+                margin-top: 0;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
             dt {
                 display: inline-block;
                 width: 49%;
@@ -164,6 +226,19 @@
             z-index: 10;
             font-size: 17px;
             padding: 15px 17px 20px;
+            @include media('<widescreen') {
+                padding: 10px;
+                font-size: 15px;
+            }
+            @include media('<desktop') {
+                font-size: 12px;
+                min-width: 100px;
+            }
+            @include media('<phone') {
+                font-size: 10px;
+                padding: 7px;
+                margin-left: 8px;
+            }
             &:hover {
                 background-image: url("../images/btn-raggy-bg-white-green.svg");
                 color: $dark-red;
@@ -179,6 +254,9 @@
             background-color: #c7d126;
             z-index: 10;
             transform: rotate(66deg);
+            @include media('<tablet') {
+                right: -46px;
+            }
         }
         .product-image {
             position: absolute;

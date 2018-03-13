@@ -5,10 +5,10 @@ var diffSpeed = {
         console.log($parallaxEl);
         if (!$parallaxEl.length) return false;
         if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-           /* var s = skrollr.init({
+            var s = skrollr.init({
                 forceHeight: false,
                 smoothScrolling: false
-            });*/
+            });
         }
 
     }
