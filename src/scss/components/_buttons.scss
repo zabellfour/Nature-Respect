@@ -23,8 +23,8 @@
 
 .play-btn {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 100%;
   border: 9px solid #fff;
   position: relative;
@@ -32,12 +32,12 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 57%;
     transform: translate(-50%,-50%);
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 15.5px 0 15.5px 21px;
+    border-width: 13.5px 0 13.5px 19px;
     border-color: transparent transparent transparent #ffffff;
   }
 }

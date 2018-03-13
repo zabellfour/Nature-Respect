@@ -8,10 +8,8 @@
 	@include media('<desktop') {
 		margin: 0;
 	}
-	.tab-content {
-		@include media('<tablet') {
-			padding: 0 70px;
-		}
+	@include media('<tablet') {
+		overflow: hidden;
 	}
 	.tab-nav {
 		@extend %listreset;
@@ -20,12 +18,14 @@
 		justify-content: center;
 		font-size: 36px;
 		line-height: 38px;
-		padding: 24px 0 ;
+		padding: 24px 0;
 		@include media('<desktop') {
 			font-size: 28px;
 			line-height: 30px;
 		}
 		@include media('<tablet') {
+			font-size: 15px;
+			line-height: 17px;
 			justify-content: space-between;
 		}
 		li {
@@ -44,6 +44,12 @@
 			color: #fff;
 			text-decoration: none;
 			padding: 0 0 0 57px;
+			@include media('<tablet') {
+				display: flex;
+				align-items: center;
+				flex-direction: row-reverse;
+				padding: 0;
+			}
 		}
 		a.active {
 			opacity: 1;
@@ -53,6 +59,14 @@
 			left: -11px;
 			top: 50%;
 			transform: translateY(-50%);
+			@include media('<tablet') {
+				width: 40px;
+				position: relative;
+				left: 0;
+				top: 0;
+				transform: translateY(0);
+				margin: 0 5px 0 0;
+			}
 		}
 	}
 	.tab-content {
@@ -60,13 +74,18 @@
 			height: 0;
 			overflow: hidden;
 		}
-		>.active {
+		> .active {
 			height: auto;
 		}
 	}
 	.img-box {
 		border: 22px solid #d1bdb3;
 		position: relative;
+		@include media('<tablet') {
+			width: 65%;
+			margin: 0 auto;
+			border-width: 5px;
+		}
 		&:before {
 			@include animate(opacity);
 			content: '';
@@ -133,11 +152,11 @@
 			font-variant: normal;
 			text-transform: none;
 			line-height: 1;
-			width: 50px;
-			height: 50px;
+			width: 35px;
+			height: 35px;
 			border-radius: 100px;
 			background: #b09080;
-			left: -60px;
+			left: 15px;
 			top: 50%;
 			transform: translateY(-50%);
 			display: flex;
@@ -163,7 +182,7 @@
 			right: 8%;
 		}
 		@include media('<tablet') {
-			right: -60px;
+			right: 15px;
 			&:before {
 				content: '\e905';
 			}

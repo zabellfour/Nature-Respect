@@ -20,9 +20,12 @@
 
 .slider-menu-wrap {
     background: url(../images/decor13.png) 0 85% no-repeat;
-    padding: 246px 0 1px;
+    padding: 10px 0;
     position: relative;
     z-index: 2;
+    .home &{
+        padding: 246px 0 1px;
+    }
     .paralax-photo-holder {
         position: absolute;
         top: 0;

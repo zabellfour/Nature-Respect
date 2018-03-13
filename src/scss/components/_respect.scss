@@ -1,0 +1,190 @@
+/* respect style */
+
+.respect-holder {
+	padding: 73px 0;
+	overflow: hidden;
+	@include media('<tablet') {
+		padding: 25px 0;
+	}
+	&.img-left {
+		.container {
+			flex-direction: row-reverse;
+			@include media('<tablet') {
+				flex-direction: column-reverse;
+			}
+		}
+		.img-box {
+			padding: 0;
+			@include media('<tablet') {
+				padding: 0 50px 25px;
+			}
+		}
+	}
+	&.no-padding {
+		padding: 73px 0 0;
+		@include media('<tablet') {
+			padding: 25px 0 0;
+		}
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1230px;
+		@include media('<tablet') {
+			flex-direction: column-reverse;
+		}
+	}
+	.text-box {
+		font-size: 21px;
+		line-height: 25px;
+		width: 50%;
+		padding: 0 0 0 100px;
+		color: $dark-red;
+		@include media('<desktop') {
+			font-size: 18px;
+			line-height: 23px;
+			padding: 0;
+		}
+		@include media('<tablet') {
+			width: 100%;
+		}
+	}
+	.img-box {
+		width: 46%;
+		padding: 105px 0 0;
+		@include media('<tablet') {
+			width: 100%;
+			padding: 0 50px 25px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.h3 {
+		font: 31px/33px $base-font-hobo;
+		margin: 0 0 38px;
+		color: $dark-red;
+		display: inline-block;
+		vertical-align: middle;
+		@include media('<desktop') {
+			font-size: 28px;
+			line-height: 30px;
+		}
+		@include media('<tablet') {
+			width: 100%;
+			text-align: center;
+		}
+		span {
+			color: #c2cd23;
+		}
+	}
+	.text-decor {
+		background: $dark-red;
+		padding: 14px 14px 11px 17px;
+		color: #fff;
+		margin: 0 0 18px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			right: -50px;
+			top: -105px;
+			background: url(../images/decor18.png) 0 0 no-repeat;
+			width: 94px;
+			height: 148px;
+			@include media('<tablet') {
+				display: none;
+			}
+		}
+		p {
+			margin: 0;
+			&:first-letter {
+				font-weight: bold;
+				font-size: 28px;
+			}
+		}
+	}
+	.title-list {
+		font-size: 27px;
+		line-height: 29px;
+		font-weight: bold;
+		display: block;
+		margin: 0 0 20px;
+		+ .respect-list {
+			margin: 0;
+		}
+	}
+	.respect-list {
+		@extend %listreset;
+		margin: 37px 0 0;
+		li {
+			padding: 0 0 0 30px;
+			margin: 0 0 35px;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: -10px;
+				background: url(../images/decor17.png) 0 0 no-repeat;
+				width: 21px;
+				height: 32px;
+			}
+			&:first-letter {
+				font-weight: bold;
+				font-size: 28px;
+			}
+			p {
+				margin: 0 0 36px;
+				&:first-letter {
+					font-weight: bold;
+					font-size: 28px;
+				}
+			}
+		}
+		span {
+			font-family: $base-font-hobo;
+			display: block;
+			margin: 0 0 26px;
+		}
+	}
+	span.img-holder {
+		display: block;
+		text-align: center;
+		padding: 16px 0 6px;
+		margin: 0;
+	}
+}
+
+.blockquote-banner {
+	text-align: center;
+	font-size: 48px;
+	line-height: 58px;
+	padding: 25px 0 16px;
+	color: #fff;
+	background: #c68900 url(../images/decor19.png) 0 0/cover no-repeat;
+	@include media('<desktop') {
+		font-size: 28px;
+		line-height: 32px;
+	}
+	.container {
+		max-width: 1065px;
+	}
+}
+
+.respect-holder {
+	+ .blockquote-banner {
+		margin: -133px 0 0;
+		@include media('<desktop') {
+			margin: 0;
+		}
+	}
+}
+
+.decor-line {
+	background: url(../images/decor-line.png) 50% 0 no-repeat;
+	height: 70px;
+	@include media('<tablet') {
+		display: none;
+	}
+}

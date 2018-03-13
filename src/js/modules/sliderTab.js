@@ -12,7 +12,7 @@ var sliderTabs = (function ($) {
             slidesToScroll: 1,
             slidesToShow: 1,
             centerMode: true,
-            centerPadding: ' 30%',
+            centerPadding: '27%',
             responsive: [
                 {
                     breakpoint: 768,
@@ -24,7 +24,7 @@ var sliderTabs = (function ($) {
                     breakpoint: 1024,
                     settings: {
                         centerMode: true,
-                        centerPadding: ' 10%',
+                        centerPadding: '10%',
                     }
                 }
             ]
