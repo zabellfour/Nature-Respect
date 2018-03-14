@@ -1,0 +1,51 @@
+.prefooter-slider {
+    background-image: url(../images/recepie-detail-prefooter-bg.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    .container {
+        max-width: 990px;
+        margin: 0 auto;
+    }
+    .slider-menu {
+        margin-bottom: 0;
+    }
+    .mask-holder {
+        position: relative;
+        z-index: 1;
+        mask-image: url('../images/prefooter-slider-mask.png');
+        mask-mode: alpha;
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+        background-color: #559bc7;
+        margin: -3px;
+    }
+    .item {
+        background-color: rgba($white, .84);
+        border: none;
+        border: 11px solid #559bc7;
+        mask-image: url('../images/prefooter-slider-mask.png');
+        mask-mode: alpha;
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .title-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($white, .84);
+        padding: 8px 15px 15px;
+        font-size: 20px;
+        font-family: $base-font-hobo;
+        text-align: center;
+        min-height: 64px;
+    }
+    .button-row {
+        padding: 34px 0;
+        text-align: center;
+    }
+}

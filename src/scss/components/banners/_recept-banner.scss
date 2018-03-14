@@ -59,6 +59,7 @@
             }
             @include media('<tablet') {
                 font-size: 14px;
+                max-height: 40px;
             }
             &:after {
                 content: '';
@@ -111,6 +112,7 @@
         }
     }
     .recept-menu {
+        width: 100%;
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 10px;
@@ -384,7 +386,7 @@
                     background-color: #646dc3;
                 }
                 img {
-                    width: 95%;
+                    width: 54%;
                 }
                 bottom: -44px;
             }

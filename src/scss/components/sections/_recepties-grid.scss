@@ -1,17 +1,20 @@
 .recepties-grid {
-    background-image: url('../images/recepties1-bg.jpg');
-    background-size: 100% auto;
-    background-position: 0 0;
-    background-repeat: repeat-y;
+    background-image: url('../images/prefooter-decoration3.png'), url('../images/recepties1-bg.jpg');
+    background-size: 100% auto, 100% auto;
+    background-position: 50% 100%, 0 0;
+    background-repeat: no-repeat, repeat-y;
     padding: 140px 0 100px;
     @include media('<desktop') {
         padding-top: 100px;
+        padding-bottom: 80px;
     }
     @include media('<tablet') {
         padding-top: 90px;
+        padding-bottom: 50px;
     }
     @include media('<phone') {
         padding-top: 87px;
+        padding-bottom: 30px;
     }
     .bnt-raggy {
         @include media('<widescreen') {
@@ -150,6 +153,9 @@
                 content: '';
                 border-radius: 50%;
                 z-index: 5;
+                @include media('<tablet') {
+                    left: -216px;
+                }
             }
             &:after {
                 z-index: 4;
@@ -171,12 +177,20 @@
             max-width: 240px;
             margin: 0 auto;
             font-weight: 400;
+            min-height: 78px;
             @include media('<desktop') {
                 font-size: 18px;
+                min-height: 70px;
             }
             @include media('<tablet') {
                 font-size: 13px;
-                padding: 8px 5 10px
+                padding: 8px 5 10px;
+                min-height: 58px;
+            }
+            @include media('<phone') {
+                min-height: 40px;
+                padding-top: 6px;
+                padding-bottom: 0px;
             }
         }
         dl {
@@ -193,21 +207,26 @@
             }
             @include media('<tablet') {
                 font-size: 10px;
-                line-height: 1;
+                line-height: 1.2;
+                margin-bottom: 5px;
+                padding-left: 20px;
             }
             @include media('<phone') {
                 margin-top: 0;
                 padding-top: 5px;
-                padding-bottom: 5px;
             }
             dt {
                 display: inline-block;
                 width: 49%;
+                vertical-align: top;
                 padding-right: 10px;
                 text-align-last: left;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                @include media('<phone') {
+                    width: 47%;
+                }
             }
             dd {
                 text-align: left;
@@ -215,10 +234,24 @@
                 padding-left: 15px;
                 width: 40%;
                 margin: 0;
-                border-left: 2px solid $white;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                position: relative;
+                vertical-align: top;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0px;
+                    top: 0;
+                    width: 2px;
+                    height: auto;
+                    bottom: 0;
+                    background: $white;
+                }
+                @include media('<phone') {
+                    padding-left: 6px;
+                }
             }
         }
         a {
@@ -265,5 +298,46 @@
             bottom: 6px;
             width: 35px;
         }
+    }
+    .btn-row {
+        padding-top: 30px;
+        text-align: center;
+        @include media('<tablet') {
+            margin-top: 15px;
+        }
+        .bnt-raggy {
+            @include animate(color);
+            min-width: 320px;
+            margin-bottom: 10px;
+            @include media('<tablet') {
+                min-width: 200px;
+            }
+        }
+    }
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    position: relative;
+    color: rgba($white, .2);
+    &:before {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        margin-left: -10px;
+        border-radius: 50%;
+        border: 2px solid #ccc;
+        border-top-color: #333;
+        animation: spinner .6s linear infinite;
     }
 }
