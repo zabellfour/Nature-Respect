@@ -3,12 +3,46 @@
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: 50% 100%;
+    padding-top: 12px;
+    @include media('<widescreen') {
+        background-size: 150% auto;
+    }
+    @include media('<desktop') {
+        background-size: 200% auto;
+    }
+    @include media('<tablet') {
+        background-size: 300% auto;
+    }
+    @include media('<phone') {
+        background-size: 450% auto;
+        padding-top: 46px;
+    }
+    .divider {
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        @include media('<tablet') {
+            padding-bottom: 32px;
+        }
+        img {
+            @include media('<phone') {
+                width: 200%;
+                max-width: none;
+            }
+        }
+    }
     .container {
         max-width: 990px;
         margin: 0 auto;
     }
     .slider-menu {
         margin-bottom: 0;
+        @include media('<tablet') {
+            max-width: 300px;
+            margin: 0 auto;
+        }
     }
     .mask-holder {
         position: relative;
@@ -45,7 +79,57 @@
         min-height: 64px;
     }
     .button-row {
-        padding: 34px 0;
+        padding: 34px 0 58px;
         text-align: center;
+        @include media('<tablet') {
+            padding: 0 0 44px;
+        }
+        a {
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+        a {
+            min-width: 330px;
+        }
+    }
+}
+
+.h2-decorated {
+    color: #642200;
+    font-size: 36px;
+    text-align: center;
+    font-family: $base-font-hobo;
+    padding-bottom: 22px;
+    margin-bottom: 109px;
+    letter-spacing: 7px;
+    transform: translateX(-7px);
+    @include media('<desktop') {
+        font-size: 24px;
+        margin-bottom: 50px;
+        letter-spacing: 4px;
+    }
+    @include media('<tablet') {
+        font-size: 17px;
+        margin-bottom: 11px;
+        letter-spacing: 3px;
+    }
+    @include media('<phone') {
+        letter-spacing: 0;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        height: 4px;
+        background: radial-gradient( rgba($dark-red, 1), rgba($dark-red, 0) 100%);
+        left: -10px;
+        right: -10px;
+        border-radius: 110%;
+        width: 55%;
+        margin: 0 auto;
+        @include media('<tablet') {
+            display: none;
+        }
     }
 }
