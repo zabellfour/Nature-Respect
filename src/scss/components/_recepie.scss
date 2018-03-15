@@ -226,18 +226,26 @@
 		line-height: 13px;
 	}
 	.img-box {
-		mask-image: url('../images/decor27.png');
-		mask-mode: alpha;
-		mask-repeat: no-repeat;
-		mask-size: 100% auto;
-		background: #5b9ac7;
 		padding: 8px;
 		width: 73%;
 		margin: -100px 0 50px;
 		position: relative;
+		mask-image: url('../images/decor27.png');
+		mask-mode: alpha;
+		mask-repeat: no-repeat;
+		mask-size: 100% 100%;
+		background: #5b9ac7;
 		@include media('<tablet') {
 			width: 66%;
 			margin: -60px auto 22px;
+		}
+		.mask {
+			mask-image: url('../images/decor27.png');
+			mask-mode: alpha;
+			mask-repeat: no-repeat;
+			mask-size: 100% 100%;
+			z-index: 1;
+			position: relative;
 		}
 		img {
 			width: 100%;

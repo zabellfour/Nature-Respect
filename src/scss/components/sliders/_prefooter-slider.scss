@@ -8,14 +8,11 @@
         background-size: 150% auto;
     }
     @include media('<desktop') {
-        background-size: 200% auto;
-    }
-    @include media('<tablet') {
-        background-size: 300% auto;
+        background-size: 150% auto;
     }
     @include media('<phone') {
-        background-size: 450% auto;
         padding-top: 46px;
+        background-size: 170% auto;
     }
     .divider {
         padding-bottom: 20px;
