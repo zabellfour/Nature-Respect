@@ -394,9 +394,9 @@
     }
 }
 
-.filter-opened {
+body.filter-opened {
     position: fixed;
     .recept-menu {
-        transform: translateY(0);
+        transform: translateY(0) !important;
     }
 }
