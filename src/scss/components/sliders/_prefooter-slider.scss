@@ -36,9 +36,51 @@
     }
     .slider-menu {
         margin-bottom: 0;
+        .prev.slick-arrow {
+            left: 0;
+        }
+        .next.slick-arrow {
+            right: 0;
+        }
         @include media('<tablet') {
-            max-width: 300px;
             margin: 0 auto;
+            padding: 0 20%;
+        }
+        @include media('<phone') {
+            padding-left: 19%;
+            padding-right: 19%;
+        }
+        .eggs-bg-color {
+            background-color: #d89005;
+            border-color: #d89005;
+        }
+        .turkey-bg-color {
+            background-color: #e6b02a;
+            border-color: #e6b02a;
+        }
+        .hen-bg-color {
+            background-color: #aa0033;
+            border-color: #aa0033;
+        }
+        .chikcen-bg-color {
+            background-color: #5b9ac7;
+            border-color: #5b9ac7;
+        }
+        .duck-bg-color {
+            background-color: #1a664a;
+            border-color: #1a664a;
+        }
+        .guinea-bg-color {
+            background-color: #910836;
+            border-color: #910836;
+        }
+        .goose-bg-color {
+            background-color: #9e361b;
+            border-color: #9e361b;
+        }
+        .delicatessen-bg-color {
+            background-color: #646dc3;
+            border-color: #646dc3;
         }
     }
     .mask-holder {
@@ -48,13 +90,12 @@
         mask-mode: alpha;
         mask-repeat: no-repeat;
         mask-size: 100% 100%;
-        background-color: #559bc7;
         margin: -3px;
     }
     .item {
         background-color: rgba($white, .84);
-        border: none;
-        border: 11px solid #559bc7;
+        border-width: 11px;
+        border-style: solid;
         mask-image: url('../images/prefooter-slider-mask.png');
         mask-mode: alpha;
         mask-repeat: no-repeat;
@@ -74,12 +115,20 @@
         font-family: $base-font-hobo;
         text-align: center;
         min-height: 64px;
+        @include media('<tablet') {
+            padding: 3px 15px 3px;
+            font-size: 15px;
+            min-height: 0;
+        }
+        @include media('<phone') {
+            font-size: 12px;
+        }
     }
     .button-row {
         padding: 34px 0 58px;
         text-align: center;
         @include media('<tablet') {
-            padding: 0 0 44px;
+            padding: 0 0 39px;
         }
         a {
             @include media('<tablet') {
