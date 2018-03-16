@@ -394,6 +394,12 @@
     }
 }
 
+.recept-banner.product-banner {
+    @include media('<tablet') {
+        display: none;
+    }
+}
+
 .filter-opened {
     position: fixed;
     .recept-menu {

@@ -1,0 +1,140 @@
+/* product detail style */
+.product-container.product-detail-wrap {
+	margin:  0 0 60px;
+	.container {
+		display: block;
+	}
+}
+.product-detail {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 0 0 75px;
+	@include media('<tablet') {
+		display: block;
+		margin: 0 -40px;
+	}
+	.product-box {
+		width: 40%;
+		margin: -100px 0 0;
+		@include media('<tablet') {
+			width: 100%;
+		}
+	}
+	.product-text {
+		width: 45%;
+		padding: 100px 0 0;
+		@include media('<tablet') {
+			width: 100%;
+			padding: 0 45px;
+		}
+	}
+	.h4 {
+		@include media('<tablet') {
+			text-align: center;
+			display: block;
+		}
+	}
+	.product-title-mob {
+		text-align: center;
+		display: none;
+		.h1 {
+			font-size: 25px;
+			line-height: 27px;
+		}
+		span {
+			display: block;
+		}
+		@include media('<tablet') {
+			display: block;
+		}
+	}
+}
+
+.product-information {
+	padding: 20px;
+	border: 20px solid #e5e993;
+	.heading {
+		@include media('<tablet') {
+			text-align: center;
+		}
+	}
+	.h6 {
+		font-size: 31px;
+		line-height: 33px;
+		margin: 0 0 35px;
+		display: inline-block;
+		&:before {
+			left: 0;
+			right: 0;
+			transform: translateX(0);
+			width: 100%;
+			background-size: contain;
+		}
+	}
+	>p {
+		@include media('<tablet') {
+			display: none;
+		}
+	}
+}
+
+.product-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 0 70px;
+	tr:not(:last-child){
+		border-bottom: 1px solid #562900;
+	}
+	th {
+		text-align: left;
+		background: #c7d126;
+		color: #fff;
+		padding: 10px 20px;
+		&:last-child {
+			width: 1%;
+			white-space: nowrap;
+		}
+		&:nth-child(1),
+		&:nth-child(2) {
+			@include media('<tablet') {
+				display: table-cell;
+			}
+		}
+		&:nth-child(2) {
+			@include media('<tablet') {
+				text-align: right;
+			}
+		}
+		@include media('<tablet') {
+			display: none;
+		}
+	}
+	td {
+		color: #6c1c00;
+		padding: 10px 20px;
+		&:last-child {
+			width: 1%;
+			white-space: nowrap;
+		}
+		&:nth-child(1),
+		&:nth-child(2) {
+			@include media('<tablet') {
+				display: table-cell;
+			}
+		}
+		&:nth-child(2) {
+			@include media('<tablet') {
+				text-align: right;
+			}
+		}
+		@include media('<tablet') {
+			display: none;
+		}
+	}
+	tbody {
+		tr:nth-child(2n) {
+			background: #f4f6d4;
+		}
+	}
+}

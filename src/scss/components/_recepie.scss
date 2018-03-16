@@ -212,6 +212,48 @@
 	}
 }
 
+.product-box {
+	padding: 8px;
+	position: relative;
+	mask-image: url('../images/decor27.png');
+	mask-mode: alpha;
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
+	background: #5b9ac7;
+	.mask {
+		mask-image: url('../images/decor27.png');
+		mask-mode: alpha;
+		mask-repeat: no-repeat;
+		mask-size: 100% 100%;
+		z-index: 1;
+		position: relative;
+	}
+	img {
+		width: 100%;
+	}
+	&.eggs {
+		background: #d89005;
+	}
+	&.turkey {
+		background: #e6b02a;
+	}
+	&.hen {
+		background: #aa0033;
+	}
+	&.duck {
+		background: #1a664a;
+	}
+	&.guinea {
+		background: #910836;
+	}
+	&.goose {
+		background: #9e361b;
+	}
+	&.delicatessen {
+		background: #646dc3;
+	}
+}
+
 .ingridients {
 	font-size: 21px;
 	line-height: 25px;
@@ -225,16 +267,9 @@
 		font-size: 11px;
 		line-height: 13px;
 	}
-	.img-box {
-		padding: 8px;
+	.product-box {
 		width: 73%;
 		margin: -100px 0 50px;
-		position: relative;
-		mask-image: url('../images/decor27.png');
-		mask-mode: alpha;
-		mask-repeat: no-repeat;
-		mask-size: 100% 100%;
-		background: #5b9ac7;
 		@include media('<tablet') {
 			width: 66%;
 			margin: -60px auto 22px;
