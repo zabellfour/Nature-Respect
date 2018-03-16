@@ -13,36 +13,32 @@ $green-light:#cfe849;
     overflow: hidden;
     .chicken-image-holder {
         position: absolute;
-        left: 371px;
-        bottom:-178px;
-        width: 382px;
         overflow: hidden;
-
         vertical-align: bottom;
         display: flex;
         align-items: flex-end;
+        left: 326px;
+        bottom: -228px;
+        width: 424px;
         @include media('<1700px') {
             left: 303px;
             width: 261px;
-            bottom:-143px;
+            bottom: -143px;
         }
         @include media('<widescreen') {
- 
             left: 221px;
             width: 227px;
-            bottom:-99px;
+            bottom: -99px;
         }
         @include media('<desktop') {
             width: 224px;
             left: 6px;
-
         }
         @include media('<tablet') {
             left: 9px;
             width: 125px;
-            bottom:-68px;
+            bottom: -68px;
         }
-  
         img {
             width: 100%;
             vertical-align: bottom;
@@ -58,7 +54,6 @@ $green-light:#cfe849;
     }
     .banner-img-holder {
         overflow: hidden;
-
     }
     .title-section {
         font-family: $base-font-hobo;
@@ -143,7 +138,7 @@ $green-light:#cfe849;
                 font-size: 15px;
             }
             @include media('<tablet') {
-              font-size: 8px;  
+                font-size: 8px;
             }
         }
     }
@@ -237,11 +232,11 @@ $green-light:#cfe849;
         background-position: 50% 50%;
         background-size: 100% auto;
         background-repeat: no-repeat;
-        animation: move3 170s infinite linear;
-        animation-direction:reverse;
+        animation: move-sun 170s infinite linear;
+        animation-direction: reverse;
         @include media('<widescreen') {
             width: 80px;
-            top: 10%;
+            top: 8%;
         }
         @include media('<tablet') {
             width: 80px;
@@ -249,9 +244,10 @@ $green-light:#cfe849;
             right: 0;
             left: auto;
             width: 60px;
+            top: 4%;
         }
         @include media('<phone') {
-            top: -46px;
+            top: -20px;
             right: 13px;
             left: auto;
             width: 29px;
@@ -286,7 +282,7 @@ $green-light:#cfe849;
         }
         @include media('<phone') {
             right: 24px;
-            bottom:7px;
+            bottom: 7px;
             max-width: 38%;
             left: auto;
             width: 100px;
@@ -294,43 +290,50 @@ $green-light:#cfe849;
     }
 }
 
+@keyframes move-sun {
+    0% {
+        left: -100px;
+    }
+    50% {
+        left: calc(30%);
+    }
+    100% {
+        left: -100px;
+    }
+}
+
 @keyframes move1 {
     0% {
-     left:-100px;
+        left: -100px;
     }
-
     100% {
-      left:calc(100%) ;
+        left: calc(100%);
     }
-  }
-  
-  @keyframes move2 {
+}
+
+@keyframes move2 {
     0% {
-     left:-150px;
+        left: -150px;
     }
-
     100% {
-      left:calc(100%) ;
+        left: calc(100%);
     }
-  }
-  @keyframes move3 {
+}
+
+@keyframes move3 {
     0% {
-     left:-50px;
-
+        left: -50px;
     }
- 
-
     100% {
-      left:calc(100%) ;
+        left: calc(100%);
     }
-  }
-  @keyframes move4 {
+}
+
+@keyframes move4 {
     0% {
-     left:-200px;
+        left: -200px;
     }
-
     100% {
-      left:calc(100%) ;
+        left: calc(100%);
     }
-  }
-  
+}

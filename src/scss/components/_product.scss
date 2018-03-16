@@ -21,6 +21,7 @@
     position: relative;
     z-index: 102;
     // min-height: 605px;
+    @include media('<widescreen') {}
     @include media('<tablet') {
         padding: 103px 0 42px;
     }
@@ -527,7 +528,7 @@
         right: 228px;
     }
     #eggs .paralax-image-holder {
-        bottom: -79px;
+        bottom: -129px;
         right: 235px;
         width: 214px;
     }
