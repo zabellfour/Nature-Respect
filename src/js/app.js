@@ -56,6 +56,11 @@ import fancyBox from './modules/fancybox.js';
 
         //init videoSlider
         sliderVideo.init();
+
+        $('.product-list a').on('click',function () {
+            console.log('ll');
+        })
+
     });
 
 })(jQuery);

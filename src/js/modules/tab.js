@@ -14,7 +14,6 @@ var tabs = (function($) {
             var dataLook = $(this).attr('href').replace('#', '');
             $('.image-holder').removeClass('active');
             $('[data-' + dataLook + ']').addClass('active');
-            console.log(dataLook);
         });
     }
 

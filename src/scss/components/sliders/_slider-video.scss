@@ -114,6 +114,7 @@
 		transform: scale(1, -1) translate(0, 50%);
 		@include media('<tablet') {
 			right: -40px;
+			left: auto;
 			&:before {
 				content: '\e905';
 			}

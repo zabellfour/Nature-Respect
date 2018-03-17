@@ -1,10 +1,27 @@
 /* product detail style */
+
 .product-container.product-detail-wrap {
-	margin:  0 0 60px;
+	margin: 0 0 60px;
+	@include media('<phone') {
+		margin: 0;
+	}
 	.container {
 		display: block;
+		max-width: 1025px;
+	}
+	.product-box {
+		img.img-product {
+			@include media('<tablet') {
+				top: 55%;
+				width: 30%;
+			}
+			@include media('<phone') {
+				width: 38%;
+			}
+		}
 	}
 }
+
 .product-detail {
 	display: flex;
 	align-items: flex-start;
@@ -12,67 +29,130 @@
 	margin: 0 0 75px;
 	@include media('<tablet') {
 		display: block;
-		margin: 0 -40px;
+		margin: 0 -40px 35px;
 	}
 	.product-box {
-		width: 40%;
+		width: 39%;
 		margin: -100px 0 0;
+		@include media('<desktop') {
+			margin: -50px 0 0;
+		}
 		@include media('<tablet') {
 			width: 100%;
+			margin: 0 0 25px;
+			height: 355px;
+			position: relative;
+		}
+		.mask {
+			@include media('<tablet') {
+				position: absolute;
+				top: 0;
+				left: -9px;
+				height: 350px;
+				right: -9px;
+			}
 		}
 	}
 	.product-text {
-		width: 45%;
-		padding: 100px 0 0;
+		color: #6f2d00;
+		width: 50%;
+		padding: 65px 0 0;
+		@include media('<desktop') {
+			width: 54%;
+		}
 		@include media('<tablet') {
 			width: 100%;
-			padding: 0 45px;
+			padding: 0 61px;
+			font-size: 15px;
+			line-height: 19px;
 		}
 	}
 	.h4 {
+		color: #6f2d00;
+		text-transform: uppercase;
+		&:before {
+			display: none;
+		}
 		@include media('<tablet') {
+			font-size: 24px;
+			line-height: 26px;
 			text-align: center;
 			display: block;
 		}
 	}
 	.product-title-mob {
-		text-align: center;
 		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0 30px;
 		.h1 {
-			font-size: 25px;
-			line-height: 27px;
-		}
-		span {
-			display: block;
+			font: 28px/30px $base-font-hobo;
+			text-transform: uppercase;
+			margin: 0 0 18px;
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -10px;
+				width: 100%;
+				height: 2px;
+				background: linear-gradient(to right, rgba(203, 212, 40, 0.4) 0%, rgba(203, 212, 40, 0) 10%, #cbd428 20%, #cbd428 80%, rgba(203, 212, 40, 0) 90%, rgba(203, 212, 40, 0.4) 100%);
+			}
 		}
 		@include media('<tablet') {
-			display: block;
+			display: flex;
 		}
+	}
+	.subtitle {
+		font: 16px/18px $base-font-hobo;
+		display: block;
+		text-transform: uppercase;
 	}
 }
 
 .product-information {
-	padding: 20px;
+	padding: 42px 36px 20px 27px;
 	border: 20px solid #e5e993;
+	color: #6c1c00;
+	@include media('<tablet') {
+		border-width: 9px;
+		padding: 7px 59px 12px 56px;
+	}
+	@include media('<phone') {
+		padding: 12px;
+	}
 	.heading {
 		@include media('<tablet') {
 			text-align: center;
 		}
 	}
 	.h6 {
+		color: #6c1c00;
+		font-weight: normal;
 		font-size: 31px;
 		line-height: 33px;
-		margin: 0 0 35px;
+		margin: 0 0 24px;
 		display: inline-block;
+		@include media('<tablet') {
+			font-weight: bold;
+			margin: 0 0 8px;
+		}
 		&:before {
 			left: 0;
 			right: 0;
 			transform: translateX(0);
 			width: 100%;
 			background-size: contain;
+			bottom: -10px;
+			@include media('<tablet') {
+				display: none;
+			}
 		}
 	}
-	>p {
+	> p {
 		@include media('<tablet') {
 			display: none;
 		}
@@ -83,14 +163,21 @@
 	width: 100%;
 	border-collapse: collapse;
 	margin: 0 0 70px;
-	tr:not(:last-child){
+	@include media('<tablet') {
+		margin: 0 0 15px;
+	}
+	@include media('<phone') {
+		font-size: 15px;
+	}
+	tr:not(:last-child) {
 		border-bottom: 1px solid #562900;
 	}
 	th {
 		text-align: left;
 		background: #c7d126;
 		color: #fff;
-		padding: 10px 20px;
+		padding: 12px 11px;
+		font-weight: normal;
 		&:last-child {
 			width: 1%;
 			white-space: nowrap;
@@ -104,6 +191,10 @@
 		&:nth-child(2) {
 			@include media('<tablet') {
 				text-align: right;
+				padding: 12px 35px 12px 5px;
+			}
+			@include media('<phone') {
+				padding: 12px 10px 12px 5px;
 			}
 		}
 		@include media('<tablet') {
@@ -112,7 +203,10 @@
 	}
 	td {
 		color: #6c1c00;
-		padding: 10px 20px;
+		padding: 11px;
+		@include media('<tablet') {
+			padding: 12px;
+		}
 		&:last-child {
 			width: 1%;
 			white-space: nowrap;
@@ -126,6 +220,10 @@
 		&:nth-child(2) {
 			@include media('<tablet') {
 				text-align: right;
+				padding: 12px 35px 12px 5px;
+			}
+			@include media('<phone') {
+				padding: 12px 10px 12px 5px;
 			}
 		}
 		@include media('<tablet') {

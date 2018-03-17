@@ -197,9 +197,11 @@
 		right: 18.5%;
 		@include media('<desktop') {
 			right: 8%;
+			left: auto;
 		}
 		@include media('<tablet') {
 			right: 9px;
+			left: auto;
 			&:before {
 				content: '\e905';
 			}

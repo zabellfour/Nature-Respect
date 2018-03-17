@@ -20,7 +20,6 @@
     padding: 110px 0 35px;
     position: relative;
     z-index: 102;
-    // min-height: 605px;
     @include media('<widescreen') {}
     @include media('<tablet') {
         padding: 103px 0 42px;
@@ -145,6 +144,15 @@
         bottom: -18px;
         left: -100px;
         z-index: -1;
+    }
+    .image-holder{
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    [data-eggs] {
+        width: 100%;
     }
     span {
         display: block;

@@ -10,7 +10,6 @@
     margin: 0 0 22px;
     background: #fff;
     @include media('<desktop') {
-        position: relative;
         background: none;
         padding: 0;
         margin: 0;
@@ -25,7 +24,7 @@
         position: absolute;
         background: url(../images/decor01.png) 50% 0/cover no-repeat;
         @include media('<widescreen') {
-            height: 19px;
+            height: 25px;
         }
         @include media('<desktop') {
             display: none;
@@ -172,6 +171,10 @@
     position: absolute;
     right: 35px;
     bottom: -31px;
+    @include media('<widescreen') {
+        right: 30px;
+        bottom: -21px;
+    }
     @include media('<desktop') {
         display: none;
     }

@@ -1,9 +1,9 @@
 .recept-banner.recept-banner-detail {
 	.title-holder {
-		top: 46%;
+		top: 49%;
+		width: 70%;
 		@include media('<tablet') {
 			color: #fff;
-			top: 35%;
 			width: 75%;
 		}
 		&:before {
@@ -31,8 +31,12 @@
 	}
 	>img {
 		@include media('<tablet') {
-			width: 192%;
-			max-width: 192%;
+			width: 150%;
+			max-width: 150%;
+		}
+		@include media('<phone') {
+			width: 212%;
+			max-width: 212%;
 		}
 	}
 }
@@ -220,6 +224,9 @@
 	mask-repeat: no-repeat;
 	mask-size: 100% 100%;
 	background: #5b9ac7;
+	@include media('<tablet') {
+		padding: 4px;
+	}
 	.mask {
 		mask-image: url('../images/decor27.png');
 		mask-mode: alpha;
@@ -227,9 +234,6 @@
 		mask-size: 100% 100%;
 		z-index: 1;
 		position: relative;
-	}
-	img {
-		width: 100%;
 	}
 	&.eggs {
 		background: #d89005;
@@ -251,6 +255,17 @@
 	}
 	&.delicatessen {
 		background: #646dc3;
+	}
+	img.img-product {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 62%;
+	}
+	img {
+		width: 100%;
+		vertical-align: top;
 	}
 }
 
@@ -281,9 +296,6 @@
 			mask-size: 100% 100%;
 			z-index: 1;
 			position: relative;
-		}
-		img {
-			width: 100%;
 		}
 		&.eggs {
 			background: #d89005;
