@@ -431,6 +431,7 @@
 
 body.filter-opened {
     position: fixed;
+    max-width: 100%;
     .recept-menu {
         transform: translateY(0) !important;
     }

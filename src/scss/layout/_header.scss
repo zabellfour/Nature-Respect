@@ -270,7 +270,8 @@
     }
 }
 
-.recipie-page #header {
+.recipie-page #header,
+.product-page #header {
     .logo-header {
         @include media('<phone') {
             display: none;
