@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+	include ../partials/head
+	body
+		#wrapper
+			include ../partials/header
+			// single banner of the site
+			section.single-banner
+				img(src="assets/images/banner5.jpg", alt="banner")
+				.title-holder
+					h1.h1 Mentions légales
+					span.subtitle We can put an additional subline here
+			// single content of the site
+			section.single-wrapper
+				.container
+					p Vous êtes actuellement connecté au site "www.legaulois.com", édité par la société LDC Sablé.
+					h2 1. Information sur la Société
+					address
+						| LDC Sablé
+						br
+						| Service Consommateur - Z.I. St Laurent - 72308 SABLE SUR SARTHE
+						br
+						| Capital social : 235 738 512 €
+						br
+						| Tél : + 33 (0)2 43 62 70 00
+						br
+						| Fax : +33 (0)2 43 92 34 18
+						br
+						| 444 502 025 RCS LE MANS
+						br
+						| TVA intracommunautaire : FR42 444 502 025 000 18
+					h2 2. Propriété intellectuelle
+					p La présentation et le contenu du site "www.legaulois.com" ou "www.legaulois.fr" constituent, ensemble, une œuvre protégée par les lois en vigueur des droits d’auteur, de la propriété intellectuelle et industrielle.
+					p Les créations apparaissant éventuellement sur le site, dessins, photographies, images, textes, séquences animées sonores ou non et autres documentations représentées, sont objets de droits d’auteur, de propriété industrielle et/ou intellectuelle et sont, selon les cas, propriété de la société LDC Sablé ou de tiers ayant autorisé la société LDC Sablé à les utiliser.
+					p Aucune exploitation commerciale, reproduction, représentation, utilisation, adaptation, modification, incorporation, traduction, commercialisation, partielle ou intégrale de ces éléments (y compris ceux téléchargeables ou copiables) ne pourra en être faite sans l'accord préalable et écrit de la société LDC Sablé, à l'exception de l'utilisation pour un usage privé sous réserve des dispositions différentes voire plus restrictives du Code de la propriété intellectuelle.
+					p Les dénominations ou appellations, les logos sont, sauf indications particulières, des marques déposées. Toute représentation et/ou reproduction et/ou exploitation partielle ou totale de ces marques, de quelque nature que ce soit, est totalement prohibée.
+					p Outre les droits d’auteurs, la violation de l'un de ces droits de propriété industrielle et/ou intellectuelle est un délit de contrefaçon et s’expose à des sanctions civiles et pénales et notamment celles prévues aux articles L 335-2 et suivants du Code de la propriété intellectuelle.
+					h2 3. Liens hypertextes
+					p La mise en place d'un lien hypertexte vers le site "www.legaulois.com" ou "www.legaulois.fr" nécessite une autorisation préalable et écrite du directeur de publication qui ne peut en aucun cas être tenu pour responsable des sites ayant un lien hypertexte avec le site et décline toute responsabilité quant à leur contenu et à leur utilisation. LDC Sablé se réserve le droit de demander la suppression d’un lien qu’elle estime non conforme à l’objet du site "www.legaulois.com" ou "www.legaulois.fr".
+					p Les liens hypertextes établis en direction d'autres sites à partir de site "www.legaulois.com" ou "www.legaulois.fr" ne sauraient, en aucun cas, engager la responsabilité de LDC Sablé.
+					p 4. Responsabilité de l’éditeur Les informations et documents disponibles sur ce site, sont fournies sans garanties d’aucune sorte ni explicite ni implicite. Leur utilisation se fait sous l’entière et seule responsabilité de l’utilisateur, qui assume la totalité des conséquences pouvant en découler, sans
+			// slider menu of the page
+			section.slider-menu-wrap
+				.container
+					.heading
+						h3.h3 DISCOVER « NATURE & RESPECT »!
+					.slider-menu
+						.item
+							img(src="assets/images/menu-image01.jpg", alt="#")
+							a(href="#").bnt-raggy Discover our concept
+							span.title.brown OUR CONCEPT
+						.item
+							img(src="assets/images/menu-image02.jpg", alt="#")
+							a(href="#").bnt-raggy Discover our products
+							span.title.brown OUR PRODUCTS
+						.item
+							img(src="assets/images/menu-image03.jpg", alt="#")
+							a(href="#").bnt-raggy Discover our recipes
+							span.title.brown OUR RECIPES
+			include ../partials/foot

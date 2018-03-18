@@ -54,7 +54,6 @@
             padding: 0 15px;
         }
         @include media('<tablet') {
-            padding: 0 19px;
             margin: 0 0 37px;
         }
         span {
@@ -134,6 +133,11 @@
         padding: 10px 63px;
         background-position: 50% 100%;
         background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         @include media('<widescreen') {
             display: flex;
             align-items: center;
@@ -153,16 +157,13 @@
             display: block;
         }
         &.green {
-            background: url(../images/decor12.png) 0 0/cover no-repeat;
-            background-repeat: no-repeat;
-            background-position: 50% 100%;
-            background-size: cover;
+            background-image: url(../images/decor12.png);
         }
         &.yellow {
-            background: url(../images/decor11.png) 0 0/cover no-repeat;
-            background-repeat: no-repeat;
-            background-position: 50% 100%;
-            background-size: cover;
+            background-image: url(../images/decor11.png);
+        }
+        &.brown {
+            background-image: url(../images/decor28.png);
         }
     }
     .bnt-raggy {

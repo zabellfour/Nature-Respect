@@ -1,0 +1,103 @@
+/* single style */
+
+.single-wrapper {
+	font-size: 21px;
+	line-height: 22px;
+	color: #642200;
+	padding: 34px 0 0;
+	margin:  0 0 74px;
+	position: relative;
+	@include media('<tablet') {
+		font-size: 13px;
+		line-height: 16px;
+		padding: 21px 0 0;
+		margin: 0 0 39px;
+	}
+	&:before {
+		background: url(../images/decor29.png) 50% 50% no-repeat;
+		content: '';
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		right: 0;
+		height: 23px;
+		margin: 0 0 -1px;
+	}
+	.container {
+		max-width: 1185px;
+		@include media('<tablet') {
+			padding: 0 10px;
+		}
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-family: $base-font-hobo;
+		font-weight: bold;
+		margin: 0 0 22px;
+		@include media('<tablet') {
+			margin: 0 0 11px;
+		}
+	}
+	h1 {
+		font-size: 26px;
+		line-height: 28px;
+		@include media('<tablet') {
+			font-size: 20px;
+			line-height: 22px;
+		}
+	}
+	h2 {
+		font-size: 22px;
+		line-height: 24px;
+		@include media('<tablet') {
+			font-size: 16px;
+			line-height: 18px;
+		}
+	}
+	h3 {
+		font-size: 20px;
+		line-height: 22px;
+	}
+	h4 {
+		font-size: 19px;
+		line-height: 21px;
+		@include media('<tablet') {
+			font-size: 15px;
+			line-height: 17px;
+		}
+	}
+	h5 {
+		font-size: 18px;
+		line-height: 20px;
+		@include media('<tablet') {
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
+	h6 {
+		font-size: 16px;
+		line-height: 18px;
+		@include media('<tablet') {
+			font-size: 13px;
+			line-height: 15px;
+		}
+	}
+	ul {
+		@extend %listreset;
+		li {
+			margin: 0 0 10px;
+		}
+	}
+	address {
+		font-style: normal;
+		margin: 0 0 43px;
+		@include media('<tablet') {
+			margin: 0 0 18px;
+		}
+	}
+	p {
+		margin: 0 0 21px;
+		@include media('<tablet') {
+			margin: 0 0 18px;
+		}
+	}
+}
