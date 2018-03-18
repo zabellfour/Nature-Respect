@@ -459,8 +459,9 @@
 }
 
 body.filter-opened {
-	position: fixed;
-	.recept-menu {
-		transform: translateY(0) !important;
-	}
+    position: fixed;
+    max-width: 100%;
+    .recept-menu {
+        transform: translateY(0) !important;
+    }
 }

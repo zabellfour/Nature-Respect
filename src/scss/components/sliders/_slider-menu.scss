@@ -150,11 +150,15 @@
             height: 50px;
         }
         @include media('<tablet') {
+            font-size: 18px;
+            line-height: 20px;
+            height: 70px;
+            padding: 0 5px;
+        }
+        @include media('<phone') {
             font-size: 9px;
             line-height: 11px;
             height: 34px;
-            padding: 4px 5px 0 5px;
-            display: block;
         }
         &.green {
             background-image: url(../images/decor12.png);
@@ -178,7 +182,7 @@
         min-width: 175px;
         transform: translateX(-50%);
         background-image: url(../images/btn-raggy-bg-white.svg);
-        @include media('<tablet') {
+        @include media('<phone') {
             font-size: 8px;
             line-height: 11px;
             min-width: 90px;

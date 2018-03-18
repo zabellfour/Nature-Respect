@@ -12,8 +12,14 @@
 	.product-box {
 		img.img-product {
 			@include media('<tablet') {
-				top: 55%;
-				width: 30%;
+				top: 61%;
+				width: 22%;
+			}
+			@include media('<650px') {
+				width: 27%;
+			}
+			@include media('<560px') {
+				width: 31%;
 			}
 			@include media('<phone') {
 				width: 38%;

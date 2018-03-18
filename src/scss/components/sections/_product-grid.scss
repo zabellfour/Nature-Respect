@@ -1,0 +1,435 @@
+.product-grid {
+    //if necesarry could be aaded background as in recept page
+    // background-image: url('../images/prefooter-decoration3.png'), url('../images/recepties1-bg.jpg');
+    // background-size: 100% auto, 100% auto;
+    // background-position: 50% 100%, 0 0;
+    // background-repeat: no-repeat, repeat-y;
+    padding: 113px 0 100px;
+    @include media('<tablet') {
+        padding-top: 90px;
+    }
+    .btn-holder {
+        text-align: center;
+        justify-content: center;
+        max-width: 1400px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 46px;
+        .btn-row {
+            width: 100%;
+            .bnt-raggy {
+                min-width: 340px;
+                @include media('<tablet') {
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 68px;
+        @include media('<widescreen') {
+            padding: 0 15px;
+        }
+        .product-sidebar {
+            width: 261px;
+            margin-right: 20px;
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+        .product-grid-list {
+            width: calc(100% - 384px);
+            @include media('<1400px') {
+                width: calc(100% - 250px);
+            }
+            @include media('<tablet') {
+                width: 100%;
+                padding: 0 10%;
+            }
+            @include media('<640px') {
+                padding: 0 5%;
+            }
+            @include media('<phone') {
+                padding: 0;
+            }
+        }
+    }
+    .menu-btn {
+        display: block;
+        position: relative;
+        z-index: 10;
+        font-size: 24px;
+        font-family: $base-font-hobo;
+        padding: 22px 17px 22px 93px;
+        color: $white;
+        background-image: url("../images/btn-raggy-bg-white-green.svg");
+        color: $dark-red;
+        font-size: 24px;
+        text-decoration: none;
+        background-repeat: no-repeat;
+        margin-bottom: 8px;
+        @include media('<widescreen') {
+            padding: 30px 78px;
+            font-size: 16px;
+        }
+        @include media('<desktop') {
+            padding: 30px 78px;
+            font-size: 10px;
+        }
+        @include media('<phone') {
+            font-size: 10px;
+            padding: 7px;
+            margin-left: 8px;
+        }
+        &:hover {
+            background-image: url("../images/btn-raggy-bg.svg");
+            color: $dark-red;
+            opacity: 1;
+        }
+        .image {
+            background-repeat: no-repeat;
+            width: 38px;
+            height: 39px;
+            background-size: 100% auto;
+            background-position: center center;
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-60%);
+            display: block;
+            &.image-close {
+                background-image: url('../images/close.png');
+            }
+            &.image-fresh {
+                background-image: url('../images/fresh.png');
+            }
+            &.image-frozen {
+                background-image: url('../images/frozen.png');
+            }
+            &.image-service {
+                background-image: url('../images/cart.png');
+            }
+            &.image-daily {
+                background-image: url('../images/daily.png');
+            }
+        }
+    }
+    .btn-group {
+        padding-top: 45px;
+        position: relative;
+    }
+    .product-grid-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .products-holder {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        color: $white;
+        padding-right: 12px;
+        @include media('<desktop') {
+            padding: 0;
+        }
+        @include media('<phone') {
+            padding: 0 18%;
+        }
+        &:after {
+            content: '';
+            width: 31%;
+            flex-shrink: 1;
+        }
+        .single-product-box {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 31%;
+            background-size: cover;
+            overflow: hidden;
+            box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.65);
+            margin-bottom: 27px;
+            background: $white !important;
+            @include media('<desktop') {
+                width: 48%;
+            }
+            @include media('<tablet') {
+                margin-bottom: 27px;
+            }
+            .add-info {
+                position: absolute;
+                padding: 89px 14px;
+                font-size: 14px;
+                top: 0;
+                left: 0;
+                right: 5%;
+                bottom: 0;
+                background-color: rgba(255, 255, 255, .9);
+                color: $dark-red;
+                z-index: 100;
+                opacity: 0;
+                visibility: hidden;
+                @include animate(opacity visibility);
+                @include media('<tablet') {
+                    padding: 60px 10px;
+                    right: 0;
+                }
+                .product-type {
+                    display: flex;
+                    width: 100%;
+                    justify-content: flex-start;
+                    text-align: center;
+                    font-family: $base-font-hobo;
+                    font-size: 16px;
+                    .frozen-type,
+                    .fresh-type {
+                        width: 50%;
+                        font-size: 16px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-content: center;
+                        text-decoration: none;
+                        color: inherit;
+                        span {
+                            display: block;
+                            width: 100%;
+                        }
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .add-info {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .img-holder {
+                position: relative;
+                z-index: 5;
+                @include media('<tablet') {
+                    padding: 56px 21% 83px;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            @include media('<widescreen') {
+                min-height: 300px;
+            }
+            @include media('<tablet') {
+                width: 49%;
+                min-height: 250px;
+            }
+            @include media('<phone') {
+                width: 100%;
+                min-height: 193px;
+            }
+            &.eggs-recept,
+            &.eggs-product {
+                .box-heading:before {
+                    background-color: #d89005;
+                }
+            }
+            &.turkey-recept,
+            &.turkey-product {
+                .box-heading:before {
+                    background-color: #e6b02a;
+                }
+            }
+            &.hen-recept,
+            &.hen-product {
+                .box-heading:before {
+                    background-color: #aa0033;
+                }
+            }
+            &.chikcen-recept,
+            &.chikcen-product {
+                .box-heading:before {
+                    background-color: #5b9ac7;
+                }
+            }
+            &.duck-recept,
+            &.duck-product {
+                .box-heading:before {
+                    background-color: #1a664a;
+                }
+            }
+            &.guinea-recept,
+            &.guinea-product {
+                .box-heading:before {
+                    background-color: #910836;
+                }
+            }
+            &.goose-recept,
+            &.goose-product {
+                .box-heading:before {
+                    background-color: #9e361b;
+                }
+            }
+            &.delicatessen-recept,
+            &.delicatessen-product {
+                .box-heading:before {
+                    background-color: #646dc3;
+                }
+            }
+        }
+        .box-heading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            min-width: 80px;
+            z-index: 101;
+            &:before,
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: -200px;
+                right: -200px;
+                height: 521px;
+                background: #910836;
+                content: '';
+                border-radius: 50%;
+                z-index: 5;
+            }
+            &:after {
+                z-index: 4;
+                left: -220px;
+                right: -220px;
+                height: 521px;
+                bottom: -20px;
+                background-size: 100% 100%;
+                background: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 70%);
+            }
+        }
+        .box-footer {
+            min-height: 60px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 4px 25px 9px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            z-index: 100;
+            @include media('<widescreen') {
+                padding: 10px;
+            }
+            @include media('<desktop') {
+                padding: 5px 5px 5px;
+            }
+            @include media('<tablet') {
+                min-height: 60px;
+            }
+            @include media('<phone') {
+                min-height: 55px;
+            }
+            &:before,
+            &:after {
+                position: absolute;
+                top: -16px;
+                left: -130px;
+                right: -215px;
+                height: 500px;
+                background: #682806;
+                content: '';
+                border-radius: 50%;
+                z-index: 5;
+                @include media('<tablet') {
+                    top: -7px;
+                    left: -191px;
+                    right: -285px;
+                    height: 666px;
+                }
+            }
+            &:after {
+                z-index: 4;
+                top: -26px;
+                left: -130px;
+                right: -215px;
+                background-size: 100% 100%;
+                background: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 70%);
+                @include media('<tablet') {
+                    top: -17px;
+                    left: -191px;
+                    right: -285px;
+                    height: 666px;
+                }
+            }
+            a {
+                position: relative;
+                z-index: 10;
+                font-size: 12px;
+                min-width: 142px;
+                padding: 11px 10px 11px;
+                color: $white;
+                background-image: url("../images/btn-raggy-bg.svg");
+                @include media('<widescreen') {
+                    padding: 10px;
+                    font-size: 15px;
+                }
+                @include media('<desktop') {
+                    font-size: 12px;
+                    min-width: 100px;
+                }
+                @include media('<phone') {
+                    font-size: 10px;
+                    padding: 7px;
+                    margin-left: 8px;
+                }
+                &:hover {
+                    background-image: url("../images/btn-raggy-bg-white-green.svg");
+                    color: $dark-red;
+                    opacity: 1;
+                }
+            }
+        }
+        .h2 {
+            padding: 12px 12px 16px;
+            font-family: $base-font-hobo;
+            font-size: 17px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            max-width: 240px;
+            margin: 0 auto;
+            font-weight: 400;
+            min-height: 52px;
+            @include media('<desktop') {
+                font-size: 18px;
+                min-height: 70px;
+            }
+            @include media('<tablet') {
+                font-size: 13px;
+                padding: 12px 5px 10px;
+                min-height: 58px;
+            }
+            @include media('<phone') {
+                min-height: 40px;
+                padding-top: 6px;
+                padding-bottom: 0px;
+            }
+        }
+        .product-image {
+            position: absolute;
+            z-index: 10;
+            right: 4px;
+            bottom: 3px;
+            width: 56px;
+        }
+        .img-holder {
+            padding: 71px 21% 85px;
+        }
+    }
+}

@@ -70,42 +70,50 @@
                 width: 100%;
                 height: 293px;
             }
-            &.eggs-recept {
+            &.eggs-recept,
+            &.eggs-product {
                 .box-heading:before {
                     background-color: #d89005;
                 }
             }
-            &.turkey-recept {
+            &.turkey-recept,
+            &.turkey-product {
                 .box-heading:before {
                     background-color: #e6b02a;
                 }
             }
-            &.hen-recept {
+            &.hen-recept,
+            &.hen-product {
                 .box-heading:before {
                     background-color: #aa0033;
                 }
             }
-            &.chikcen-recept {
+            &.chikcen-recept,
+            &.chikcen-product {
                 .box-heading:before {
                     background-color: #5b9ac7;
                 }
             }
-            &.duck-recept {
+            &.duck-recept,
+            &.duck-product {
                 .box-heading:before {
                     background-color: #1a664a;
                 }
             }
-            &.guinea-recept {
+            &.guinea-recept,
+            &.guinea-product {
                 .box-heading:before {
                     background-color: #910836;
                 }
             }
-            &.goose-recept {
+            &.goose-recept,
+            &.goose-product {
                 .box-heading:before {
                     background-color: #9e361b;
                 }
             }
-            &.delicatessen-recept {
+            &.delicatessen-recept,
+            &.delicatessen-product {
                 .box-heading:before {
                     background-color: #646dc3;
                 }

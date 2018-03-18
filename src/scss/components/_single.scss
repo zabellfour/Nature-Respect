@@ -93,11 +93,21 @@
 		@include media('<tablet') {
 			margin: 0 0 18px;
 		}
+		a {
+			text-decoration: none;
+		}
 	}
 	p {
 		margin: 0 0 21px;
 		@include media('<tablet') {
 			margin: 0 0 18px;
+		}
+	}
+	a {
+		color: #642200;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
 		}
 	}
 }
