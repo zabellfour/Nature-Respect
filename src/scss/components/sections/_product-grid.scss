@@ -71,6 +71,7 @@
         text-decoration: none;
         background-repeat: no-repeat;
         margin-bottom: 8px;
+        background-size: 100% 100%;
         @include media('<widescreen') {
             padding: 30px 78px;
             font-size: 16px;
