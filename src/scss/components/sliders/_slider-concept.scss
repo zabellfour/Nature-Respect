@@ -91,7 +91,7 @@
 		border: 22px solid #d1bdb3;
 		position: relative;
 		@include media('<tablet') {
-			width: 68%;
+			width: 65%;
 			margin: 0 auto;
 			border-width: 5px;
 		}
@@ -161,35 +161,14 @@
 			left: 8%;
 		}
 		@include media('<tablet') {
-			font-family: 'icomoon' !important;
-			speak: none;
-			font-style: normal;
-			font-weight: normal;
-			font-variant: normal;
-			text-transform: none;
-			line-height: 1;
-			width: 35px;
-			height: 35px;
-			border-radius: 100px;
-			background: #bf927f;
-			color: #fff;
+			width: 45px;
+			height: 25px;
 			left: 9px;
 			top: calc(50% - 47px);
 			transform: translateY(-50%);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			&:before {
-				content: '\e906';
-			}
 		}
 		&:hover {
 			opacity: 0.8;
-		}
-		img {
-			@include media('<tablet') {
-				display: none;
-			}
 		}
 	}
 	.next {
@@ -202,9 +181,6 @@
 		@include media('<tablet') {
 			right: 9px;
 			left: auto;
-			&:before {
-				content: '\e905';
-			}
 		}
 	}
 }

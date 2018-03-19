@@ -305,8 +305,7 @@
         }
     }
     .header-title {
-        font-size: 86px;
-        line-height: 88px;
+        font: 86px/88px $base-font-clingy;
         text-transform: uppercase;
         display: block;
         margin: 0 0 25px;

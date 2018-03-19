@@ -4,7 +4,7 @@
 	padding: 27px 0 69px;
 	background: #c2cd23 url(../images/decor16.png) 0 0/cover no-repeat;
 	@include media('<tablet') {
-		padding: 21px 35px 51px;
+		padding: 21px 45px 51px;
 	}
 	.heading {
 		color: #fff;
@@ -77,35 +77,14 @@
 		transform: translateY(-50%);
 		cursor: pointer;
 		@include media('<tablet') {
-			font-family: 'icomoon' !important;
-			speak: none;
-			font-style: normal;
-			font-weight: normal;
-			font-variant: normal;
-			text-transform: none;
-			line-height: 1;
-			width: 35px;
-			height: 35px;
-			border-radius: 100px;
-			background: #e0e691;
-			left: -40px;
+			width: 50px;
+			height: 25px;
+			left: -55px;
 			top: 50%;
 			transform: translateY(-50%);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: #fff;
-			&:before {
-				content: '\e906';
-			}
 		}
 		&:hover {
 			opacity: .8;
-		}
-		img {
-			@include media('<tablet') {
-				display: none;
-			}
 		}
 	}
 	.next {
@@ -113,11 +92,9 @@
 		right: 17px;
 		transform: scale(1, -1) translate(0, 50%);
 		@include media('<tablet') {
-			right: -40px;
+			right: -55px;
 			left: auto;
-			&:before {
-				content: '\e905';
-			}
+			transform: scaleY(-1) translateY(50%);
 		}
 	}
 }

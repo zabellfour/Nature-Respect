@@ -6,8 +6,8 @@ var menuSlider = (function($) {
     // init slider
     function initSlider() {
         slider.slick({
-            nextArrow: '<span class="next"><i class="icon icon-arrow-right"></i></span>',
-            prevArrow: '<span class="prev"><i class="icon icon-arrow-left"></i></span>',
+            nextArrow: '<span class="next"></span>',
+            prevArrow: '<span class="prev"></span>',
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
