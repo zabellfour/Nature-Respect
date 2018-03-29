@@ -227,6 +227,7 @@
 				box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.98);
 				border-radius: 50%;
 				background: transparent;
+				pointer-events: none;
 			}
 			.mask-wrapper {
 				mask-image: url('../images/recept-menu-images/mask.png');
@@ -337,7 +338,9 @@
 			a {
 				font-size: inherit;
 				color: inherit;
-				display: block;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
 				border-radius: 50%;
 				@include media('<tablet') {
 					position: relative;
@@ -389,7 +392,7 @@
 				a {
 					background-color: #5b9ac7;
 				}
-				bottom: -34px;
+				bottom: -42px;
 			}
 			&.duck {
 				a {

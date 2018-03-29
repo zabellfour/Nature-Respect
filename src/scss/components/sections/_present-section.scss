@@ -249,13 +249,13 @@
     text-align: center;
     padding-bottom: 180px;
     padding: 0 40px;
-    min-height: 698px;
+    min-height: 870px; 
     position: relative;
     z-index: 100;
     overflow: hidden;
     @include media('<widescreen') {
         padding: 0;
-        min-height: 540px;
+        min-height: 650px;
     }
     @include media('<tablet') {
         min-height: 0;
@@ -447,8 +447,8 @@
                 }
                 .image-customer+.image-box {
                     @include media('>=widescreen') {
-                        top: 42px;
-                        left: -6px;
+                        top: 54px;
+                        left: -23px;
                         transform: rotate(-12deg);
                     }
                 }
@@ -571,8 +571,8 @@
             }
         }
         .image-customer+.image-box {
-            top: 22px;
-            left: 30px;
+            top: 31px;
+            left: 16px;
             width: 50px;
             height: auto;
             transform: rotate(-16deg);

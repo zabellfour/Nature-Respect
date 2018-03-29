@@ -6,11 +6,12 @@ var sliderTabs = (function ($) {
     // init slider
     function init() {
         slider.slick({
-            nextArrow: '<span class="next"><img src="assets/images/right02.png" alt="#"></span>',
-            prevArrow: '<span class="prev"><img src="assets/images/left02.png" alt="#"></span>',
+            nextArrow: '<span class="next"><img src="/content/themes/natureetrespect/assets/images/right02.png" alt="#"></span>',
+            prevArrow: '<span class="prev"><img src="/content/themes/natureetrespect/assets/images/left02.png" alt="#"></span>',
             infinite: true,
             slidesToScroll: 1,
             slidesToShow: 1,
+            adaptiveHeight: true,
             centerMode: true,
             centerPadding: '27%',
             responsive: [

@@ -12,6 +12,7 @@ var tabs = (function($) {
         var $tabSelector = $('.product-list a');
         $tabSelector.on('click', function() {
             var dataLook = $(this).attr('href').replace('#', '');
+            $('.productsBtn').attr('href', '/products/?slug='+dataLook);
             $('.image-holder').removeClass('active');
             $('[data-' + dataLook + ']').addClass('active');
         });

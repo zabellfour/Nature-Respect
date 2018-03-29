@@ -72,6 +72,7 @@
         background-repeat: no-repeat;
         margin-bottom: 8px;
         background-size: 100% 100%;
+        hyphens: auto;
         @include media('<widescreen') {
             padding: 30px 78px;
             font-size: 16px;
@@ -89,6 +90,10 @@
             background-image: url("../images/btn-raggy-bg.svg");
             color: $dark-red;
             opacity: 1;
+        }
+        &.active {
+            background-image: url("../images/btn-raggy-bg.svg");
+            color: $dark-red;
         }
         .image {
             background-repeat: no-repeat;
@@ -133,6 +138,7 @@
         flex-wrap: wrap;
         color: $white;
         padding-right: 12px;
+        width:100%;
         @include media('<desktop') {
             padding: 0;
         }
@@ -215,12 +221,14 @@
             .img-holder {
                 position: relative;
                 z-index: 5;
+                text-align:center;
                 @include media('<tablet') {
                     padding: 56px 21% 83px;
                 }
                 img {
-                    width: 100%;
+                    width: auto;
                     height: 100%;
+                    max-height: 206px;
                     object-fit: cover;
                 }
             }
@@ -253,8 +261,8 @@
                     background-color: #aa0033;
                 }
             }
-            &.chikcen-recept,
-            &.chikcen-product {
+            &.chicken-recept,
+            &.chicken-product {
                 .box-heading:before {
                     background-color: #5b9ac7;
                 }
@@ -298,7 +306,7 @@
                 left: -200px;
                 right: -200px;
                 height: 521px;
-                background: #910836;
+                background-color: #5b9ac7;
                 content: '';
                 border-radius: 50%;
                 z-index: 5;
@@ -374,8 +382,8 @@
                 font-size: 12px;
                 min-width: 142px;
                 padding: 11px 10px 11px;
-                color: $white;
-                background-image: url("../images/btn-raggy-bg.svg");
+                background-image: url("../images/btn-raggy-bg-white-green.svg");
+                color: $dark-red;
                 @include media('<widescreen') {
                     padding: 10px;
                     font-size: 15px;
@@ -390,8 +398,8 @@
                     margin-left: 8px;
                 }
                 &:hover {
-                    background-image: url("../images/btn-raggy-bg-white-green.svg");
-                    color: $dark-red;
+                    color: $white;
+                    background-image: url("../images/btn-raggy-bg.svg");
                     opacity: 1;
                 }
             }

@@ -23,6 +23,9 @@ var sliders = {
         $(".circle-text").each(function(index, el) {
           new CircleType(el).radius(134);
       });
+      $(".discoverSpecial").each(function (index, el) {
+        new CircleType(el).radius(210);
+    });
     }
 
 };

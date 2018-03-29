@@ -100,7 +100,17 @@
 		}
 	}
 }
-
+.circleTest {
+	width: 700px;
+	height: 700px;
+	border-radius: 350px;
+	position: absolute;
+	background-color:#5b9ac7;
+	top: -635px;
+	left: -200px;
+	z-index:1;
+	box-shadow: 0px 0px 4px #000;
+}
 .slider-menu {
 	position: relative;
 	margin: 0 0 50px;
@@ -110,8 +120,20 @@
 	.item {
 		border: 16px solid #f2f8d2;
 		position: relative;
+
 		@include media('<tablet') {
 			border-width: 6px;
+		}
+		&.product {
+			overflow:hidden;
+			height:300px;
+			background-image: url(../images/product-decor.jpg);
+			background-size: cover;
+			background-position: center center;
+		}
+		&.recipe {
+			overflow:hidden;
+					height:300px;
 		}
 	}
 	.slick-slide {
@@ -120,24 +142,38 @@
 			padding: 0 5px;
 		}
 	}
+
 	.title {
-		background-image: url(../images/decor10.png);
 		position: absolute;
 		left: 0;
 		right: 0;
 		top: 0;
+		z-index:1;
 		color: #fff;
 		text-align: center;
 		height: 67px;
 		font: 18px/20px $base-font-hobo;
-		padding: 10px 63px;
-		background-position: 50% 100%;
-		background-repeat: no-repeat;
-		background-size: cover;
+		padding: 5px 20px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+
+		&.green {
+			background-image:url(../images/decor12.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		&.yellow {
+			background-image:url(../images/decor11.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		&.brown {
+			background-image:url(../images/decor28.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
 		@include media('<widescreen') {
 			display: flex;
 			align-items: center;
@@ -159,15 +195,6 @@
 			font-size: 9px;
 			line-height: 11px;
 			height: 34px;
-		}
-		&.green {
-			background-image: url(../images/decor12.png);
-		}
-		&.yellow {
-			background-image: url(../images/decor11.png);
-		}
-		&.brown {
-			background-image: url(../images/decor28.png);
 		}
 	}
 	.bnt-raggy {
@@ -264,6 +291,16 @@
 	}
 	img {
 		vertical-align: top;
-		width: 100%;
+		height:100%;
+		width:auto;
+		max-width: none;
+		transform: translateX(-50%);
+		left: 50%;
+		position: relative;
+		z-index: 0;
+		&.imgProduct{
+			height:60%;
+			margin-top:25%;
+		}
 	}
 }

@@ -110,4 +110,169 @@
 			text-decoration: none;
 		}
 	}
+
+	.zone_texte_image{
+		max-width:  1000px;
+		margin: 0 auto;
+		.elt{
+			display: flex;
+
+			@include media('<phone') {
+				flex-direction: column;
+			}
+
+			&:nth-child(odd){
+				.texte{
+					order:2;
+					padding: 20px 0 0 20px;
+					@include media('<phone') {
+						padding: 20px 20px 0 0;
+						order:0;
+					}
+				}
+			}
+			&:nth-child(even){
+				.texte{
+					padding: 20px 20px 0 0;
+				}
+			}
+			.texte{
+				width: 50%;
+				@include media('<phone') {
+					width: 100%;
+				}
+			}
+			.image{
+				width: 50%;
+
+				@include media('<phone') {
+					width: 100%;
+				}
+			}
+		}
+		h3{
+		  font-family: $headings-font-family;
+		  font-weight: bold;
+		  color: $headings-color;
+		  position: relative;
+		  font: 25px $base-font-hobo;
+		  margin: 0 0 38px;
+
+			 &:before {
+			    content: '';
+			    position: absolute;
+			    bottom: -15px;
+			    left: 50%;
+			    transform: translateX(-50%);
+			    background: url(../images/decor-title.png) 0 0/cover no-repeat;
+			    width: 260px;
+			    height: 3px;
+			}
+		}
+		.button-row{
+			text-align: right;
+			a.bnt-raggy{
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+	.faq{
+		margin-top: 45px;
+		padding: 0 22px 22px;
+
+		&:after{
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+		}
+
+		aside{
+			width: 25%;
+			padding-right: 20px;
+			float: left;
+
+			@include media('<phone') {
+				float: none;
+				width: 100%;
+			}
+
+			h3{
+				font-size: 28px;
+			}
+			p{
+				margin-top: 20px;
+				a{
+					text-decoration: none;
+					color: #cbd537;
+				}
+			}
+			ul{
+				margin-top: 20px;
+
+				li{
+					font-family: 'HoboStd';
+
+					a{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		section{
+			width: 75%;
+			float: left;
+
+			@include media('<phone') {
+				float: none;
+				width: 100%;
+			}
+
+			h3{
+				font-size: 28px;
+			}
+			.faqQuestion{
+				background-color: white;
+				border-radius: 3px;
+				margin-top: 15px;
+				position: relative;
+				margin-bottom: 15px;
+
+				.faqQuestionHeader{
+					background-color: #e0e687;
+					position: relative;
+					&:after{
+						@include animate(transform);
+						content : '▶';
+						position: absolute;
+						right: 20px;
+						top: 20px;
+						transform: rotate(0deg);
+					}
+					&.active:after{
+						transform: rotate(90deg);
+					}
+					p{
+						padding: 22px 47px 22px 22px;
+						cursor: pointer;
+						font-family: 'HoboStd';
+						margin: 0;
+					}
+				}
+				.faqReponse{
+					background-color: #cbd537;
+					display: none;
+					overflow: hidden;
+
+					p{
+						padding: 10px 47px 30px;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
 }

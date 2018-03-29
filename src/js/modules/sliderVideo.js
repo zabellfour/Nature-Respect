@@ -6,8 +6,8 @@ var sliderVideo = (function ($) {
     // init slider
     function init() {
         slider.slick({
-            nextArrow: '<span class="next"><img src="assets/images/right.png" alt="#"></span>',
-            prevArrow: '<span class="prev"><img src="assets/images/left.png" alt="#"></span>',
+            nextArrow: '<span class="next"><img src="/content/themes/natureetrespect/assets/images/right.png" alt="#"></span>',
+            prevArrow: '<span class="prev"><img src="/content/themes/natureetrespect/assets/images/left.png" alt="#"></span>',
             infinite: true,
             slidesToScroll: 1,
             slidesToShow: 2,

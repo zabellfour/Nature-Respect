@@ -243,9 +243,9 @@
 
 .respect-holder {
 	+ .blockquote-banner {
-		margin: -133px 0 0;
+		margin: -50px 0 0;
 		@include media('<widescreen') {
-			margin: -70px 0 0;
+			margin: -50px 0 0;
 		}
 		@include media('<desktop') {
 			margin: 0;
