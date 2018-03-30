@@ -1,306 +1,309 @@
 /* slider menu style */
 
+.ie11 .slider-menu-wrap .paralax-photo-holder .image-holder {
+    right: -6%;
+}
+
 .slider-menu-wrap {
-	background: url(../images/decor13.png) 0 85% no-repeat;
-	padding: 10px 0;
-	position: relative;
-	z-index: 2;
-	.home & {
-		padding: 246px 0 1px;
-		@include media('<desktop') {
-			padding: 100px 0;
-		}
-		@include media('<tablet') {
-			padding: 45px 0;
-		}
-	}
-	@include media('<desktop') {
-		padding: 100px 0;
-	}
-	@include media('<tablet') {
-		padding: 8px 0 45px;
-		background-size: cover;
-		background-position: 50% 0;
-	}
-	.paralax-photo-holder {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		max-width: 1300px;
-		margin: 0 auto;
-		.image-holder {
-			position: absolute;
-			top: -238px;
-			right: 15%;
-			&[data-eggs] {
-				top: -185px;
-			}
-		}
-	}
-	.container {
-		max-width: 1165px;
-		padding: 0 50px;
-		@include media('<widescreen') {
-			padding: 0 70px;
-		}
-	}
-	.heading {
-		color: #642200;
-		margin: 0 0 70px;
-		text-transform: uppercase;
-		text-align: center;
-		@include media('<desktop') {
-			padding: 0 15px;
-		}
-		@include media('<tablet') {
-			margin: 0 0 37px;
-		}
-		span {
-			font: 23px/24px $base-font-hobo;
-			@include media('<desktop') {
-				font-size: 20px;
-				line-height: 22px;
-			}
-			@include media('<tablet') {
-				font-size: 10px;
-				line-height: 12px;
-			}
-		}
-	}
-	.h3 {
-		font: 35px/37px $base-font-hobo;
-		position: relative;
-		margin: 0 0 39px;
-		@include media('<desktop') {
-			font-size: 25px;
-			line-height: 27px;
-			margin: 0 0 9px;
-		}
-		@include media('<tablet') {
-			font-size: 15px;
-			line-height: 17px;
-		}
-		&:before {
-			background: url(../images/decor09.png) 0 0/100% 100% no-repeat;
-			content: '';
-			position: absolute;
-			bottom: -18px;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 420px;
-			height: 2px;
-			@include media('<desktop') {
-				bottom: -6px;
-			}
-			@include media('<tablet') {
-				width: 200px;
-				bottom: -12px;
-			}
-		}
-	}
+    background: url(../images/decor13.png) 0 85% no-repeat;
+    padding: 10px 0;
+    position: relative;
+    z-index: 2;
+    .home & {
+        padding: 246px 0 1px;
+        @include media('<desktop') {
+            padding: 100px 0;
+        }
+        @include media('<tablet') {
+            padding: 45px 0;
+        }
+    }
+    @include media('<desktop') {
+        padding: 100px 0;
+    }
+    @include media('<tablet') {
+        padding: 8px 0 45px;
+        background-size: cover;
+        background-position: 50% 0;
+    }
+    .paralax-photo-holder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-width: 1300px;
+        margin: 0 auto;
+        .image-holder {
+            position: absolute;
+            top: -238px;
+            right: 15%;
+            &[data-eggs] {
+                top: -185px;
+            }
+        }
+    }
+    .container {
+        max-width: 1165px;
+        padding: 0 50px;
+        @include media('<widescreen') {
+            padding: 0 70px;
+        }
+    }
+    .heading {
+        color: #642200;
+        margin: 0 0 70px;
+        text-transform: uppercase;
+        text-align: center;
+        @include media('<desktop') {
+            padding: 0 15px;
+        }
+        @include media('<tablet') {
+            margin: 0 0 37px;
+        }
+        span {
+            font: 23px/24px $base-font-hobo;
+            @include media('<desktop') {
+                font-size: 20px;
+                line-height: 22px;
+            }
+            @include media('<tablet') {
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
+    }
+    .h3 {
+        font: 35px/37px $base-font-hobo;
+        position: relative;
+        margin: 0 0 39px;
+        @include media('<desktop') {
+            font-size: 25px;
+            line-height: 27px;
+            margin: 0 0 9px;
+        }
+        @include media('<tablet') {
+            font-size: 15px;
+            line-height: 17px;
+        }
+        &:before {
+            background: url(../images/decor09.png) 0 0/100% 100% no-repeat;
+            content: '';
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 420px;
+            height: 2px;
+            @include media('<desktop') {
+                bottom: -6px;
+            }
+            @include media('<tablet') {
+                width: 200px;
+                bottom: -12px;
+            }
+        }
+    }
 }
+
 .circleTest {
-	width: 700px;
-	height: 700px;
-	border-radius: 350px;
-	position: absolute;
-	background-color:#5b9ac7;
-	top: -635px;
-	left: -200px;
-	z-index:1;
-	box-shadow: 0px 0px 4px #000;
+    width: 700px;
+    height: 700px;
+    border-radius: 350px;
+    position: absolute;
+    background-color: #5b9ac7;
+    top: -635px;
+    left: -200px;
+    z-index: 1;
+    box-shadow: 0px 0px 4px #000;
 }
+
 .slider-menu {
-	position: relative;
-	margin: 0 0 50px;
-	@include media('<tablet') {
-		margin: 0 0 30px;
-	}
-	.item {
-		border: 16px solid #f2f8d2;
-		position: relative;
-
-		@include media('<tablet') {
-			border-width: 6px;
-		}
-		&.product {
-			overflow:hidden;
-			height:300px;
-			background-image: url(../images/product-decor.jpg);
-			background-size: cover;
-			background-position: center center;
-		}
-		&.recipe {
-			overflow:hidden;
-					height:300px;
-		}
-	}
-	.slick-slide {
-		padding: 0 15px;
-		@include media('<desktop') {
-			padding: 0 5px;
-		}
-	}
-
-	.title {
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		z-index:1;
-		color: #fff;
-		text-align: center;
-		height: 67px;
-		font: 18px/20px $base-font-hobo;
-		padding: 5px 20px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-
-		&.green {
-			background-image:url(../images/decor12.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		&.yellow {
-			background-image:url(../images/decor11.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		&.brown {
-			background-image:url(../images/decor28.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		@include media('<widescreen') {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 10px;
-		}
-		@include media('<desktop') {
-			font-size: 14px;
-			line-height: 16px;
-			height: 50px;
-		}
-		@include media('<tablet') {
-			font-size: 18px;
-			line-height: 20px;
-			height: 70px;
-			padding: 0 5px;
-		}
-		@include media('<phone') {
-			font-size: 9px;
-			line-height: 11px;
-			height: 34px;
-		}
-	}
-	.bnt-raggy {
-		white-space: nowrap;
-		font-size: 15px;
-		line-height: 17px;
-		color: #642200;
-		position: absolute;
-		bottom: 10px;
-		left: 50%;
-		padding: 9px 19px 13px 19px;
-		min-width: 175px;
-		transform: translateX(-50%);
-		background-image: url(../images/btn-raggy-bg-white.svg);
-		@include media('<phone') {
-			font-size: 8px;
-			line-height: 11px;
-			min-width: 90px;
-			padding: 5px;
-			bottom: 6px;
-		}
-	}
-	.slick-dots {
-		@extend %listreset;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: absolute;
-		bottom: -43px;
-		left: 0;
-		right: 0;
-		@include media('<tablet') {
-			bottom: -27px;
-		}
-		.slick-active {
-			button {
-				background: #642200;
-			}
-		}
-		button {
-			@include animate(background);
-			background: none;
-			border: none;
-			font-size: 0;
-			width: 13px;
-			height: 13px;
-			border-radius: 100px;
-			background: #d0bcb2;
-			margin: 0 7px;
-			padding: 0;
-			&:focus {
-				outline: none;
-			}
-			@include media('<tablet') {
-				width: 6px;
-				height: 7px;
-				margin: 0 4px;
-			}
-		}
-	}
-	.next,
-	.prev {
-		@include animate(opacity);
-		background: url(../images/right.png) 0 0/100% 100% no-repeat;
-		width: 75px;
-		height: 43px;
-		display: block;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		right: -64px;
-		cursor: pointer;
-		@include media('<desktop') {
-			width: 63px;
-			height: 35px;
-		}
-		@include media('<tablet') {
-			width: 55px;
-			height: 30px;
-			right: -60px;
-		}
-		&:hover {
-			opacity: .7;
-		}
-	}
-	.prev {
-		right: auto;
-		left: -64px;
-		transform: scaleX(-1) translateY(-50%);
-		@include media('<tablet') {
-			left: -60px;
-			right: auto;
-		}
-	}
-	img {
-		vertical-align: top;
-		height:100%;
-		width:auto;
-		max-width: none;
-		transform: translateX(-50%);
-		left: 50%;
-		position: relative;
-		z-index: 0;
-		&.imgProduct{
-			height:60%;
-			margin-top:25%;
-		}
-	}
+    position: relative;
+    margin: 0 0 50px;
+    @include media('<tablet') {
+        margin: 0 0 30px;
+    }
+    .item {
+        border: 16px solid #f2f8d2;
+        position: relative;
+        @include media('<tablet') {
+            border-width: 6px;
+        }
+        &.product {
+            overflow: hidden;
+            height: 300px;
+            background-image: url(../images/product-decor.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        &.recipe {
+            overflow: hidden;
+            height: 300px;
+        }
+    }
+    .slick-slide {
+        padding: 0 15px;
+        @include media('<desktop') {
+            padding: 0 5px;
+        }
+    }
+    .title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        color: #fff;
+        text-align: center;
+        height: 67px;
+        font: 18px/20px $base-font-hobo;
+        padding: 5px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &.green {
+            background-image: url(../images/decor12.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &.yellow {
+            background-image: url(../images/decor11.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &.brown {
+            background-image: url(../images/decor28.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @include media('<widescreen') {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        @include media('<desktop') {
+            font-size: 14px;
+            line-height: 16px;
+            height: 50px;
+        }
+        @include media('<tablet') {
+            font-size: 18px;
+            line-height: 20px;
+            height: 70px;
+            padding: 0 5px;
+        }
+        @include media('<phone') {
+            font-size: 9px;
+            line-height: 11px;
+            height: 34px;
+        }
+    }
+    .bnt-raggy {
+        white-space: nowrap;
+        font-size: 15px;
+        line-height: 17px;
+        color: #642200;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        padding: 9px 19px 13px 19px;
+        min-width: 175px;
+        transform: translateX(-50%);
+        background-image: url(../images/btn-raggy-bg-white.svg);
+        @include media('<phone') {
+            font-size: 8px;
+            line-height: 11px;
+            min-width: 90px;
+            padding: 5px;
+            bottom: 6px;
+        }
+    }
+    .slick-dots {
+        @extend %listreset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: -43px;
+        left: 0;
+        right: 0;
+        @include media('<tablet') {
+            bottom: -27px;
+        }
+        .slick-active {
+            button {
+                background: #642200;
+            }
+        }
+        button {
+            @include animate(background);
+            background: none;
+            border: none;
+            font-size: 0;
+            width: 13px;
+            height: 13px;
+            border-radius: 100px;
+            background: #d0bcb2;
+            margin: 0 7px;
+            padding: 0;
+            &:focus {
+                outline: none;
+            }
+            @include media('<tablet') {
+                width: 6px;
+                height: 7px;
+                margin: 0 4px;
+            }
+        }
+    }
+    .next,
+    .prev {
+        @include animate(opacity);
+        background: url(../images/right.png) 0 0/100% 100% no-repeat;
+        width: 75px;
+        height: 43px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -64px;
+        cursor: pointer;
+        @include media('<desktop') {
+            width: 63px;
+            height: 35px;
+        }
+        @include media('<tablet') {
+            width: 55px;
+            height: 30px;
+            right: -60px;
+        }
+        &:hover {
+            opacity: .7;
+        }
+    }
+    .prev {
+        right: auto;
+        left: -64px;
+        transform: scaleX(-1) translateY(-50%);
+        @include media('<tablet') {
+            left: -60px;
+            right: auto;
+        }
+    }
+    img {
+        vertical-align: top;
+        height: 100%;
+        width: auto;
+        max-width: none;
+        transform: translateX(-50%);
+        left: 50%;
+        position: relative;
+        z-index: 0;
+        &.imgProduct {
+            height: 60%;
+            margin-top: 25%;
+        }
+    }
 }

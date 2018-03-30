@@ -2,7 +2,6 @@
 //
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
-
 import headerNav from './modules/mobileNav.js';
 import diffSpeed from './modules/paralaxEl.js';
 import common from './modules/commonModule.js';
@@ -21,6 +20,8 @@ import fancyBox from './modules/fancybox.js';
 
     // When DOM is ready
     $(() => {
+        common.fixIE();
+
         fancyBox.init();
         //init mobile navigation
         headerNav.init();

@@ -1,22 +1,22 @@
 /* product style */
+
 .discoverSpecial {
-    position:absolute;
-    height:100px;
-    width:400px;
-    top:-210px;
-    font-size:1.7em;
+    position: absolute;
+    height: 100px;
+    width: 400px;
+    top: -210px;
+    font-size: 1.7em;
     font-family: 'HoboStd';
-    left:50%;
-    transform:translateX(-50%);
-    @include media('<widescreen'){
-        top:-170px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include media('<widescreen') {
+        top: -170px;
     }
-    @include media('<tablet'){
-        top:-100px;
-        font-size:1.4em;
+    @include media('<tablet') {
+        top: -100px;
+        font-size: 1.4em;
     }
 }
-
 
 .product-section-wrap {
     mask-image: url('../images/decor03-mask.png');
@@ -31,6 +31,10 @@
     @include media('<desktop') {
         mask-image: url('../images/decor03-mask-mob.png');
     }
+}
+
+.ie .product-section-wrap {
+    overflow: hidden;
 }
 
 .product-wrap {
@@ -163,9 +167,9 @@
         left: -100px;
         z-index: -1;
     }
-    .image-holder{
-        margin-left:auto;
-        margin-right:auto;
+    .image-holder {
+        margin-left: auto;
+        margin-right: auto;
         width: 320px;
         display: none;
         &.active {
@@ -327,7 +331,7 @@
         text-transform: uppercase;
         display: block;
         margin: 0 0 25px;
-        position:relative;
+        position: relative;
         top: -60px;
         @include media('<widescreen') {
             font-size: 60px;

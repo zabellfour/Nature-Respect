@@ -1,464 +1,465 @@
 .recept-banner {
-	text-align: center;
-	position: relative;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	.img-banner-mask {
-		mask-image: url('../images/recept-banner-mask.png');
-		mask-size: 100% auto;
-		mask-mode: alpha;
-		mask-repeat: no-repeat;
-		mask-position: 50% 100%;
-		position: relative;
-		vertical-align: middle;
-		img {
-			vertical-align: top;
-		}
-		&:before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			content: '';
-			background-color: rgba(0, 0, 0, .10);
-			@include media('<desktop') {
-				background-color: rgba(0, 0, 0, .45);
-			}
-		}
-	}
-	.title-holder {
-		position: absolute;
-		top: 40%;
-		left: 50%;
-		text-align: center;
-		transform: translate(-50%, -50%);
-		color: $white;
-		@include media('<1700px') {
-			top: 50%;
-		}
-		@include media('<tablet') {
-			top: calc(100% + 20px);
-			transform: translate(-50%, 0%);
-			color: $dark-red;
-		}
-		&:before {
-			position: absolute;
-			content: '';
-			z-index: -1;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 300%;
-			height: 300%;
-			background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
-			/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			@include media('<desktop') {
-				width: 150%;
-				height: 150%;
-				background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
-			}
-			@include media('<tablet') {
-				display: none;
-			}
-		}
-		.h1 {
-			font-size: 50px;
-			font-family: $base-font-hobo;
-			font-weight: 400;
-			text-transform: uppercase;
-			margin-bottom: 3px;
-			@include media('<desktop') {
-				font-size: 30px;
-			}
-			@include media('<tablet') {
-				font-size: 18px;
-			}
-		}
-		.subtitle {
-			font-size: 19px;
-			display: inline-block;
-			position: relative;
-			padding-top: 4px;
-			@include media('<desktop') {
-				font-size: 14px;
-			}
-			@include media('<tablet') {
-				font-size: 14px;
-				max-height: 40px;
-			}
-			&:after {
-				content: '';
-				position: absolute;
-				top: -4px;
-				height: 3px;
-				background: linear-gradient(to right, rgba(203, 212, 40, .4) 0%, rgba(203, 212, 40, 0) 10%, rgba(203, 212, 40, 1) 20%, rgba(203, 212, 40, 1) 80%, rgba(203, 212, 40, 0) 90%, rgba(203, 212, 40, .4) 100%);
-				/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-				left: -60px;
-				right: -60px;
-				border-radius: 110%;
-			}
-		}
-	}
-	& > img {
-		width: 100%;
-		@include media('<tablet') {
-			width: 130%;
-			max-width: 130%;
-		}
-	}
-	.filter-open-btn {
-		display: none;
-		align-items: center;
-		font-size: 13px;
-		font-weight: 400;
-		color: $white;
-		text-transform: uppercase;
-		font-family: $base-font-hobo;
-		z-index: 999;
-		.btn-decorate {
-			margin-left: 15px;
-			border: 3px solid $white;
-			border-radius: 50%;
-			background-color: #cbd428;
-			color: $white;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 29px;
-			width: 40px;
-			height: 40px;
-		}
-		@include media('<tablet') {
-			position: absolute;
-			right: 10px;
-			top: 10px;
-			display: flex;
-			justify-content: flex-end;
-		}
-	}
-	.recept-menu {
-		width: 100%;
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 10px;
-		@extend %listreset;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		@include animate(transform);
-		@include media('<tablet') {
-			position: absolute;
-			top: 0px;
-			left: 0;
-			right: 0px;
-			height: 100vh;
-			padding-bottom: 40px;
-			background: $white;
-			padding: 10px;
-			flex-direction: column;
-			z-index: 999;
-			justify-content: flex-start;
-			transform: translateY(-200%);
-			overflow: auto;
-		}
-		li {
-			position: relative;
-			display: inline-block;
-			border-radius: 50%;
-			position: relative;
-			color: $white;
-			font-size: 16px;
-			margin: 0;
-			font-family: $base-font-hobo;
-			font-weight: 400;
-			letter-spacing: -0.5px;
-			@include animate (margin);
-			@include media('<tablet') {
-				bottom: 0 !important;
-				margin-bottom: 10px;
-			}
-			.text-mobile {
-				display: none;
-				color: #6b2a00;
-				font-size: 12px;
-				margin-right: 15px;
-				text-transform: uppercase;
-				font-family: $base-font-hobo;
-				white-space: nowrap;
-				background: rgba(#dcdcdc, .35);
-				padding: 3px;
-				box-shadow: 0px 0px 17px 0px rgba(220, 220, 220, 0.4);
-				@include media('<tablet') {
-					display: block;
-					position: absolute;
-					right: calc(100% - 5px);
-					top: 50%;
-					text-align: right;
-					transform: translateY(-50%);
-				}
-			}
-			&:hover,
-			&.active {
-				margin-bottom: -25px;
-				@include media('<widescreen') {
-					margin-bottom: -20px;
-				}
-				@include media('<desktop') {
-					margin-bottom: -8px;
-				}
-				@include media('<tablet') {
-					margin-bottom: 10px;
-				}
-			}
-			&:before {
-				position: absolute;
-				top: 5px;
-				left: 5px;
-				right: 5px;
-				bottom: 5px;
-				content: '';
-				display: block;
-				box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.98);
-				border-radius: 50%;
-				background: transparent;
-				pointer-events: none;
-			}
-			.mask-wrapper {
-				mask-image: url('../images/recept-menu-images/mask.png');
-				mask-size: 100% 100%;
-				mask-mode: alpha;
-				mask-repeat: no-repeat;
-				mask-position: 50% 50%;
-				padding: 4px;
-				background: $white;
-				width: 112px;
-				height: 112px;
-				@include animate(margin width height);
-				border-radius: 50%;
-				@include media('<widescreen') {
-					width: 100px;
-					height: 100px;
-				}
-				@include media('<desktop') {
-					width: 95px;
-					height: 95px;
-				}
-				@include media('<tablet') {
-					width: 40px;
-					height: 40px;
-					padding: 2px;
-				}
-			}
-			&:hover .mask-wrapper,
-			&.active .mask-wrapper {
-				margin-bottom: 0px;
-				width: 162px;
-				height: 162px;
-				@include media('<widescreen') {
-					width: 140px;
-					height: 140px;
-				}
-				@include media('<desktop') {
-					width: 110px;
-					height: 110px;
-				}
-				@include media('<tablet') {
-					width: 40px;
-					height: 40px;;
-				}
-				a {
-					.text {
-						font-size: 21px;
-						width: 100%;
-						word-wrap: break-word;
-						@include media('<widescreen') {
-							font-size: 16px;
-						}
-						@include media('<desktop') {
-							font-size: 14px;
-						}
-					}
-				}
-			}
-			a {
-				width: 100%;
-				height: 100%;
-				mask-image: url('../images/recept-menu-images/mask.png');
-				mask-size: 100% 100%;
-				mask-mode: alpha;
-				mask-repeat: no-repeat;
-				mask-position: 50% 50%;
-				padding: 10%;
-				text-decoration: none;
-				.img-holder {
-					@include media('<tablet') {
-						height: 100%;
-						display: flex;
-						align-items: center;
-					}
-				}
-				@include media('<tablet') {
-					display: flex;
-					align-items: center;
-				}
-				.text {
-					font-size: 15px;
-					@include animate(font-size);
-					@include media('<widescreen') {
-						font-size: 14px;
-					}
-					@include media('<desktop') {
-						font-size: 12px;
-					}
-					@include media('<tablet') {
-						position: absolute;
-						right: calc(100% + 10px);
-						color: #6b2a00;
-					}
-				}
-				img {
-					width: 50%;
-					display: inline;
-					margin: 0 auto 3px;
-					@include media('<desktop') {
-						margin-bottom: 5px;
-					}
-					@include media('<tablet') {
-						width: 90%;
-						margin-bottom: 0;
-					}
-				}
-			}
-			a {
-				font-size: inherit;
-				color: inherit;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				border-radius: 50%;
-				@include media('<tablet') {
-					position: relative;
-				}
-				&:before {
-					@include media('<tablet') {
-						position: absolute;
-						left: -999px;
-						top: 0;
-						bottom: 0;
-						right: 0;
-						content: '';
-					}
-				}
-			}
-			&.close {
-				display: none;
-				font-size: 29px;
-				text-align: center;
-				@include media('<tablet') {
-					display: block;
-				}
-				.mask-wrapper {
-					background: #cbd428;
-				}
-			}
-			&.eggs {
-				a {
-					background-color: #d89005;
-					img {
-						width: 35%;
-					}
-				}
-				bottom: 0px;
-			}
-			&.turkey {
-				a {
-					background-color: #e6b02a;
-				}
-				bottom: -14px;
-			}
-			&.hen {
-				a {
-					background-color: #aa0033;
-				}
-				bottom: -30px;
-			}
-			&.chicken {
-				a {
-					background-color: #5b9ac7;
-				}
-				bottom: -42px;
-			}
-			&.duck {
-				a {
-					background-color: #1a664a;
-				}
-				bottom: -52px;
-			}
-			&.guinea {
-				a {
-					background-color: #910836;
-				}
-				bottom: -58px;
-			}
-			&.goose {
-				a {
-					background-color: #9e361b;
-				}
-				bottom: -56px;
-			}
-			&.delicatessen {
-				a {
-					background-color: #646dc3;
-				}
-				img {
-					width: 54%;
-				}
-				bottom: -44px;
-			}
-		}
-	}
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .img-banner-mask {
+        mask-image: url('../images/recept-banner-mask.svg');
+        mask-size: 100% auto;
+        mask-mode: alpha;
+        mask-repeat: no-repeat;
+        mask-position: 50% 100%;
+        position: relative;
+        vertical-align: middle;
+        img {
+            vertical-align: top;
+        }
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            background-color: rgba(0, 0, 0, .10);
+            @include media('<desktop') {
+                background-color: rgba(0, 0, 0, .45);
+            }
+        }
+    }
+    .title-holder {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: $white;
+        @include media('<1700px') {
+            top: 50%;
+        }
+        @include media('<tablet') {
+            top: calc(100% + 20px);
+            transform: translate(-50%, 0%);
+            color: $dark-red;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            @include media('<desktop') {
+                width: 150%;
+                height: 150%;
+                background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+            }
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+        .h1 {
+            font-size: 50px;
+            font-family: $base-font-hobo;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+            @include media('<desktop') {
+                font-size: 30px;
+            }
+            @include media('<tablet') {
+                font-size: 18px;
+            }
+        }
+        .subtitle {
+            font-size: 19px;
+            display: inline-block;
+            position: relative;
+            padding-top: 4px;
+            @include media('<desktop') {
+                font-size: 14px;
+            }
+            @include media('<tablet') {
+                font-size: 14px;
+                max-height: 40px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: -4px;
+                height: 3px;
+                background: linear-gradient(to right, rgba(203, 212, 40, .4) 0%, rgba(203, 212, 40, 0) 10%, rgba(203, 212, 40, 1) 20%, rgba(203, 212, 40, 1) 80%, rgba(203, 212, 40, 0) 90%, rgba(203, 212, 40, .4) 100%);
+                /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                left: -60px;
+                right: -60px;
+                border-radius: 110%;
+            }
+        }
+    }
+    &>img {
+        width: 100%;
+        @include media('<tablet') {
+            width: 130%;
+            max-width: 130%;
+        }
+    }
+    .filter-open-btn {
+        display: none;
+        align-items: center;
+        font-size: 13px;
+        font-weight: 400;
+        color: $white;
+        text-transform: uppercase;
+        font-family: $base-font-hobo;
+        z-index: 999;
+        .btn-decorate {
+            margin-left: 15px;
+            border: 3px solid $white;
+            border-radius: 50%;
+            background-color: #cbd428;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 29px;
+            width: 40px;
+            height: 40px;
+        }
+        @include media('<tablet') {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    .recept-menu {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 10px;
+        @extend %listreset;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include animate(transform);
+        @include media('<tablet') {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            right: 0px;
+            height: 100vh;
+            padding-bottom: 40px;
+            background: $white;
+            padding: 10px;
+            flex-direction: column;
+            z-index: 999;
+            justify-content: flex-start;
+            transform: translateY(-200%);
+            overflow: auto;
+        }
+        li {
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+            position: relative;
+            color: $white;
+            font-size: 16px;
+            margin: 0;
+            font-family: $base-font-hobo;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            @include animate (margin);
+            @include media('<tablet') {
+                bottom: 0 !important;
+                margin-bottom: 10px;
+            }
+            .text-mobile {
+                display: none;
+                color: #6b2a00;
+                font-size: 12px;
+                margin-right: 15px;
+                text-transform: uppercase;
+                font-family: $base-font-hobo;
+                white-space: nowrap;
+                background: rgba(#dcdcdc, .35);
+                padding: 3px;
+                box-shadow: 0px 0px 17px 0px rgba(220, 220, 220, 0.4);
+                @include media('<tablet') {
+                    display: block;
+                    position: absolute;
+                    right: calc(100% - 5px);
+                    top: 50%;
+                    text-align: right;
+                    transform: translateY(-50%);
+                }
+            }
+            &:hover,
+            &.active {
+                margin-bottom: -25px;
+                @include media('<widescreen') {
+                    margin-bottom: -20px;
+                }
+                @include media('<desktop') {
+                    margin-bottom: -8px;
+                }
+                @include media('<tablet') {
+                    margin-bottom: 10px;
+                }
+            }
+            &:before {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+                content: '';
+                display: block;
+                box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.98);
+                border-radius: 50%;
+                background: transparent;
+                pointer-events: none;
+            }
+            .mask-wrapper {
+                mask-image: url('../images/recept-menu-images/mask.svg');
+                mask-size: 100% 100%;
+                mask-mode: alpha;
+                mask-repeat: no-repeat;
+                mask-position: 50% 50%;
+                padding: 4px;
+                background: $white;
+                width: 112px;
+                height: 112px;
+                @include animate(margin width height);
+                border-radius: 50%;
+                @include media('<widescreen') {
+                    width: 100px;
+                    height: 100px;
+                }
+                @include media('<desktop') {
+                    width: 95px;
+                    height: 95px;
+                }
+                @include media('<tablet') {
+                    width: 40px;
+                    height: 40px;
+                    padding: 2px;
+                }
+            }
+            &:hover .mask-wrapper,
+            &.active .mask-wrapper {
+                margin-bottom: 0px;
+                width: 162px;
+                height: 162px;
+                @include media('<widescreen') {
+                    width: 140px;
+                    height: 140px;
+                }
+                @include media('<desktop') {
+                    width: 110px;
+                    height: 110px;
+                }
+                @include media('<tablet') {
+                    width: 40px;
+                    height: 40px;
+                    ;
+                }
+                a {
+                    .text {
+                        font-size: 21px;
+                        width: 100%;
+                        word-wrap: break-word;
+                        @include media('<widescreen') {
+                            font-size: 16px;
+                        }
+                        @include media('<desktop') {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            a {
+                width: 100%;
+                height: 100%;
+                mask-image: url('../images/recept-menu-images/mask.svg');
+                mask-size: 100% 100%;
+                mask-mode: alpha;
+                mask-repeat: no-repeat;
+                mask-position: 50% 50%;
+                padding: 10%;
+                text-decoration: none;
+                .img-holder {
+                    @include media('<tablet') {
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                @include media('<tablet') {
+                    display: flex;
+                    align-items: center;
+                }
+                .text {
+                    font-size: 15px;
+                    @include animate(font-size);
+                    @include media('<widescreen') {
+                        font-size: 14px;
+                    }
+                    @include media('<desktop') {
+                        font-size: 12px;
+                    }
+                    @include media('<tablet') {
+                        position: absolute;
+                        right: calc(100% + 10px);
+                        color: #6b2a00;
+                    }
+                }
+                img {
+                    width: 50%;
+                    display: inline;
+                    margin: 0 auto 3px;
+                    @include media('<desktop') {
+                        margin-bottom: 5px;
+                    }
+                    @include media('<tablet') {
+                        width: 90%;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            a {
+                font-size: inherit;
+                color: inherit;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-radius: 50%;
+                @include media('<tablet') {
+                    position: relative;
+                }
+                &:before {
+                    @include media('<tablet') {
+                        position: absolute;
+                        left: -999px;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        content: '';
+                    }
+                }
+            }
+            &.close {
+                display: none;
+                font-size: 29px;
+                text-align: center;
+                @include media('<tablet') {
+                    display: block;
+                }
+                .mask-wrapper {
+                    background: #cbd428;
+                }
+            }
+            &.eggs {
+                a {
+                    background-color: #d89005;
+                    img {
+                        width: 35%;
+                    }
+                }
+                bottom: 0px;
+            }
+            &.turkey {
+                a {
+                    background-color: #e6b02a;
+                }
+                bottom: -14px;
+            }
+            &.hen {
+                a {
+                    background-color: #aa0033;
+                }
+                bottom: -30px;
+            }
+            &.chicken {
+                a {
+                    background-color: #5b9ac7;
+                }
+                bottom: -42px;
+            }
+            &.duck {
+                a {
+                    background-color: #1a664a;
+                }
+                bottom: -52px;
+            }
+            &.guinea {
+                a {
+                    background-color: #910836;
+                }
+                bottom: -58px;
+            }
+            &.goose {
+                a {
+                    background-color: #9e361b;
+                }
+                bottom: -56px;
+            }
+            &.delicatessen {
+                a {
+                    background-color: #646dc3;
+                }
+                img {
+                    width: 54%;
+                }
+                bottom: -44px;
+            }
+        }
+    }
 }
 
 .recept-banner.product-banner {
-	@include media('<tablet') {
-		display: none;
-	}
-	.title-holder {
-		top: 43%;
-		.subtitle {
-			padding: 30px 0 0;
-			font: 31px/33px $base-font-hobo;
-			text-transform: uppercase;
-			@include media('<widescreen') {
-				font-size: 28px;
-				line-height: 30px;
-				padding: 15px 0 0;
-			}
-			@include media('<desktop') {
-				font-size: 20px;
-				line-height: 22px;
-			}
-		}
-		h1 {
-			font-size: 78px;
-			line-height: 80px;
-			padding: 0 0 8px;
-			@include media('<widescreen') {
-				font-size: 50px;
-				line-height: 52px;
-			}
-			@include media('<desktop') {
-				font-size: 40px;
-				line-height: 42px;
-			}
-		}
-	}
+    @include media('<tablet') {
+        display: none;
+    }
+    .title-holder {
+        top: 43%;
+        .subtitle {
+            padding: 30px 0 0;
+            font: 31px/33px $base-font-hobo;
+            text-transform: uppercase;
+            @include media('<widescreen') {
+                font-size: 28px;
+                line-height: 30px;
+                padding: 15px 0 0;
+            }
+            @include media('<desktop') {
+                font-size: 20px;
+                line-height: 22px;
+            }
+        }
+        h1 {
+            font-size: 78px;
+            line-height: 80px;
+            padding: 0 0 8px;
+            @include media('<widescreen') {
+                font-size: 50px;
+                line-height: 52px;
+            }
+            @include media('<desktop') {
+                font-size: 40px;
+                line-height: 42px;
+            }
+        }
+    }
 }
 
 body.filter-opened {
@@ -466,5 +467,21 @@ body.filter-opened {
     max-width: 100%;
     .recept-menu {
         transform: translateY(0) !important;
+    }
+}
+
+.ie .recept-banner {
+    .recept-menu {
+        li {
+            &.eggs img {
+                width: 35px !important;
+            }
+            img {
+                width: 50px !important;
+            }
+            @include media('>=tablet') {
+                bottom: -52px !important;
+            }
+        }
     }
 }

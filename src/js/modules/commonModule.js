@@ -31,7 +31,6 @@ var common = {
         if (!$filterMenu.length) return;
         var openBtn = $filterMenu.siblings('.filter-open-btn'),
             closeBtn = $filterMenu.find('.close');
-        console.log(openBtn);
         var $body = $('body');
         openBtn.on('click', function() {
             $body.addClass('filter-opened');
@@ -40,10 +39,15 @@ var common = {
             $body.removeClass('filter-opened');
         });
 
+    },
+    fixIE: function() {
+        if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+            $('body').addClass('ie');
+        }
+        if (document.documentMode) {
+            $('body').addClass('ie11');
+        }
     }
-
-
-
 };
 
 export default common;
